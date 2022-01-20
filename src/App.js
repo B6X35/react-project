@@ -1,12 +1,11 @@
+
 import s from './App.module.css';
-import Radiobuttons from './components/SharedComponents/Radiobuttons';
+import './App.css';
 
 function App() {
-  return (
-    <div className={s.container}>
-      <Radiobuttons />
-    </div>
-  );
+
+  return <div className="container"></div>;
+
 }
 
 export default App;
