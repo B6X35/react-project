@@ -1,3 +1,5 @@
+
+import s from './App.module.css';
 import './App.css';
 
 function App() {
