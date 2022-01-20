@@ -1,0 +1,17 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-Ellipse-2" viewBox="0 0 32 32">
+<path fill="#fc842d" style="fill: var(--color1, #fc842d)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+</symbol>
+<symbol id="icon-Ellipse-3" viewBox="0 0 32 32">
+<path fill="#fff" style="fill: var(--color2, #fff); stroke: var(--color3, #e0e0e0)" stroke="#e0e0e0" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.4545" d="M30.545 16c0 8.033-6.512 14.545-14.545 14.545s-14.545-6.512-14.545-14.545c0-8.033 6.512-14.545 14.545-14.545s14.545 6.512 14.545 14.545z"></path>
+</symbol>
+<symbol id="icon-Group-13" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="4.5714" d="M2.286 2.286l27.429 27.429"></path>
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="4.5714" d="M2.286 29.714l27.429-27.429"></path>
+</symbol>
+<symbol id="icon-Vector-1" viewBox="0 0 48 32">
+<path d="M0 32h48v-5.333h-48v5.333zM0 18.667h48v-5.333h-48v5.333zM0 0v5.333h48v-5.333h-48z"></path>
+</symbol>
+</defs>
+</svg>
