@@ -1,1 +1,1 @@
-export {default} from './DiaryDateCalendare'
+export {default} from './DiaryDateCalendar';
