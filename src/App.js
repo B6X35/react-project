@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       {/* <Suspense fallback={<div>Loading...</div>}> */}
-      <Switch>
+      {/* <Switch>
         <Route exact path="/registration">
           <RegistrationPage />
         </Route>
@@ -17,7 +17,7 @@ function App() {
         <Route path="/login">
           <LoginPage />
         </Route>
-      </Switch>
+      </Switch> */}
       {/* </Suspense> */}
     </div>
   );
