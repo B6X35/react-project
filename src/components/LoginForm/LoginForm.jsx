@@ -5,7 +5,7 @@ import { Formik, Form } from 'formik';
 import { ErrorMessagesSchema } from '../../utils/errorMessageSchema';
 
 import Button from '../Shared components/Button';
-import FormikInput from '../Shared components/FormikInput';
+import FormikInput from '../SharedComponents/FormikInput';
 import s from './LoginForm.module.css';
 
 const initialValues = { email: '', password: '' };
