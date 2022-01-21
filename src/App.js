@@ -1,6 +1,5 @@
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
-// import { lazy, Suspense } from 'react';
 
 import RegistrationPage from './pages/RegistrationPage';
 import LoginPage from './pages/LoginPage';
@@ -8,6 +7,7 @@ import LoginPage from './pages/LoginPage';
 function App() {
   return (
     <div className="container">
+      {/* <Header /> */}
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       <Switch>
         <Route exact path="/registration">
