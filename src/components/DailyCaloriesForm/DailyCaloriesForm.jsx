@@ -2,7 +2,7 @@ import React from 'react';
 import { useFormik } from 'formik';
 
 import s from './DailyCaloriesForm.module.css';
-import Button from '../Shared components/Button/';
+import Button from '../SharedComponents/Button/';
 
 const DailyCaloriesForm = () => {
   const formik = useFormik({
