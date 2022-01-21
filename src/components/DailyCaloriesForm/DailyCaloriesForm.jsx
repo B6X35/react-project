@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 import s from './DailyCaloriesForm.module.css';
-import Button from '../SharedComponents/Button';
+import Button from '../SharedComponents/Button/';
 
 const DailyCaloriesForm = () => {
   const formik = useFormik({

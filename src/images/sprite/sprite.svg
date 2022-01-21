@@ -3,7 +3,7 @@
 <symbol id="icon-Vector-9" viewBox="0 0 53 32">
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="7.1111" d="M49.778 5.333v10.667h-42.667M7.111 16l12.444-12.444M7.111 16l12.444 12.444"></path>
 </symbol>
-<symbol id="icon-calendar-1" viewBox="0 0 32 32">
+<symbol id="icon-calendar" viewBox="0 0 32 32">
 <path fill="#9b9faa" style="fill: var(--color1, #9b9faa)" d="M24 14.4h-3.2v3.2h3.2v-3.2z"></path>
 <path fill="#9b9faa" style="fill: var(--color1, #9b9faa)" d="M17.6 14.4h-3.2v3.2h3.2v-3.2z"></path>
 <path fill="#9b9faa" style="fill: var(--color1, #9b9faa)" d="M11.2 14.4h-3.2v3.2h3.2v-3.2z"></path>
