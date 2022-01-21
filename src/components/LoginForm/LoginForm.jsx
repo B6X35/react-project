@@ -4,7 +4,7 @@ import { Formik, Form } from 'formik';
 
 import { ErrorMessagesSchema } from '../../utils/errorMessageSchema';
 
-import Button from '../Shared components/Button';
+import Button from '../SharedComponents/Button';
 import FormikInput from '../SharedComponents/FormikInput';
 import s from './LoginForm.module.css';
 
