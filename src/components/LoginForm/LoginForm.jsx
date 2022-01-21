@@ -32,12 +32,13 @@ const LoginForm = () => {
             placeholder="Пароль *"
             pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
           />
+          <div className={s['button-container']}>
+            <Button text="Вход" type="submit" />
 
-          <Button text="Вход" type="submit" />
-
-          <Link to="/registration" className={s.link}>
-            Регистрация
-          </Link>
+            <Link to="/registration" className={s.link}>
+              Регистрация
+            </Link>
+          </div>
         </Form>
       )}
     </Formik>

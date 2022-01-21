@@ -1,14 +1,12 @@
-import Section from '../../components/SharedComponents/Section';
+// import Section from '../../components/SharedComponents/Section';
 import LoginForm from '../../components/LoginForm';
-
-import s from '../../sharedStyles/RegistrationLoginPages.module.css';
-
+import s from './LoginPage.module.css';
 const LoginPage = () => {
   return (
-    <Section>
+    <section className={s.section}>
       <h1 className={s.title}>Вход</h1>
       <LoginForm />
-    </Section>
+    </section>
   );
 };
 export default LoginPage;

@@ -8,6 +8,7 @@ import { registerUser } from '../../redux/auth/authOperation';
 import Button from '../SharedComponents/Button';
 import FormikInput from '../SharedComponents/FormikInput';
 
+import s from './RegistrationForm.module.css';
 const initialValues = { username: '', email: '', password: '' };
 
 const RegistrationForm = () => {
@@ -31,12 +32,13 @@ const RegistrationForm = () => {
             placeholder="Пароль *"
             pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
           />
+          <div className={s['button-container']}>
+            <Link to="/login" className={s.link}>
+              Вход
+            </Link>
 
-          <Link to="/login" className="link">
-            Вход
-          </Link>
-
-          <Button text="Регистрация" type="submit" />
+            <Button text="Регистрация" type="submit" />
+          </div>
         </Form>
       )}
     </Formik>
