@@ -1,5 +1,5 @@
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+// import { Switch, Route } from 'react-router-dom';
 // import { lazy, Suspense } from 'react';
 
 // import RegistrationPage from './pages/RegistrationPage';
