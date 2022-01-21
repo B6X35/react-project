@@ -1,10 +1,14 @@
+import Section from '../../components/SharedComponents/Section';
 import RegistrationForm from '../../components/RegistrationForm';
+
+import s from '../../sharedStyles/RegistrationLoginPages.module.css';
+
 const RegistrationPage = () => {
   return (
-    <section>
-      <h1>Регистрация</h1>
+    <Section>
+      <h1 className={s.title}>Регистрация</h1>
       <RegistrationForm />
-    </section>
+    </Section>
   );
 };
 export default RegistrationPage;

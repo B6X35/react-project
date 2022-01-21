@@ -1,0 +1,10 @@
+.title {
+  font-family: Gotham Pro;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.08;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #fc842d;
+}
