@@ -1,5 +1,3 @@
-
-import s from './App.module.css';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 // import { lazy, Suspense } from 'react';
