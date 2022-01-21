@@ -1,1 +1,41 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.wrapperAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  background-color: #fc842d;
+  border: 2px #fc842d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+}
+
+button:hover {
+  background-color: white;
+  border: 2px #fc842d;
+}
+
+.vectorUse {
+  width: 15px;
+  height: 15px;
+}
+
+.vectorSvg {
+  width: 15px;
+  height: 15px;
+}
