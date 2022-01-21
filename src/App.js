@@ -1,9 +1,10 @@
+import './App.css';
 import { Switch, Route } from 'react-router-dom';
 // import { lazy, Suspense } from 'react';
 
 import RegistrationPage from './pages/RegistrationPage';
 import LoginPage from './pages/LoginPage';
-import './App.css';
+
 // import s from './App.module.css';
 function App() {
   return (
