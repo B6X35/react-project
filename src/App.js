@@ -1,11 +1,12 @@
-
-import s from './App.module.css';
 import './App.css';
+import MainPage from '../src/pages/MainPage';
 
 function App() {
-
-  return <div className="container"></div>;
-
+  return (
+    <div className="container">
+      <MainPage />
+    </div>
+  );
 }
 
 export default App;
