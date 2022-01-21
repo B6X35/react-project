@@ -9,7 +9,7 @@ import './App.css';
 // import s from './App.module.css';
 function App() {
   return (
-    <div сlassName="container">
+    <div className="container">
       {/* <Header /> */}
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       {/* <Switch>
