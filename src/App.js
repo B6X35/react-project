@@ -1,4 +1,5 @@
 import './App.css';
+// import Header from './components/Header/Header';
 // import { Switch, Route } from 'react-router-dom';
 // import { lazy, Suspense } from 'react';
 
@@ -9,12 +10,12 @@ import './App.css';
 function App() {
   return (
     <div сlassName="container">
+      {/* <Header /> */}
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       {/* <Switch>
         <Route exact path="/registration">
           <RegistrationPage />
         </Route>
-
         <Route path="/login">
           <LoginPage />
         </Route>

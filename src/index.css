@@ -7,7 +7,21 @@ html {
 *::after {
   box-sizing: inherit;
 }
-img {
-  display: block;
-  width: 100%;
+
+
+@font-face {
+  font-family: 'Verdana';
+  src: url('./fonts/verdana.woff2');
+}
+@font-face {
+  font-family: 'VerdanaBold';
+  src: url('./fonts/VerdanaBold.woff2');
+}
+@font-face {
+  font-family: 'GothamPro-Light';
+  src: url('./fonts/GothamPro-Light.woff');
+}
+@font-face {
+  font-family: 'GothamPro-Bold';
+  src: url('./fonts/GothamPro-Bold.woff');
 }
