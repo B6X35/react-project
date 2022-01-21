@@ -22,7 +22,7 @@ const unsetToken = () => {
   axios.defaults.headers.common['Authorization'] = '';
 };
 
-export const refreshTokenApi = async (refreshToken, sid) => {
+export const newRefreshTokenApi = async (refreshToken, sid) => {
   setToken(refreshToken);
   try {
     const { data } = await axios.post(path.REFRESH, sid );

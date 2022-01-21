@@ -1,15 +1,18 @@
 import React from 'react';
-import { getUserName } from '../../redux/user/userOperations';
-import './UserMenu.module.css';
+// import { getUserName } from '../../redux/user/userOperations';
+import s from './UserInfo.module.css';
 
-export default function UserMenu() {
-    const userName = useSelector(getUserName);
+export default function UserInfo() {
+    // const userName = useSelector(getUserName);
     return (
         <>
-        <div className={styles.userName}>
-          {`${userName}`}
+        <div className={s.userInfoWrap}>
+        <div className={s.userName}>
+          {/* {`${userName}`} */}
+          Nic
         </div>
-        <button onClick={} type='button'>ВЫХОД</button>
+        <button to='/home' className={s.logout} type='button'>ВЫХОД</button> 
+        </div>
         </>
     );
 }

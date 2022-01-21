@@ -1,5 +1,5 @@
 import DairyCaloriesForm from '../../components/DailyCaloriesForm';
-import Section from '../../components/Section';
+import Section from '../../components/SharedComponents/Section';
 
 const MainPage = () => {
   return (
