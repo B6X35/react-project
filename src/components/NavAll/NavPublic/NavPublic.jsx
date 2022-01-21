@@ -15,6 +15,7 @@ const NavPublic = () => {
             <li>
             <NavLink activeClassName={s.active} exact to="/register">
             <span>РЕГИСТРАЦИЯ</span>
+
             </NavLink>
             </li>
   
