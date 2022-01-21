@@ -1,4 +1,4 @@
-import DiaryDateCalendare from '../../components/DiaryDateCalendar';
+import DiaryDateCalendar from '../../components/DiaryDateCalendar';
 import DiaryAddProduct from '../../components/DiaryAddProduct';
 import DiaryProductList from '../../components/DiaryProductList';
 
