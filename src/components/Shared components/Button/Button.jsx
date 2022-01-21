@@ -1,14 +1,10 @@
 import s from './Button.module.css';
 
-const Button = ({ text = 'My text', isActive = true, typeBtn = 'button' }) => {
+const Button = ({ text = 'My text', isActive = true }) => {
   const element = isActive ? (
-    <button className={s.btnActive} type={typeBtn} >
-      {text}
-    </button>
+    <button className={s.btnActive}> {text} </button>
   ) : (
-    <button className={s.btnPassive} type={typeBtn}>
-      {text}
-    </button>
+    <button className={s.btnPassive}>{text} </button>
   );
 
   return element;
