@@ -1,16 +1,35 @@
-import s from './BurgerCloseButton';
+import s from './BurgerCloseButton.module.css';
 import { useState } from 'react';
+import sprite from '../../../images/sprite/sprite.svg';
 
 function BurgerCloseButton() {
-const [isActive, setButton] = useState(false);
+  const [isActive, setButton] = useState(false);
 
-const openModal = () => {
-  setButton(true);
-}
+  const openModal = () => {
+    setButton(true);
+  };
 
-return (
-  {!isActive && <button type="button" onClick={openModal} className={s.btn}></button>}
-{isActive && <button type="button" onClick={closeModal} className={s.btn}></button>}
-)
+  const closeModal = () => {
+    setButton(false);
+  };
+
+  return (
+    <>
+      {!isActive && (
+        <button type="button" onClick={openModal} className={s.btn}>
+          <svg className={s.iconClose}>
+            <use href={sprite + '#icon-close'} />
+          </svg>
+        </button>
+      )}
+      {isActive && (
+        <button type="button" onClick={closeModal} className={s.btn}>
+          <svg className={s.iconClose}>
+            <use href={sprite + '#icon-burger'} />
+          </svg>
+        </button>
+      )}
+    </>
+  );
 }
 export default BurgerCloseButton;
