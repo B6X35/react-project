@@ -1,0 +1,29 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-Vector-9" viewBox="0 0 53 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="7.1111" d="M49.778 5.333v10.667h-42.667M7.111 16l12.444-12.444M7.111 16l12.444 12.444"></path>
+</symbol>
+<symbol id="icon-calendar" viewBox="0 0 32 32">
+<path fill="#9b9faa" style="fill: var(--color1, #9b9faa)" d="M24 14.4h-3.2v3.2h3.2v-3.2z"></path>
+<path fill="#9b9faa" style="fill: var(--color1, #9b9faa)" d="M17.6 14.4h-3.2v3.2h3.2v-3.2z"></path>
+<path fill="#9b9faa" style="fill: var(--color1, #9b9faa)" d="M11.2 14.4h-3.2v3.2h3.2v-3.2z"></path>
+<path fill="#9b9faa" style="fill: var(--color1, #9b9faa)" d="M27.2 3.2h-1.6v-3.2h-3.2v3.2h-12.8v-3.2h-3.2v3.2h-1.6c-1.776 0-3.184 1.44-3.184 3.2l-0.016 22.4c0 1.76 1.424 3.2 3.2 3.2h22.4c1.76 0 3.2-1.44 3.2-3.2v-22.4c0-1.76-1.44-3.2-3.2-3.2zM27.2 28.8h-22.4v-17.6h22.4v17.6z"></path>
+</symbol>
+<symbol id="icon-Vector-3" viewBox="0 0 32 32">
+<path fill="#fff" style="fill: var(--color2, #fff)" d="M32 18.286h-13.714v13.714h-4.571v-13.714h-13.714v-4.571h13.714v-13.714h4.571v13.714h13.714v4.571z"></path>
+</symbol>
+<symbol id="icon-Ellipse-2" viewBox="0 0 32 32">
+<path fill="#fc842d" style="fill: var(--color3, #fc842d)" d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+</symbol>
+<symbol id="icon-Ellipse-3" viewBox="0 0 32 32">
+<path fill="#fff" style="fill: var(--color2, #fff); stroke: var(--color4, #e0e0e0)" stroke="#e0e0e0" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.4545" d="M30.545 16c0 8.033-6.512 14.545-14.545 14.545s-14.545-6.512-14.545-14.545c0-8.033 6.512-14.545 14.545-14.545s14.545 6.512 14.545 14.545z"></path>
+</symbol>
+<symbol id="icon-close" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="4.5714" d="M2.286 2.286l27.429 27.429"></path>
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="4.5714" d="M2.286 29.714l27.429-27.429"></path>
+</symbol>
+<symbol id="icon-burger" viewBox="0 0 32 32">
+<path d="M0 26.667h32v-3.556h-32v3.556zM0 17.778h32v-3.556h-32v3.556zM0 5.333v3.556h32v-3.556h-32z"></path>
+</symbol>
+</defs>
+</svg>
