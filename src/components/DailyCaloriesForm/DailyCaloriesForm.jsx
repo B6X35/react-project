@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 import s from './DailyCaloriesForm.module.css';
 import Button from '../SharedComponents/Button';
@@ -20,8 +21,10 @@ const DailyCaloriesForm = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="height">Рост *</label>
+    <form className={s.form} onSubmit={formik.handleSubmit}>
+      <label className={s.elements} htmlFor="height">
+        Рост *
+      </label>
 
       <input
         id="height"
@@ -31,7 +34,9 @@ const DailyCaloriesForm = () => {
         value={formik.values.height}
       />
 
-      <label htmlFor="age">Возраст *</label>
+      <label className={s.elements} htmlFor="age">
+        Возраст *
+      </label>
 
       <input
         id="age"
@@ -41,7 +46,9 @@ const DailyCaloriesForm = () => {
         value={formik.values.lastName}
       />
 
-      <label htmlFor="currentWeight">Текущий вес *</label>
+      <label className={s.elements} htmlFor="currentWeight">
+        Текущий вес *
+      </label>
 
       <input
         id="currentWeight"
@@ -50,7 +57,9 @@ const DailyCaloriesForm = () => {
         onChange={formik.handleChange}
         value={formik.values.currentWeight}
       />
-      <label htmlFor="desiredWeight">Желаемый вес *</label>
+      <label className={s.elements} htmlFor="desiredWeight">
+        Желаемый вес *
+      </label>
 
       <input
         id="desiredWeight"
@@ -59,11 +68,14 @@ const DailyCaloriesForm = () => {
         onChange={formik.handleChange}
         value={formik.values.desiredWeight}
       />
-      <div id="my-radio-group">Группа крови *</div>
-      <div role="group" aria-labelledby="my-radio-group">
-        <div className="radio">
-          <label>
+      <div className={s.elements} id="my-radio-group">
+        Группа крови *
+      </div>
+      <div className={s.radioBtns} role="group" aria-labelledby="my-radio-group">
+        <div className={s.radio}>
+          <label className={s.radioLabel}>
             <input
+              className={s.radioInput}
               name="bloodTypes"
               onChange={formik.handleChange}
               type="radio"
@@ -73,9 +85,10 @@ const DailyCaloriesForm = () => {
             1
           </label>
         </div>
-        <div className="radio">
-          <label>
+        <div className={s.radio}>
+          <label className={s.radioLabel}>
             <input
+              className={s.radioInput}
               name="bloodTypes"
               onChange={formik.handleChange}
               type="radio"
@@ -85,9 +98,10 @@ const DailyCaloriesForm = () => {
             2
           </label>
         </div>
-        <div className="radio">
-          <label>
+        <div className={s.radio}>
+          <label className={s.radioLabel}>
             <input
+              className={s.radioInput}
               name="bloodTypes"
               onChange={formik.handleChange}
               type="radio"
@@ -97,9 +111,10 @@ const DailyCaloriesForm = () => {
             3
           </label>
         </div>
-        <div className="radio">
-          <label>
+        <div className={s.radio}>
+          <label className={s.radioLabel}>
             <input
+              className={s.radioInput}
               name="bloodTypes"
               onChange={formik.handleChange}
               type="radio"
