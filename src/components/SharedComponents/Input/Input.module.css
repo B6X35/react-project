@@ -12,3 +12,7 @@
   font: inherit;
   color: #9b9faa;
 }
+
+input::-webkit-search-cancel-button {
+  color: #9b9faa;
+}

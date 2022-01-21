@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import s from './Input.module.css';
 
-const Input = ({ name, value, placeholder = 'Hello world', pattern }) => {
+const Input = ({ type = 'text', name, value, placeholder = 'Hello world', pattern }) => {
   return (
     <input
       className={s.input}
-      type="text"
+      type={type}
       name={name}
       placeholder={placeholder}
       value={value}
