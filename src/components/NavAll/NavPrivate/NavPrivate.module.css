@@ -1,0 +1,20 @@
+.links {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    position: absolute;
+    right: auto;
+    top: auto;
+    margin-left: 302px;
+    margin-top: 133px;
+  }
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 174px;
+    list-style: none;
+    padding: 0;
+  }
+}
