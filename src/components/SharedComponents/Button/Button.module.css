@@ -14,7 +14,8 @@ button {
   box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
 }
 
-.btnPassive:hover {
+.btnPassive:hover,
+.btnPassive:focus {
   background-color: transparent;
   color: #fc842d;
   border-color: #fc842d;
@@ -26,7 +27,8 @@ button {
   border: 2px solid #fc842d;
 }
 
-.btnActive:hover {
+.btnActive:hover,
+.btnActive:focus {
   background-color: #fc842d;
   color: white;
   border: 2px solid transparent;
