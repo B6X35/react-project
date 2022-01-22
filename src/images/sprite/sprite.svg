@@ -25,8 +25,8 @@
 <symbol id="icon-burger" viewBox="0 0 32 32">
 <path d="M0 26.667h32v-3.556h-32v3.556zM0 17.778h32v-3.556h-32v3.556zM0 5.333v3.556h32v-3.556h-32z"></path>
 </symbol>
-<symbol id="icon-plus" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#000000" stroke="none"/>
+<symbol id="icon-plus" viewBox="0 0 32 32">
+<path d="M32 18.286h-13.714v13.714h-4.571v-13.714h-13.714v-4.571h13.714v-13.714h4.571v13.714h13.714v4.571z"></path>
 </symbol>
 </defs>
 </svg>

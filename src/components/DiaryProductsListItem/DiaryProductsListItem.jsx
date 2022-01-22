@@ -1,6 +1,6 @@
 import Input from '../SharedComponents/Input';
 import s from './DiaryProductsListItem.module.css';
-import image from '../../images/sprite/plus.svg';
+import sprite from '../../images/sprite/sprite.svg';
 
 const DiaryProductsListItem = ({ arr = [] }) => {
   return (
@@ -20,8 +20,8 @@ const DiaryProductsListItem = ({ arr = [] }) => {
         </div>
       </div>
       <button className={s.btn} type="button">
-        <svg>
-          <use href={image} className={s.vectorUse} />
+        <svg className={s.vectorSvg}>
+          <use href={sprite + '#icon-plus'} />
         </svg>
       </button>
     </div>
