@@ -1,0 +1,28 @@
+.btn {
+  width: 50px;
+  height: 50px;
+  margin-left: 75px;
+  border-radius: 50%;
+  background-color: #fc842d;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+}
+
+.btn:hover {
+  background-color: white;
+  border: 2px solid #fc842d;
+  fill: #fc842d;
+}
+
+.btn:hover > .vectorSvg {
+  fill: #fc842d;
+}
+
+.vectorSvg {
+  width: 15px;
+  height: 15px;
+  fill: white;
+}

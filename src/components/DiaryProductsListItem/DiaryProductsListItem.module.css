@@ -1,3 +1,10 @@
+.wrapperAll {
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -8,34 +15,11 @@
   margin-right: 30px;
 }
 
-.wrapperAll {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.productName {
+  width: 240px;
 }
 
-.btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #fc842d;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn:hover {
-  background-color: white;
-  border: 2px solid #fc842d;
-}
-
-.vectorSvg {
-  width: 15px;
-  height: 15px;
-  fill: white;
-}
-
-.btn:hover > .vectorSvg {
-  fill: #fc842d;
+.productWeight {
+  width: 105px;
+  text-align: right;
 }

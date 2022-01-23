@@ -1,6 +1,7 @@
 .input {
-  width: 240px;
+  width: 100%;
   font: inherit;
+  text-align: inherit;
   font-size: 14px;
   padding-bottom: 16px;
   color: #212121;

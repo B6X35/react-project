@@ -7,13 +7,13 @@ const Input = ({
   name,
   value,
   placeholder = 'Hello world',
-  list = 'somelist',
+  listId = 'somelistId',
   pattern,
 }) => {
   return (
     <input
       id={id}
-      list={list}
+      list={listId}
       className={s.input}
       type={type}
       name={name}
@@ -31,6 +31,7 @@ Input.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
   pattern: PropTypes.string,
+  listId: PropTypes.string,
 };
