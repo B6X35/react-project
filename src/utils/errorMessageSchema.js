@@ -10,10 +10,7 @@ const errorMessage = {
 const DiaryFormSchema = Yup.object().shape({
   height: Yup.number().min(100, 'Too Short!').max(250, 'Too Long!').required(errorMessage.required),
   age: Yup.number().min(18, 'Too Short!').max(100, 'Too Long!').required(errorMessage.required),
-  currentWeight: Yup.number()
-    .min(20, errorMessage.diaryValue)
-    .max(500, 'Too Long!')
-    .required(errorMessage.required),
+  weight: Yup.number().min(20, 'Too Short!').max(500, 'Too Long!').required(errorMessage.required),
   desiredWeight: Yup.number()
     .min(20, 'Too Short!')
     .max(500, 'Too Long!')

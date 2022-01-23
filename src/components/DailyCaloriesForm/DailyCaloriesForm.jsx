@@ -1,21 +1,31 @@
 import React from 'react';
+// import { useHistory, useLocation } from 'react-router';
 import { useFormik } from 'formik';
 import s from './DailyCaloriesForm.module.css';
 import Button from '../SharedComponents/Button';
 import { DiaryFormSchema } from '../../utils/errorMessageSchema';
+import { useDispatch } from 'react-redux';
+import { getDailyRate } from '../../redux/dailyRate/dailyRateActions';
 
 const DailyCaloriesForm = () => {
+  const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
       height: '',
       age: '',
-      currentWeight: '',
+      weight: '',
       desiredWeight: '',
-      bloodTypes: '1',
+      bloodType: '1',
     },
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-      console.log(values.bloodTypes);
+      values.weight = Number(values.weight);
+      values.age = Number(values.age);
+      values.height = Number(values.height);
+      values.desiredWeight = Number(values.desiredWeight);
+      values.bloodType = Number(values.bloodType);
+      const formData = JSON.stringify(values);
+
+      dispatch(getDailyRate(formData));
     },
     validationSchema: DiaryFormSchema,
   });
@@ -60,24 +70,22 @@ const DailyCaloriesForm = () => {
           ) : null}
         </div>
         <div className={s.inputWrapper}>
-          <label className={s.label} htmlFor="currentWeight">
+          <label className={s.label} htmlFor="weight">
             Текущий вес *
           </label>
 
           <input
             className={
-              formik.touched.currentWeight && formik.errors.currentWeight
-                ? s.input + ' ' + s.error
-                : s.input
+              formik.touched.weight && formik.errors.weight ? s.input + ' ' + s.error : s.input
             }
-            id="currentWeight"
-            name="currentWeight"
+            id="weight"
+            name="weight"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.currentWeight}
+            value={formik.values.weight}
           />
-          {formik.touched.currentWeight && formik.errors.currentWeight ? (
-            <div className={s.errorMessage}>{formik.errors.currentWeight}</div>
+          {formik.touched.weight && formik.errors.weight ? (
+            <div className={s.errorMessage}>{formik.errors.weight}</div>
           ) : null}
         </div>
         <div className={s.inputWrapper}>
@@ -107,44 +115,44 @@ const DailyCaloriesForm = () => {
             <div className={s.radio}>
               <input
                 className={s.radioInput}
-                name="bloodTypes"
+                name="bloodType"
                 onChange={formik.handleChange}
                 type="radio"
                 value="1"
-                checked={'1' === formik.values.bloodTypes}
+                checked={'1' === formik.values.bloodType}
               />
               <label className={s.radioLabel}> 1</label>
             </div>
             <div className={s.radio}>
               <input
                 className={s.radioInput}
-                name="bloodTypes"
+                name="bloodType"
                 onChange={formik.handleChange}
                 type="radio"
                 value="2"
-                checked={'2' === formik.values.bloodTypes}
+                checked={'2' === formik.values.bloodType}
               />
               <label className={s.radioLabel}>2</label>
             </div>
             <div className={s.radio}>
               <input
                 className={s.radioInput}
-                name="bloodTypes"
+                name="bloodType"
                 onChange={formik.handleChange}
                 type="radio"
                 value="3"
-                checked={'3' === formik.values.bloodTypes}
+                checked={'3' === formik.values.bloodType}
               />
               <label className={s.radioLabel}>3</label>
             </div>
             <div className={s.radio}>
               <input
                 className={s.radioInput}
-                name="bloodTypes"
+                name="bloodType"
                 onChange={formik.handleChange}
                 type="radio"
                 value="4"
-                checked={'4' === formik.values.bloodTypes}
+                checked={'4' === formik.values.bloodType}
               />
               <label className={s.radioLabel}>4</label>
             </div>
