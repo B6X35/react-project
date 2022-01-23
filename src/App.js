@@ -1,4 +1,5 @@
 import './App.css';
+
 import { Switch, Route } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
 import DiaryProductsListItem from './components/DiaryProductsListItem';
@@ -8,6 +9,7 @@ import RoundButton from './components/SharedComponents/RoundButton';
 
 // import RegistrationPage from './pages/RegistrationPage';
 // import LoginPage from './pages/LoginPage';
+// import MainPage from './pages/MainPage/MainPage';
 
 // const { id, productWeight, productTitle, calories } = item;
 

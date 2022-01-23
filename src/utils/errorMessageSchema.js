@@ -7,7 +7,17 @@ const errorMessage = {
   required: '* Поле обязательно к заполнению.',
 };
 
-export const ErrorMessagesSchema = Yup.object().shape({
+const DiaryFormSchema = Yup.object().shape({
+  height: Yup.number().min(100, 'Too Short!').max(250, 'Too Long!').required(errorMessage.required),
+  age: Yup.number().min(18, 'Too Short!').max(100, 'Too Long!').required(errorMessage.required),
+  weight: Yup.number().min(20, 'Too Short!').max(500, 'Too Long!').required(errorMessage.required),
+  desiredWeight: Yup.number()
+    .min(20, 'Too Short!')
+    .max(500, 'Too Long!')
+    .required(errorMessage.required),
+});
+
+const ErrorMessagesSchema = Yup.object().shape({
   username: Yup.string()
     .trim()
     .min(3, errorMessage.name)
@@ -16,3 +26,5 @@ export const ErrorMessagesSchema = Yup.object().shape({
   email: Yup.string().email(errorMessage.email).required(errorMessage.required),
   password: Yup.string().trim().min(6, errorMessage.password).required(errorMessage.required),
 });
+
+export { DiaryFormSchema, ErrorMessagesSchema };
