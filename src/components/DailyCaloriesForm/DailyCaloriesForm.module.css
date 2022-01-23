@@ -39,9 +39,8 @@ input {
 @media screen and (min-width: 768px) {
 }
 
-/* .radio {
+.radioInput {
   position: absolute;
-  z-index: -1;
   opacity: 0;
 }
 
@@ -74,4 +73,4 @@ input {
   background-position: center center;
   background-image: url('../../images/sprite/ellipse.svg');
   background-size: 50% 50%;
-} */
+}

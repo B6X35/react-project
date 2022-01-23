@@ -73,56 +73,48 @@ const DailyCaloriesForm = () => {
       </div>
       <div className={s.radioBtns} role="group" aria-labelledby="my-radio-group">
         <div className={s.radio}>
-          <label className={s.radioLabel}>
-            <input
-              className={s.radioInput}
-              name="bloodTypes"
-              onChange={formik.handleChange}
-              type="radio"
-              value="1"
-              checked={'1' === formik.values.bloodTypes}
-            />
-            1
-          </label>
+          <input
+            className={s.radioInput}
+            name="bloodTypes"
+            onChange={formik.handleChange}
+            type="radio"
+            value="1"
+            checked={'1' === formik.values.bloodTypes}
+          />
+          <label className={s.radioLabel}> 1</label>
         </div>
         <div className={s.radio}>
-          <label className={s.radioLabel}>
-            <input
-              className={s.radioInput}
-              name="bloodTypes"
-              onChange={formik.handleChange}
-              type="radio"
-              value="2"
-              checked={'2' === formik.values.bloodTypes}
-            />
-            2
-          </label>
+          <input
+            className={s.radioInput}
+            name="bloodTypes"
+            onChange={formik.handleChange}
+            type="radio"
+            value="2"
+            checked={'2' === formik.values.bloodTypes}
+          />
+          <label className={s.radioLabel}>2</label>
         </div>
         <div className={s.radio}>
-          <label className={s.radioLabel}>
-            <input
-              className={s.radioInput}
-              name="bloodTypes"
-              onChange={formik.handleChange}
-              type="radio"
-              value="3"
-              checked={'3' === formik.values.bloodTypes}
-            />
-            3
-          </label>
+          <input
+            className={s.radioInput}
+            name="bloodTypes"
+            onChange={formik.handleChange}
+            type="radio"
+            value="3"
+            checked={'3' === formik.values.bloodTypes}
+          />
+          <label className={s.radioLabel}>3</label>
         </div>
         <div className={s.radio}>
-          <label className={s.radioLabel}>
-            <input
-              className={s.radioInput}
-              name="bloodTypes"
-              onChange={formik.handleChange}
-              type="radio"
-              value="4"
-              checked={'4' === formik.values.bloodTypes}
-            />
-            4
-          </label>
+          <input
+            className={s.radioInput}
+            name="bloodTypes"
+            onChange={formik.handleChange}
+            type="radio"
+            value="4"
+            checked={'4' === formik.values.bloodTypes}
+          />
+          <label className={s.radioLabel}>4</label>
         </div>
       </div>
       <Button text="Похудеть" type="submit" />
