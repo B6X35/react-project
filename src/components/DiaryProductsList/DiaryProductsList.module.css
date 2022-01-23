@@ -1,0 +1,36 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.listItem:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+.productName {
+  padding-bottom: 20px;
+  margin-right: 30px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.21;
+  letter-spacing: 0.04;
+  color: #212121;
+
+  width: 240px;
+}
+
+.productWeight {
+  composes: productName;
+  width: 105px;
+}
+.productClories {
+  composes: productName;
+  width: 105px;
+}
