@@ -2,8 +2,10 @@
   .list {
     display: inline-flex;
     flex-direction: column;
+    padding-right: 10px;
     height: 287px;
-    overflow: scroll;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
   }
 
   .listItem {
@@ -48,8 +50,10 @@
   .list {
     display: inline-flex;
     flex-direction: column;
+    padding-right: 30px;
     height: 240px;
-    overflow: scroll;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
   }
 
   .listItem {
@@ -88,8 +92,11 @@
   .list {
     display: inline-flex;
     flex-direction: column;
+    padding-right: 40px;
+    padding-left: 0; /*/////////////////*/
     height: 290px;
-    overflow: auto;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
   }
 
   .listItem {
