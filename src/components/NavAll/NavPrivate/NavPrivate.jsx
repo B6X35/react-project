@@ -1,28 +1,32 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
-import styles from './AuthNavigations.module.scss';
-import { NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
-import userSelectors from '../../redux/user/userSelectors.js';
+import s from './NavPrivate.module.css';
+// import { NavLink } from 'react-router-dom';
+// import { connect } from 'react-redux';
+// import userSelectors from '../../redux/user/userSelectors.js';
 
-const AuthNavigations = ({ dailyRate, userDataDailyRate }) => (
-  <ul className={styles.authnav}>
+const NavPrivate = () => {
+  return (
+    <>
+  <ul className={s.links}>
     <li>
-      <NavLink exact to="/diary" className={styles.link}>
+      <div exact to="/diary" className={s.linkDiary}>
         <span>ДНЕВНИК</span>
-      </NavLink>
+      </div>
     </li>
     <li>
-      <NavLink exact to="/calculator" className={styles.link}>
+      <div exact to="/calculator" className={s.linkCalc}>
         <span>КАЛЬКУЛЯТОР</span>
-      </NavLink>
+      </div>
     </li>
   </ul>
-);
-const mapState = state => ({
-  dailyRate: userSelectors.getCalories(state),
-  userDataDailyRate: userSelectors.getUserDataDailyRate(state),
-});
+  </>
+  )
+  };
+// const mapState = state => ({
+//   dailyRate: userSelectors.getCalories(state),
+//   userDataDailyRate: userSelectors.getUserDataDailyRate(state),
+// });
 
-export default connect(mapState)(AuthNavigations);
+export default NavPrivate;
 

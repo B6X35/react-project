@@ -1,0 +1,25 @@
+.wrapperAll {
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.productName {
+  width: 240px;
+}
+
+.productWeight {
+  width: 105px;
+  text-align: right;
+}

@@ -1,4 +1,4 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -8,18 +8,19 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-} from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import authReducer from './auth/authSlice'
+} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import authReducer from './auth/authSlice';
+import dailyRateReducers from './dailyRate/dailyRateReducers';
 
 const authConfigPersist = {
-  key: "token",
+  key: 'token',
   version: 1,
   storage,
-  whitelist: ['token']
-}
+  whitelist: ['token'],
+};
 
-const middleware = (getDefaultMiddleware) =>
+const middleware = getDefaultMiddleware =>
   getDefaultMiddleware({
     serializableCheck: {
       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
@@ -28,13 +29,13 @@ const middleware = (getDefaultMiddleware) =>
 
 const rootReducer = combineReducers({
   auth: persistReducer(authConfigPersist, authReducer),
-  
+  dailyRateReducers,
 });
 
 const store = configureStore({
   reducer: rootReducer,
   middleware,
-  devTools: process.env.NODE_ENV !== "production",
+  devTools: process.env.NODE_ENV !== 'production',
 });
 
 export const persistor = persistStore(store);
