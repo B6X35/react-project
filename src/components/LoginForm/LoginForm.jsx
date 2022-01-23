@@ -24,7 +24,7 @@ const LoginForm = () => {
       }}
     >
       {() => (
-        <Form>
+        <Form className={s.form}>
           <FormikInput name="email" type="text" placeholder="Почта *" />
           <FormikInput
             name="password"
