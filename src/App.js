@@ -17,7 +17,8 @@ import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
 function App() {
   return (
     <div className="container">
-      {/* <DiaryProductsList
+      <DiaryProductsListItem />
+      <DiaryProductsList
         arr={[
           { id: 1, productWeight: 100, productTitle: 'meat', calories: 123 },
           { id: 2, productWeight: 100, productTitle: 'meat', calories: 123 },
@@ -33,7 +34,7 @@ function App() {
           { id: 12, productWeight: 100, productTitle: 'meat', calories: 123 },
           { id: 13, productWeight: 100, productTitle: 'meat', calories: 123 },
         ]}
-      /> */}
+      />
       {/* <RoundButton /> */}
       {/* <Header /> */}
       {/* <Suspense fallback={<div>Loading...</div>}> */}
