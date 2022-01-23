@@ -1,4 +1,5 @@
 import './App.css';
+import MainPage from './pages/MainPage/MainPage';
 import { Switch, Route } from 'react-router-dom';
 
 // import RegistrationPage from './pages/RegistrationPage';
@@ -7,6 +8,7 @@ import { Switch, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="container">
+      <MainPage />
       {/* <Header /> */}
       {/* <Suspense fallback={<div>Loading...</div>}> */}
       {/* <Switch>

@@ -1,4 +1,4 @@
-form {
+.form {
   width: 290px;
 }
 .link {
@@ -37,7 +37,7 @@ form {
 }
 
 @media screen and (min-width: 605px) {
-  form {
+  .form {
     width: 382px;
   }
 
