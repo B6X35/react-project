@@ -5,7 +5,8 @@ import LoginForm from './components/LoginForm';
 import DiaryProductsListItem from './components/DiaryProductsListItem';
 import DiaryProductsList from './components/DiaryProductsList';
 import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
-import RoundButton from './components/SharedComponents/RoundButton';
+// import RoundButton from './components/SharedComponents/RoundButton';
+// import DiaryPage from './pages/DiaryPage';
 
 // import RegistrationPage from './pages/RegistrationPage';
 // import LoginPage from './pages/LoginPage';
@@ -16,7 +17,7 @@ import RoundButton from './components/SharedComponents/RoundButton';
 function App() {
   return (
     <div className="container">
-      <DiaryProductsList
+      {/* <DiaryProductsList
         arr={[
           { id: 1, productWeight: 100, productTitle: 'meat', calories: 123 },
           { id: 2, productWeight: 100, productTitle: 'meat', calories: 123 },
@@ -32,7 +33,7 @@ function App() {
           { id: 12, productWeight: 100, productTitle: 'meat', calories: 123 },
           { id: 13, productWeight: 100, productTitle: 'meat', calories: 123 },
         ]}
-      />
+      /> */}
       {/* <RoundButton /> */}
       {/* <Header /> */}
       {/* <Suspense fallback={<div>Loading...</div>}> */}
@@ -45,6 +46,7 @@ function App() {
         </Route>
       </Switch> */}
       {/* </Suspense> */}
+      {/* <DiaryPage /> */}
     </div>
   );
 }
