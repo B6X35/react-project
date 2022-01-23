@@ -11,12 +11,14 @@ import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
 // import RegistrationPage from './pages/RegistrationPage';
 // import LoginPage from './pages/LoginPage';
 // import MainPage from './pages/MainPage/MainPage';
+// import DailyCalorieIntake from './components/DailyCalorieIntake';
 
 // const { id, productWeight, productTitle, calories } = item;
 
 function App() {
   return (
     <div className="container">
+      {/* <DailyCalorieIntake /> */}
       {/* <DiaryProductsListItem />
       <DiaryProductsList
         arr={[
