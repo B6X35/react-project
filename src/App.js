@@ -2,8 +2,8 @@ import './App.css';
 
 import { Switch, Route } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
-import DiaryProductsListItem from './components/DiaryProductsListItem';
-import DiaryProductsList from './components/DiaryProductsList';
+// import DiaryProductsListItem from './components/DiaryProductsListItem';
+// import DiaryProductsList from './components/DiaryProductsList';
 import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
 // import RoundButton from './components/SharedComponents/RoundButton';
 // import DiaryPage from './pages/DiaryPage';
@@ -17,7 +17,8 @@ import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
 function App() {
   return (
     <div className="container">
-      {/* <DiaryProductsList
+      {/* <DiaryProductsListItem />
+      <DiaryProductsList
         arr={[
           { id: 1, productWeight: 100, productTitle: 'meat', calories: 123 },
           { id: 2, productWeight: 100, productTitle: 'meat', calories: 123 },
