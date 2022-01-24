@@ -4,7 +4,10 @@ import { useFormik } from 'formik';
 import s from './DailyCaloriesForm.module.css';
 import Button from '../SharedComponents/Button';
 import { DiaryFormSchema } from '../../utils/errorMessageSchema';
-import { useDispatch } from 'react-redux';
+import {
+  useDispatch,
+  // useSelector
+} from 'react-redux';
 import { getDailyRate } from '../../redux/dailyRate/dailyRateActions';
 
 const DailyCaloriesForm = () => {
