@@ -2,15 +2,16 @@ import './App.css';
 
 import { Switch, Route } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
+// import RegistrationPage from './pages/RegistrationPage';
 // import DiaryProductsListItem from './components/DiaryProductsListItem';
-// import DiaryProductsList from './components/DiaryProductsList';
+import DiaryProductsList from './components/DiaryProductsList';
 import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
 // import RoundButton from './components/SharedComponents/RoundButton';
 // import DiaryPage from './pages/DiaryPage';
 
 // import RegistrationPage from './pages/RegistrationPage';
 // import LoginPage from './pages/LoginPage';
-// import MainPage from './pages/MainPage/MainPage';
+import MainPage from './pages/MainPage/MainPage';
 // import DailyCalorieIntake from './components/DailyCalorieIntake';
 
 // const { id, productWeight, productTitle, calories } = item;
@@ -18,9 +19,11 @@ import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
 function App() {
   return (
     <div className="container">
+      {/* <DiaryProductsList /> */}
+      <MainPage />
       {/* <DailyCalorieIntake /> */}
-      {/* <DiaryProductsListItem />
-      <DiaryProductsList
+      {/* <DiaryProductsListItem /> */}
+      {/* <DiaryProductsList
         arr={[
           { id: 1, productWeight: 100, productTitle: 'meat', calories: 123 },
           { id: 2, productWeight: 100, productTitle: 'meat', calories: 123 },
