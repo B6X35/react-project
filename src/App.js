@@ -1,26 +1,8 @@
 import './App.css';
-
-import { Switch, Route } from 'react-router-dom';
-import LoginForm from './components/LoginForm';
-// import DiaryProductsListItem from './components/DiaryProductsListItem';
-// import DiaryProductsList from './components/DiaryProductsList';
-import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
-// import RoundButton from './components/SharedComponents/RoundButton';
-// import DiaryPage from './pages/DiaryPage';
-
-// import RegistrationPage from './pages/RegistrationPage';
-// import LoginPage from './pages/LoginPage';
-// import MainPage from './pages/MainPage/MainPage';
-// import DailyCalorieIntake from './components/DailyCalorieIntake';
-
-import { useState } from 'react';
-import Modal from './components/Modal'
-
-
-// const { id, productWeight, productTitle, calories } = item;
-
+import MainPageView from './pages/MainPageView';
 function App() {
   return (
+
     <div className="container">
       {/* <DailyCalorieIntake /> */}
       {/* <DiaryProductsListItem />
@@ -54,8 +36,10 @@ function App() {
       </Switch> */}
       {/* </Suspense> */}
       {/* <DiaryPage /> */}
+      {/* <Modal/> */}
     </div>
+
   );
 }
- 
+
 export default App;
