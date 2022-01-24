@@ -1,6 +1,6 @@
 import DiaryDateCalendar from '../../components/DiaryDateCalendar';
 import DiaryAddProduct from '../../components/DiaryAddProduct';
-import DiaryProductList from '../../components/DiaryProductList';
+import DiaryProductsList from '../../components/DiaryProductsList';
 
 import s from './DiaryPage.module.css';
 
@@ -9,7 +9,7 @@ const DiaryPage = () => {
     <section>
       <DiaryDateCalendar />
       <DiaryAddProduct />
-      <DiaryProductList />
+      <DiaryProductsList />
     </section>
   );
 };

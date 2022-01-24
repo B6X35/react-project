@@ -1,10 +1,27 @@
 .calendar {
+  position: relative;
   border: 0px;
   background-color: transparent;
   color:rgba(33, 33, 33, 1);
   
   font-family: Verdana;
   font-weight: 700;
-  font-size: 34px;
-  line-height: 41px;
+  font-size: 18px;
+  line-height: 1.2;
+ }
+
+ @media screen and (min-width: 768px) {
+   .calendar {
+    font-size: 34px;
+   }
+}
+
+.calendarIcon {
+  width: 20px;
+  height: 20px;
+  
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: -50px;
 }

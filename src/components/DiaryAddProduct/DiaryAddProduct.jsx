@@ -6,7 +6,7 @@ const DiaryAddProduct = () => {
   const dispatch = useDispatch();
   const productSelector = useSelector(state => state.products.name);
   const state = useSelector(state);
-  console.log(state)
+  console.log(state);
   const [product, setProduct] = useState('');
   const [weight, setWeight] = useState('');
 
