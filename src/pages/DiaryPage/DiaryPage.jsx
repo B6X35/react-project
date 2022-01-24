@@ -1,15 +1,15 @@
-import DateCalendar from '../../components/DiaryDateCalendar/DiaryDateCalendar';
-import DiaryAddProduct from '../../components/DiaryAddProduct/DiaryAddProduct';
-import DiaryProductsList from '../../components/DiaryProductsList/DiaryProductsList';
+import DiaryDateCalendare from '../../components/DiaryDateCalendare';
+import DiaryAddProduct from '../../components/DiaryAddProduct';
+import DiaryProductList from '../../components/DiaryProductList';
 
 import s from './DiaryPage.module.css';
 
 const DiaryPage = () => {
   return (
     <section>
-      <DateCalendar />
+      <DiaryDateCalendare />
       <DiaryAddProduct />
-      <DiaryProductsList />
+      <DiaryProductList />
     </section>
   );
 };
