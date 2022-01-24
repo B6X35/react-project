@@ -5,13 +5,13 @@ import DiaryProductList from '../../components/DiaryProductList';
 import s from './DiaryPage.module.css';
 
 const DiaryPage = () => {
-    return (
-        <section>
-            <DiaryDateCalendare />
-            <DiaryAddProduct />
-            <DiaryProductList />
-        </section>
-    )
-}
+  return (
+    <section>
+      <DiaryDateCalendare />
+      <DiaryAddProduct />
+      <DiaryProductList />
+    </section>
+  );
+};
 
 export default DiaryPage;

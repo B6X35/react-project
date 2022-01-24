@@ -13,7 +13,10 @@ const path = {
   DAY: './day',
   GET_INFO_DAY: './day/info',
 };
-
+const headers = {
+  accept: 'application/json',
+  'Content-Type': 'application/json',
+};
 const setToken = token => {
   axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 };
@@ -22,10 +25,10 @@ const unsetToken = () => {
   axios.defaults.headers.common['Authorization'] = '';
 };
 
-export const refreshTokenApi = async (refreshToken, sid) => {
+export const newRefreshTokenApi = async (refreshToken, sid) => {
   setToken(refreshToken);
   try {
-    const { data } = await axios.post(path.REFRESH, sid );
+    const { data } = await axios.post(path.REFRESH, sid);
     const { newAccessToken, newRefreshToken } = data;
     return { accessToken: newAccessToken, refreshToken: newRefreshToken };
   } catch (error) {
@@ -74,7 +77,7 @@ export const getUserApi = async id => {
 
 export const postDayilyRate = async rate => {
   try {
-    const { data } = await axios.post(path.DAILY_RATE, rate);
+    const { data } = await axios.post(path.DAILY_RATE, rate, { headers: headers });
     return data;
   } catch (error) {
     throw error.message;

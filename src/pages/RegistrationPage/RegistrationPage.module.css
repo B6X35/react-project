@@ -1,0 +1,47 @@
+.section {
+  padding-top: 40px;
+  height: 1024px;
+}
+.title {
+  margin-bottom: 60px;
+  font-family: GothamPro-Bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.08;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #fc842d;
+}
+
+@media screen and (min-width: 605px) {
+  .section {
+    padding-top: 157px;
+  }
+  .title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 810px) {
+  .section {
+    padding-top: 95px;
+  }
+  .title {
+    margin-bottom: 71px;
+  }
+}
+
+/* @media screen and (min-width: 320px) {
+} */
+@media screen and (min-width: 768px) {
+  .background {
+    background-image: url('../../images/bg-images/desktop/bg-img.png');
+    background-repeat: no-repeat;
+    background-size: 553px;
+    background-position: 130px 246px;
+  }
+}
+@media screen and (min-width: 1024px) {
+}

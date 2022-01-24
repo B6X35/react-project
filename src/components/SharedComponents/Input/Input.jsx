@@ -1,11 +1,21 @@
 import PropTypes from 'prop-types';
 import s from './Input.module.css';
 
-const Input = ({ name, value, placeholder = 'Hello world', pattern }) => {
+const Input = ({
+  type = 'text',
+  id,
+  name,
+  value,
+  placeholder = 'Hello world',
+  listId = 'somelistId',
+  pattern,
+}) => {
   return (
     <input
+      id={id}
+      list={listId}
       className={s.input}
-      type="text"
+      type={type}
       name={name}
       placeholder={placeholder}
       value={value}
@@ -18,8 +28,10 @@ const Input = ({ name, value, placeholder = 'Hello world', pattern }) => {
 export default Input;
 
 Input.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
   pattern: PropTypes.string,
+  listId: PropTypes.string,
 };

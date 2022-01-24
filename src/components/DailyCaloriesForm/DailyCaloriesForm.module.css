@@ -1,8 +1,119 @@
+.form {
+  color: #9b9faa;
+  font-weight: 700;
+}
+
+.input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+}
+.radioBtns {
+  display: flex;
+  justify-content: space-between;
+  width: 239px;
+}
+.btnWrp {
+  text-align: center;
+}
+.error {
+  border: 2px solid red;
+}
+.errorMessage {
+  position: absolute;
+  color: red;
+  font-size: 12px;
+}
 @media screen and (max-width: 767px) {
+  .formWrapper {
+    width: 240px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.21;
+    letter-spacing: 0.04em;
+  }
+  .inputWrapper {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+
+  .label {
+    font-size: 14px;
+    padding-top: 30px;
+    line-height: 1.21;
+  }
+
+  .radioBtns {
+    padding-top: 10px;
+    padding-bottom: 41px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .btnWrp {
+    text-align: initial;
+  }
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    height: 320px;
+  }
+  .inputWrapper {
+    margin-bottom: 40px;
+    margin-right: 30px;
+    width: 239px;
+  }
+  .radioBtns {
+    margin-top: 18px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
+  .btnWrp {
+    text-align: center;
+  }
 }
 
-@media screen and (min-width: 768px) {
+/* custom radiobtns */
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.radioInput + label {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  color: #9b9faa;
+}
+
+.radioInput + label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+.radioInput:checked + label {
+  font-weight: bold;
+  color: #fc842d;
+}
+
+.radioInput:checked + label::before {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../../images/sprite/ellipse.svg');
+  background-size: 50% 50%;
 }
