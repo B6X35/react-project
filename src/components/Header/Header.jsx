@@ -8,7 +8,6 @@ const HeaderNav = ({ isLoginUser }) => {
   return <>{isLoginUser ? <LoginForm /> : <RegistrationForm />}</>;
 };
 
-
 function Header() {
   return (
     <div className={s.navWrap}>
