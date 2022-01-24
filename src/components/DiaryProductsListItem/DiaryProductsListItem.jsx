@@ -24,7 +24,9 @@ const DiaryProductsListItem = ({ arr = [], onClick }) => {
           </div>
         </div>
       </div>
-      <RoundButton onClick={onClick} />
+      <div className={s.btn}>
+        <RoundButton onClick={onClick} />
+      </div>
     </div>
   );
 };
