@@ -1,15 +1,25 @@
-// import React from 'react';
-// import routes from '../../routes';
+import React from 'react';
+import routes from '../../Routers/Routes';
 
-// import NavPrivate from './NavPrivate/NavPrivate';
-// import NavPublic from './NavPublic/NavPublic';
+import NavPrivate from './NavPrivate/NavPrivate';
+import NavPublic from './NavPublic/NavPublic';
 
-//  const routesMap = routes.map(route => {
-//     return route.privated ? (
-//       <NavPrivate key={route.path} {...route} />
-//     ) : (
-//       <NavPublic key={route.path} {...route} />
-//     );
-//   });
+import PrivateRoute from '../../Routers/PrivateRoute';
+import PublicRoute from '../../Routers/PublicRoute';
 
-//   export default routesMap;
+const NavAll = () =>
+  routes.map(route => {
+    return route.private ? (
+      <>
+        <PrivateRoute />
+        <NavPrivate key={route.path} {...route} />
+      </>
+    ) : (
+      <>
+        <NavPublic />
+        <PublicRoute key={route.path} {...route} />
+      </>
+    );
+  });
+
+export default NavAll;

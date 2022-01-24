@@ -8,6 +8,22 @@ html {
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: 'Verdana';
+  src: url('./fonts/verdana.woff2');
+}
+@font-face {
+  font-family: 'VerdanaBold';
+  src: url('./fonts/VerdanaBold.woff2');
+}
+@font-face {
+  font-family: 'GothamPro-Light';
+  src: url('./fonts/GothamPro-Light.woff');
+}
+@font-face {
+  font-family: 'GothamPro-Bold';
+  src: url('./fonts/GothamPro-Bold.woff');
+}
 
 @font-face {
   font-family: 'Verdana';
@@ -24,4 +40,36 @@ html {
 @font-face {
   font-family: 'GothamPro-Bold';
   src: url('./fonts/GothamPro-Bold.woff');
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
 }

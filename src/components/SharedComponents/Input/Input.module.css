@@ -1,0 +1,19 @@
+.input {
+  width: 100%;
+  font: inherit;
+  text-align: inherit;
+  font-size: 14px;
+  padding-bottom: 16px;
+  color: #212121;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.input::placeholder {
+  font: inherit;
+  color: #9b9faa;
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
