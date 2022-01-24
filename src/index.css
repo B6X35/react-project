@@ -73,3 +73,7 @@ ul {
 
   list-style: none;
 }
+ol {
+  padding: 0;
+  margin: 0;
+}
