@@ -54,6 +54,7 @@ function App() {
       </Switch> */}
       {/* </Suspense> */}
       {/* <DiaryPage /> */}
+      {/* <Modal/> */}
     </div>
   );
 }
