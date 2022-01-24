@@ -1,9 +1,9 @@
 import Input from '../SharedComponents/Input';
 import RoundButton from '../SharedComponents/RoundButton';
 
-import s from './DiaryProductsListItem.module.css';
+import s from './DiaryAddProductForm.module.css';
 
-const DiaryProductsListItem = ({ arr = [], onClick }) => {
+const DiaryAddProductForm = ({ arr = [], onClick }) => {
   return (
     <div className={s.wrapperAll}>
       <div className={s.wrapper}>
@@ -31,4 +31,4 @@ const DiaryProductsListItem = ({ arr = [], onClick }) => {
   );
 };
 
-export default DiaryProductsListItem;
+export default DiaryAddProductForm;
