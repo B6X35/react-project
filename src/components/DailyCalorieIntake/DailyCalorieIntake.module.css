@@ -10,8 +10,11 @@
   padding-bottom: 30px;
   border-bottom: 1px solid #e0e0e0;
 }
-
 .title {
+  font-size: 18px;
+  line-height: 1.44;
+}
+.subTitle {
   font-size: 14px;
   font-weight: 700;
   padding-top: 20px;
@@ -19,12 +22,13 @@
 }
 .forbiddenProducts {
   margin-bottom: 35px;
+  height: 120px;
+  overflow-y: scroll;
 }
 .forbiddenProductsItem {
   color: #9b9faa;
   font-size: 14px;
   font-weight: 400;
-  margin-left: 15px;
 }
 .forbiddenProductsItem:not(:last-child) {
   margin-bottom: 18px;
@@ -38,6 +42,16 @@
     padding-bottom: 22px;
   }
   .title {
+    font-size: 26px;
+    line-height: 1.23;
+  }
+  .subTitle {
     padding-top: 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .title {
+    text-align: center;
+    width: 500px;
   }
 }
