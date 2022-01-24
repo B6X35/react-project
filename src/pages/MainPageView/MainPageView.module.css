@@ -1,0 +1,14 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url('../../images/bg-images/desktop/bg-home-leafs.png'),
+    url('../../images/bg-images/desktop/bg-banana.png'),
+    url('../../images/bg-images/desktop/bg-strawberry.png'),
+    url('../../images/bg-images/desktop/bg-img-grey.png');
+
+  background-repeat: no-repeat;
+  background-size: 746px auto, 773px auto, 286px auto, 602px auto;
+  background-position: calc(100% - 195px) -26px, calc(100% + 275px) -102px,
+    calc(100% - 35px) calc(100% - 35px), right bottom;
+}
