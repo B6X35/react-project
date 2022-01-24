@@ -14,6 +14,10 @@ import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
 import MainPage from './pages/MainPage/MainPage';
 // import DailyCalorieIntake from './components/DailyCalorieIntake';
 
+import { useState } from 'react';
+import Modal from './components/Modal'
+
+
 // const { id, productWeight, productTitle, calories } = item;
 
 function App() {
@@ -56,5 +60,5 @@ function App() {
     </div>
   );
 }
-
+ 
 export default App;
