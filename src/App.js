@@ -1,10 +1,13 @@
 import './App.css';
-
-import { Switch, Route } from 'react-router-dom';
-import LoginForm from './components/LoginForm';
+import { Suspense } from 'react';
+import { Switch, /*Route*/ } from 'react-router-dom';
+import Header from './components/Header/Header';
+import NavAll from './components/NavAll/NavAll';
+import MainPageView from './pages/MainPageView';
+// import LoginForm from './components/LoginForm';
 // import DiaryProductsListItem from './components/DiaryProductsListItem';
 // import DiaryProductsList from './components/DiaryProductsList';
-import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
+// import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
 // import RoundButton from './components/SharedComponents/RoundButton';
 // import DiaryPage from './pages/DiaryPage';
 
@@ -13,14 +16,23 @@ import BurgerCloseButton from './components/SharedComponents/BurgerCloseButton';
 // import MainPage from './pages/MainPage/MainPage';
 // import DailyCalorieIntake from './components/DailyCalorieIntake';
 
-import { useState } from 'react';
-import Modal from './components/Modal'
+// import { useState } from 'react';
+// import Modal from './components/Modal'
+
 
 
 // const { id, productWeight, productTitle, calories } = item;
 
+
 function App() {
   return (
+    <>
+      <Suspense fallback={<p>Loading...</p>}>
+      <Header />
+    <Switch>
+      <NavAll />
+    </Switch>
+    </Suspense>
     <div className="container">
       {/* <DailyCalorieIntake /> */}
       {/* <DiaryProductsListItem />
@@ -54,9 +66,11 @@ function App() {
       </Switch> */}
       {/* </Suspense> */}
       {/* <DiaryPage /> */}
+
       {/* <Modal/> */}
     </div>
+</>
   );
 }
- 
+
 export default App;
