@@ -1,8 +1,6 @@
 import './App.css';
-import LoaderTailSpin from './components/Loader';
+
 //props={ dateOn, kcalLeft, kcalConsumed, dailyRate, percentsOfDailyRate, notAllowedProducts };
-function App() {
-  return <LoaderTailSpin />;
-}
+function App() {}
 
 export default App;
