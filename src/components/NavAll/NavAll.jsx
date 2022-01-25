@@ -9,15 +9,19 @@ import PublicRoute from '../../Routers/PublicRoute';
 
 const NavAll = () =>
   routes.map(route => {
+    const Component = route.component
     return route.private ? (
       <>
-        <PrivateRoute />
-        <NavPrivate key={route.path} {...route} />
+        <PrivateRoute exact path={route.path} {...route}>
+          <NavPrivate exact path={route.path} {...route} />
+        </PrivateRoute>
       </>
     ) : (
       <>
-        <NavPublic />
-        <PublicRoute key={route.path} {...route} />
+        <PublicRoute isLoginUser={false} exact path={route.path} {...route}>
+          <NavPublic />
+          <Component />
+        </PublicRoute>
       </>
     );
   });

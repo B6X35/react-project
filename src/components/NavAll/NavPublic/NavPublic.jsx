@@ -13,7 +13,7 @@ const NavPublic = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink exact to="/register" className={s.login}>
+            <NavLink exact to="/registration" className={s.login}>
               Регистрация
             </NavLink>
           </li>

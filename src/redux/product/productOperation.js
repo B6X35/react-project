@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getProduct, postDay } from "../../services/serviceApi";
+import { getProductApi, postDay } from "../../services/serviceApi";
 
 export const getProduct = createAsyncThunk(
     'getProduct',

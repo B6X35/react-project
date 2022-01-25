@@ -3,10 +3,11 @@ import { Logo, LogoText } from './Logo/Logo';
 import UserInfo from '../NavAll/UserInfo/UserInfo';
 import LoginForm from '../LoginForm/LoginForm';
 import RegistrationForm from '../RegistrationForm/RegistrationForm';
+import MainPage from '../../pages/MainPage/MainPage';
 
-const HeaderNav = ({ isLoginUser }) => {
-  return <>{isLoginUser ? <LoginForm /> : <RegistrationForm />}</>;
-};
+// const HeaderNav = ({ isLoginUser }) => {
+//   return <>{isLoginUser ? <LoginForm /> : <MainPage />}</>;
+// };
 
 
 function Header() {
@@ -15,7 +16,7 @@ function Header() {
       <Logo />
       <LogoText />
       <UserInfo />
-      <HeaderNav />
+      {/* <HeaderNav /> */}
     </div>
   );
 }

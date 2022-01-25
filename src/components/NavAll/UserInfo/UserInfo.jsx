@@ -1,16 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
-// import { getUserName } from '../../redux/user/userOperations';
+import { NavLink } from 'react-router-dom';
+import { getUserNameSelector } from '../../../redux/auth/authSelectors';
 import s from './UserInfo.module.css';
 
-export default function UserInfo() {
-    // const userName = useSelector(getUserName);
+export default function UserInfo(userName) {
     return (
         <>
         <div className={s.userInfoWrap}>
         <div className={s.userName}>
-          {/* {`${userName}`} */}
-          Nic
+          {`${userName}`}
         </div>
         <NavLink to='/main' className={s.logout} type='button'>ВЫХОД</NavLink> 
         </div>
@@ -18,3 +16,6 @@ export default function UserInfo() {
     );
 }
 
+const mapStateToProps = state => ({
+  userName: getUserNameSelector(state)
+});
