@@ -1,9 +1,14 @@
 import './App.css';
+import LoginForm from './components/LoginForm';
 
 // import DiaryPage from './pages/DiaryPage';
 
 function App() {
-  return;
+  return (
+    <>
+    <LoginForm />
+    </>
+  );
 }
 
 export default App;
