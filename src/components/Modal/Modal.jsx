@@ -7,29 +7,36 @@ import sprite from '../../images/sprite/sprite.svg';
 import DailyCalorieIntake from '../DailyCalorieIntake/DailyCalorieIntake';
 
 const ModalRootElement = document.querySelector('#modal-root');
-const Modal = (props) => {
-    const {marker,open, onClose} = props;
+const Modal = props => {
+  const { marker, open, onClose } = props;
 
-    const element = useMemo(() => document.createElement("div"), [] );
-    useEffect(() => {
-        ModalRootElement.appendChild(element);
-        return () => {
-            ModalRootElement.removeChild(element)
-        }
+  const element = useMemo(() => document.createElement('div'), []);
+  useEffect(() => {
+    ModalRootElement.appendChild(element);
+    return () => {
+      ModalRootElement.removeChild(element);
+    };
+  }, []);
 
-    } , [] );
-    
-    if (open) {
-        return createPortal(
-            <div className={styles.box} onClick={onClose}>
-                <div className={styles.modal} >
-                    <img src="" alt=""/><button className={styles.closeBtn} onClick={onClose}><svg className={styles.svg}><use href={sprite + '#icon-close'}></use></svg></button>
-                </div>
-            </div>, ModalRootElement)
-    }
+  if (open) {
+    return createPortal(
+      <div className={styles.box} onClick={onClose}>
+        <div className={styles.modal}>
+          {/* <img src="" alt="" /> */}
+          <button className={styles.closeBtn} onClick={onClose}>
+            <svg className={styles.svg}>
+              <use href={sprite + '#icon-close'}></use>
+            </svg>
+          </button>{' '}
+          <DailyCalorieIntake />
+        </div>
+      </div>,
+      ModalRootElement,
+    );
+  }
 
-    return null;
-}
+  return null;
+};
 
 export default Modal;
 
