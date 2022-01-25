@@ -4,6 +4,7 @@ import { registerUser, loginUser, logoutUser, currentUser } from './authOperatio
 const initialState = {
   user: {
     email: null,
+    username: null,
   },
   todaySummary: {
       userId: null,
@@ -32,6 +33,7 @@ const authSlice = createSlice({
             state.sid = payload.sid;
             state.user = {
               email: payload.user.email,
+              username: payload.user.username,
             };
             state.todaySummary = {
                 userId: payload.userId,
@@ -52,10 +54,12 @@ const authSlice = createSlice({
             state.sid = payload.sid;
             state.user = {
               email: payload.user.email,
+              username: payload.user.username,
             };
             state.todaySummary = {
                 userId: payload.userId,
-            }
+            };
+            console.log(payload)
           },
           [loginUser.rejected]: (state, { payload }) => {
             state.isLoading = false;
@@ -87,6 +91,7 @@ const authSlice = createSlice({
             state.isLoginUser = false;
             state.user = {
               email: null,
+              username: null
             };
           },
           [logoutUser.rejected]: () => {

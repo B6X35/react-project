@@ -9,14 +9,14 @@ const NavPrivate = () => {
   return (
     <>
       <nav className={s.container}>
-        <ul className={s.links}>
+        <ul className={s.navContainer}>
           <li>
-            <NavLink exact to="/diary-page" className={s.linkDiary}>
+            <NavLink exact to="/diary-page" className={s.diary}>
               ДНЕВНИК
             </NavLink>
           </li>
           <li>
-            <NavLink exact to="/calculator" className={s.linkCalc}>
+            <NavLink exact to="/calculator" className={s.calculator}>
               КАЛЬКУЛЯТОР
             </NavLink>
           </li>

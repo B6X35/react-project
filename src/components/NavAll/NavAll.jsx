@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import NavPrivate from './NavPrivate/NavPrivate';
 import NavPublic from './NavPublic/NavPublic';
 import { getIsAuth } from '../../redux/auth/authSelectors';
+import UserInfo from './UserInfo/UserInfo';
 
 const NavAll = () => {
   const isLogin = useSelector(getIsAuth);
