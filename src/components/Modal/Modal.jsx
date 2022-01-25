@@ -10,21 +10,28 @@ import sprite from '../../images/sprite/sprite.svg'
 
 
 const ModalRootElement = document.querySelector('#modal-root');
-const Modal = () => {
+const Modal = (props) => {
+    const {marker,open, onClose} = props;
+
     const element = useMemo(() => document.createElement("div"), [] );
     useEffect(() => {
         ModalRootElement.appendChild(element);
         return () => {
             ModalRootElement.removeChild(element)
         }
-        
+
     } , [] );
     
-    return createPortal(<div className={styles.box}>
-        <div className={styles.modal}>
-            <img src="" alt=""/><button className={styles.closeBtn}><svg className={styles.svg}><use href={sprite + '#icon-close'}></use></svg></button>
-        </div>
-    </div>, ModalRootElement)
+    if (open) {
+        return createPortal(
+            <div className={styles.box} onClick={onClose}>
+                <div className={styles.modal} >
+                    <img src="" alt=""/><button className={styles.closeBtn} onClick={onClose}><svg className={styles.svg}><use href={sprite + '#icon-close'}></use></svg></button>
+                </div>
+            </div>, ModalRootElement)
+    }
+
+    return null;
 }
 
 export default Modal;

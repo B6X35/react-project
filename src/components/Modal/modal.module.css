@@ -2,6 +2,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(33, 33, 33, 0.12);
+    position:absolute;
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
