@@ -6,7 +6,7 @@ import s from './DiaryPage.module.css';
 
 const DiaryPage = () => {
   return (
-    <div className={`${s.background} container`}>
+    <div className={`${s.background} containerNeo`}>
       <div className={s.wrapper}>
         <DiaryDateCalendar />
         <DiaryAddProductForm />
