@@ -1,16 +1,18 @@
 import DiaryDateCalendar from '../../components/DiaryDateCalendar';
-import DiaryAddProduct from '../../components/DiaryAddProduct';
+import DiaryAddProductForm from '../../components/DiaryAddProductForm';
 import DiaryProductList from '../../components/DiaryProductsList';
 
-// import s from './DiaryPage.module.css';
+import s from './DiaryPage.module.css';
 
 const DiaryPage = () => {
   return (
-    <section>
-      <DiaryDateCalendar />
-      <DiaryAddProduct />
-      <DiaryProductList />
-    </section>
+    <div className={`${s.background} container`}>
+      <div className={s.wrapper}>
+        <DiaryDateCalendar />
+        <DiaryAddProductForm />
+        <DiaryProductList />
+      </div>
+    </div>
   );
 };
 
