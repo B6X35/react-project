@@ -1,4 +1,4 @@
-.container {
+/* .container {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -11,8 +11,8 @@
 }
 @media screen and (min-width: 768px) {
   .container {
-    padding-left: 90px; /*interpolated*/
-    padding-right: 90px; /*interpolated*/
+    padding-left: 90px; 
+    padding-right: 90px; 
     width: 635px;
   }
 }
@@ -22,4 +22,4 @@
     padding-right: 115px;
     width: 840px;
   }
-}
+} */
