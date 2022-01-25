@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 // import { getUserName } from '../../redux/user/userOperations';
 import s from './UserInfo.module.css';
 
@@ -11,7 +12,7 @@ export default function UserInfo() {
           {/* {`${userName}`} */}
           Nic
         </div>
-        <button to='/home' className={s.logout} type='button'>ВЫХОД</button> 
+        <NavLink to='/main' className={s.logout} type='button'>ВЫХОД</NavLink> 
         </div>
         </>
     );
