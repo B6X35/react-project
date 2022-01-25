@@ -1,8 +1,10 @@
 import './App.css';
-import DiaryPage from './pages/DiaryPage';
+import Button from './components/SharedComponents/Button';
+
+//{ text = 'My text', isActive = true, type = 'button', pathName, onClick }
 
 function App() {
-  return <DiaryPage />;
+  return <Button isActive={false} pathName={'/home'} />;
 }
 
 export default App;
