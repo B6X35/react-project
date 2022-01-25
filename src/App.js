@@ -1,6 +1,9 @@
 import './App.css';
 
-//props={ dateOn, kcalLeft, kcalConsumed, dailyRate, percentsOfDailyRate, notAllowedProducts };
-function App() {}
+// import DiaryPage from './pages/DiaryPage';
+
+function App() {
+  return;
+}
 
 export default App;

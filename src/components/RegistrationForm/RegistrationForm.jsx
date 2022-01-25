@@ -2,13 +2,14 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Formik, Form } from 'formik';
 
-import { ErrorMessagesSchema } from '../../utils/errorMessageSchema';
+import { ErrorRegistrationSchema } from '../../utils/errorMessageSchema';
 import { registerUser } from '../../redux/auth/authOperation';
 
 import Button from '../SharedComponents/Button';
 import FormikInput from '../SharedComponents/FormikInput';
 
 import s from './RegistrationForm.module.css';
+
 const initialValues = { username: '', email: '', password: '' };
 
 const RegistrationForm = () => {
@@ -16,7 +17,7 @@ const RegistrationForm = () => {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={ErrorMessagesSchema}
+      validationSchema={ErrorRegistrationSchema}
       onSubmit={(values, { resetForm }) => {
         dispatch(registerUser(values));
         resetForm(initialValues);
