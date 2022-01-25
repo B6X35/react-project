@@ -2,7 +2,7 @@ import { lazy } from 'react';
 
 const routes = [
   {
-    path: '/dairy-page',
+    path: '/diary-page',
     label: 'Diary',
     exact: true,
     component: lazy(() => import('../pages/DiaryPage/DiaryPage')),
