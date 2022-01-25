@@ -30,7 +30,7 @@ const LoginForm = () => {
             name="password"
             type="text"
             placeholder="Пароль *"
-            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+            // pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
           />
           <div className={s['button-container']}>
             <Button text="Вход" type="submit" />
