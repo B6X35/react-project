@@ -6,7 +6,9 @@ export const registerUser = createAsyncThunk(
     async (userData, { rejectWithValue }) => {
         try {
             const data = await registerUserApi(userData);
-            return data;
+            const newUserData = { email: data.email, password: userData.password }
+            const login = await loginUserApi(newUserData)
+            return login;
         } catch (error) {
             return rejectWithValue(error)
         }
