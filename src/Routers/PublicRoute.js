@@ -1,18 +1,26 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { Redirect, Route } from "react-router";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Redirect, Route } from 'react-router';
+import { getIsAuth } from '../redux/auth/authSelectors';
 
-const PublicRoute = ({ path, exact, component, isLoginUser, isRestricted }) => {
-  const dailyRate = useSelector(state => state.auth.currentUser.isLoginUser);
-  
+const PublicRoute = ({ path, exact, component, isRestricted, children }) => {
+  const isLoginUser = useSelector(getIsAuth);
+
+  console.log('isLoginUser && isRestricted', isLoginUser && isRestricted);
+
   return isLoginUser && isRestricted ? (
-    dailyRate ? (
-      <Redirect to="/daily-page" />
+    isLoginUser ? (
+      <Redirect to="/diary-page" />
     ) : (
       <Redirect to="/calculator" />
     )
   ) : (
-    <Route path={path} exact={exact} component={component} />
+    <>
+    {console.log("first")}
+    <Route path={path} exact={exact}>
+      {children}
+    </Route>
+    </>
   );
 };
 

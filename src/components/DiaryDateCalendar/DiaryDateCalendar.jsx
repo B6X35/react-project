@@ -4,7 +4,7 @@ import s from './DiaryDateCalendar.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
 import sprite from '../../images/sprite/sprite.svg';
 
-function DateCalendar() {
+function DiaryDateCalendar() {
   const [startDate, setStartDate] = useState(new Date());
   const CustomInput = forwardRef(({ value, onClick }, ref) => (
     <>
@@ -26,4 +26,4 @@ function DateCalendar() {
   );
 }
 
-export default DateCalendar;
+export default DiaryDateCalendar;
