@@ -93,7 +93,7 @@
     display: inline-flex;
     flex-direction: column;
     padding-right: 40px;
-    padding-left: 0; /*/////////////////*/
+    padding-left: 0;
     height: 290px;
     overflow-y: auto;
     scroll-behavior: smooth;

@@ -9,7 +9,13 @@ const DiaryAddProductForm = ({ arr = [], onClick }) => {
       <div className={s.wrapper}>
         <div className={s.item}>
           <div className={s.productName}>
-            <Input id="data1" type="search" list="data" name="productName" />
+            <Input
+              id="data1"
+              type="search"
+              list="data"
+              name="productName"
+              placeholder="Введите название продукта"
+            />
 
             <datalist id="data">
               {arr.map(item => (
@@ -20,7 +26,7 @@ const DiaryAddProductForm = ({ arr = [], onClick }) => {
         </div>
         <div className={s.item}>
           <div className={s.productWeight}>
-            <Input id="data2" type="text" name="weight" />
+            <Input id="data2" type="text" name="weight" placeholder="Граммы" />
           </div>
         </div>
       </div>

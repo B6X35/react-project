@@ -1,7 +1,7 @@
 import './App.css';
-import MainPageView from './pages/MainPageView';
+import DiaryPage from './pages/DiaryPage';
 function App() {
-  return <MainPageView />;
+  return <DiaryPage />;
 }
 
 export default App;

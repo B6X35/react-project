@@ -1,4 +1,4 @@
-.section {
+/* .section {
   padding-top: 40px;
 }
 .title {
@@ -31,5 +31,68 @@
   }
   .title {
     margin-bottom: 71px;
+  }
+} */
+
+@media screen and (max-width: 767px) {
+  padding-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .background {
+    width: 100vw;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: 740px auto, 291px auto, 740px auto, 553px auto;
+    background-position: right -249px bottom -96px, right -26px bottom 279px, right 12px top -97px,
+      right -32px bottom -187px;
+
+    background-image: url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-banana.png'),
+      url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-strawberry.png'),
+      url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-leafs.png'),
+      url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-img-grey.png');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    .background {
+      background-image: url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-banana@2x.png'),
+        url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-strawberry@2x.png'),
+        url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-leafs@2x.png'),
+        url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-img-grey@2x.png');
+    }
+  }
+
+  .wrapper {
+    padding-top: 191px;
+    width: 605px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .background {
+    width: 100vw;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: 773px auto, 756px auto, 286px auto, 717px auto;
+    background-position: right -205px bottom -42px, right 224px top, right 65px bottom 358px,
+      right bottom;
+
+    background-image: url('../../images/bg-images/desktop/LoginRegistrationPage/desktop-bg-banana.png'),
+      url('../../images/bg-images/desktop/LoginRegistrationPage/desktop-bg-leafs.png'),
+      url('../../images/bg-images/desktop/LoginRegistrationPage/desktop-bg-strawberry.png'),
+      url('../../images/bg-images/desktop/LoginRegistrationPage/desktop-bg-img-grey.png');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    .background {
+      background-image: url('../../images/bg-images/desktop/LoginRegistrationPage/desktop-bg-banana@2x.png'),
+        url('../../images/bg-images/desktop/LoginRegistrationPage/desktop-bg-leafs@2x.png'),
+        url('../../images/bg-images/desktop/LoginRegistrationPage/desktop-bg-strawberry@2x.png'),
+        url('../../images/bg-images/desktop/LoginRegistrationPage/desktop-bg-img-grey@2x.png');
+    }
+  }
+
+  .wrapper {
+    padding-top: 213px;
+    width: 382px;
   }
 }

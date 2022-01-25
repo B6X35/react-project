@@ -9,7 +9,7 @@ const DiaryProductsList = ({ arr = [] }) => {
       <li key={id} className={s.listItem}>
         <p className={s.productName}>{productTitle}</p>
         <p className={s.productWeight}>{productWeight} г</p>
-        <p className={`${s.productClories} test`}>
+        <p className={s.productClories}>
           {(Number(productWeight) * Number(calories)) / 100}
           <span className={s.dimension}> ккал</span>
         </p>

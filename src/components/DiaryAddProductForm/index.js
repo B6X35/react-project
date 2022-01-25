@@ -1,1 +1,1 @@
-export { default } from './DiaryProductsListItem';
+export { default } from './DiaryAddProductForm';
