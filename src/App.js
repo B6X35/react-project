@@ -1,8 +1,8 @@
 import './App.css';
-import DiaryPage from './pages/DiaryPage';
+// import DiaryPage from './pages/DiaryPage';
 
 function App() {
-  return <DiaryPage />;
+  return;
 }
 
 export default App;

@@ -38,15 +38,17 @@
 
     background-repeat: no-repeat;
     background-size: 740px auto;
-    background-position: right -235px bottom -27px;
+    background-position: right -235px bottom -27px, 100vw 100vh;
 
-    background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs.png');
-    /* linear-gradient(90deg, white 70%, grey); */
+    background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs.png'),
+      linear-gradient(90deg, white 70%, grey);
   }
   @media (-webkit-min-device-pixel-ratio: 2) {
     .background {
-      background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs@2x.png');
-      /* linear-gradient(90deg, white 70%, grey 70%); */
+      /* background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs@2x.png'),
+        linear-gradient(90deg, white 70%, grey 70%); */
+
+      background-image: linear-gradient(90deg, white 70%, grey 70%);
     }
   }
 
