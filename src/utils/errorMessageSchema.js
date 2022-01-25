@@ -17,7 +17,7 @@ const DiaryFormSchema = Yup.object().shape({
     .required(errorMessage.required),
 });
 
-const ErrorMessagesSchema = Yup.object().shape({
+const ErrorRegistrationSchema = Yup.object().shape({
   username: Yup.string()
     .trim()
     .min(3, errorMessage.name)
@@ -27,4 +27,9 @@ const ErrorMessagesSchema = Yup.object().shape({
   password: Yup.string().trim().min(6, errorMessage.password).required(errorMessage.required),
 });
 
-export { DiaryFormSchema, ErrorMessagesSchema };
+const ErrorLoginSchema = Yup.object().shape({
+  email: Yup.string().email(errorMessage.email).required(errorMessage.required),
+  password: Yup.string().trim().min(6, errorMessage.password).required(errorMessage.required),
+});
+
+export { DiaryFormSchema, ErrorRegistrationSchema, ErrorLoginSchema };

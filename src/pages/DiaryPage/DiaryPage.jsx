@@ -1,16 +1,22 @@
-import DiaryDateCalendare from '../../components/DiaryDateCalendare';
-import DiaryAddProduct from '../../components/DiaryAddProduct';
-import DiaryProductList from '../../components/DiaryProductList';
+import DiaryDateCalendar from '../../components/DiaryDateCalendar';
+import DiaryAddProductForm from '../../components/DiaryAddProductForm';
+import DiaryProductList from '../../components/DiaryProductsList';
+import Header from '../../components/Header';
 
 import s from './DiaryPage.module.css';
 
 const DiaryPage = () => {
   return (
-    <section>
-      <DiaryDateCalendare />
-      <DiaryAddProduct />
-      <DiaryProductList />
-    </section>
+    <>
+      <Header />
+      <div className={`${s.background} containerNeo`}>
+        <div className={s.wrapper}>
+          <DiaryDateCalendar />
+          <DiaryAddProductForm />
+          <DiaryProductList />
+        </div>
+      </div>
+    </>
   );
 };
 

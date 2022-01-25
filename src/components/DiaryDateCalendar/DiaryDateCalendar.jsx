@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import s from './DiaryDateCalendar.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
-function DateCalendar() {
+function DiaryDateCalendar() {
   const [startDate, setStartDate] = useState(new Date());
   const CustomInput = forwardRef(({ value, onClick }, ref) => (
     <button className={s.calendar} onClick={onClick} ref={ref}>
@@ -20,4 +20,4 @@ function DateCalendar() {
   );
 }
 
-export default DateCalendar;
+export default DiaryDateCalendar;

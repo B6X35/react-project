@@ -1,0 +1,52 @@
+@media screen and (max-width: 767px) {
+  padding-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .background {
+    width: 100vw;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: 531px auto, 100% auto;
+    background-position: right -220px bottom -140px, right bottom;
+
+    background-image: url('../../images/bg-images/tablet/DiaryPage/tablet-bg-leafs.png'),
+      url('../../images/bg-images/tablet/DiaryPage/tablet-bg-grey.png');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    .background {
+      background-image: url('../../images/bg-images/tablet/DiaryPage/tablet-bg-leafs@2x.png'),
+        url('../../images/bg-images/tablet/DiaryPage/tablet-bg-grey.png');
+    }
+  }
+
+  .wrapper {
+    padding-top: 191px;
+    width: 605px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .background {
+    width: 100vw;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: 740px auto, auto 100%;
+    background-position: right -235px bottom -27px, right bottom;
+
+    background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs.png'),
+      url('../../images/bg-images/desktop/DiaryPage/desktop-bg-grey.png');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    .background {
+      background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs@2x.png'),
+        url('../../images/bg-images/desktop/DiaryPage/desktop-bg-grey.png');
+    }
+  }
+
+  .wrapper {
+    padding-top: 213px;
+    width: 382px;
+  }
+}

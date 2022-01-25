@@ -93,7 +93,7 @@ export const postDayilyRateUser = async (id, rate) => {
   }
 };
 
-export const getProduct = async product => {
+export const getProductApi = async product => {
   try {
     const { data } = await axios.get(path.PRODUCT, product);
     return data;
