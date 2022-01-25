@@ -1,0 +1,122 @@
+@media screen and (max-width: 767px) {
+  .section {
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.04;
+    color: #9b9faa;
+    width: 100%;
+  }
+  .section:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    color: #212121;
+    margin-bottom: 20px;
+  }
+
+  .list {
+  }
+
+  .listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .listItem:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .allowedProducts {
+    line-height: 2.42;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .section {
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.04;
+    color: #9b9faa;
+    max-width: 280px;
+  }
+  .section:not(:last-child) {
+    padding-right: 65px;
+    margin-right: 30px;
+  }
+
+  .title {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    color: #212121;
+    margin-bottom: 20px;
+  }
+
+  .list {
+  }
+
+  .listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .listItem:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .allowedProducts {
+    line-height: 2.42;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    display: block;
+    max-width: 330px;
+  }
+  .section {
+    padding-right: 60px;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.04;
+    color: #9b9faa;
+  }
+  .section:not(:last-child) {
+    padding-bottom: 60px;
+    margin-right: 0;
+  }
+
+  .title {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: inherit;
+    color: #212121;
+    margin-bottom: 20px;
+  }
+
+  .list {
+  }
+
+  .listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .listItem:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .allowedProducts {
+    line-height: 2.42;
+  }
+}
