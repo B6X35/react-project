@@ -1,11 +1,41 @@
+import { useState } from 'react';
+import { Switch } from 'react-router-dom';
 import './App.css';
-import LoginForm from './components/LoginForm';
 
-// import DiaryPage from './pages/DiaryPage';
+import Header from './components/Header';
+import PublicRoute from './Routers/PublicRoute';
+import PrivateRoute from './Routers/PrivateRoute';
+
+import MainPage from './pages/MainPage/MainPage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
+import DiaryPage from './pages/DiaryPage/DiaryPage';
+import CalculatorPage from './pages/CalculatorPage/CalculatorPage';
 
 function App() {
-  const [open, setOpen] = useState(false);
-  return;
+  const [open,setOpen] = useState(false);
+  return(
+    <div>
+      <Header />
+      <Switch>
+        <PublicRoute exact path='/main'>
+          <MainPage />
+        </PublicRoute>
+        <PublicRoute exact path='/login' isRestricted>
+          <LoginPage />
+        </PublicRoute>
+        <PublicRoute exact path='/registration' isRestricted>
+          <RegistrationPage />
+        </PublicRoute>
+        <PrivateRoute exact path='/diary-page'>
+          <DiaryPage />
+        </PrivateRoute>
+        <PrivateRoute exact path='/calculator'>
+          <CalculatorPage />
+        </PrivateRoute>
+      </Switch>
+    </div>
+  );
 }
 
 export default App;

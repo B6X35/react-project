@@ -1,5 +1,7 @@
 @media screen and (max-width: 767px) {
+  .background {
   padding-top: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
