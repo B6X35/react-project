@@ -1,23 +1,23 @@
-.container {
+.containerNeo {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 320px) {
-  .container {
+  .containerNeo {
     max-width: 320px;
   }
 }
 @media screen and (min-width: 768px) {
-  .container {
+  .containerNeo {
     padding-left: 90px; /*interpolated*/
     padding-right: 90px; /*interpolated*/
     width: 635px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .container {
+  .containerNeo {
     padding-left: 115px;
     padding-right: 115px;
     width: 840px;
