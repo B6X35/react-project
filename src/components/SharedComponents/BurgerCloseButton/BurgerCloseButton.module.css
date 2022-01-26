@@ -8,14 +8,17 @@
   position: absolute;
   background-color: transparent;
   border: 0;
-  top: -50px;
+  top: 34px;
   max-width: 25px;
   max-height: 25px;
+  margin-right: 18px;
+
 }
 @media screen and (min-width: 768px) {
   .btn {
     position: relative;
     top: 0px;
+    margin-right: 90px;
   }
 }
 @media screen and (min-width: 1200px) {
