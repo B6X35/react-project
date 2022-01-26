@@ -2,17 +2,20 @@
   .containerNeo {
     padding-left: 15px;
     padding-right: 15px;
+    overflow: hidden;
   }
 }
 @media screen and (min-width: 768px) {
   .containerNeo {
     padding-left: 90px; /*interpolated*/
     padding-right: 90px; /*interpolated*/
+    overflow: hidden;
   }
 }
 @media screen and (min-width: 1024px) {
   .containerNeo {
     padding-left: 115px;
     padding-right: 115px;
+    overflow: hidden;
   }
 }
