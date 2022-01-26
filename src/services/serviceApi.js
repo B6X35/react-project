@@ -66,10 +66,10 @@ export const logoutUserApi = async user => {
   }
 };
 
-export const getUserApi = async id => {
+export const getUserApi = async token => {
   try {
-    const { data } = await axios.get(path.USER, id);
-    console.log(data);
+    setToken(token)
+    const { data } = await axios.get(path.USER, token);
     return data;
   } catch (error) {
     throw error.message;
