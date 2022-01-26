@@ -46,13 +46,17 @@
 .calculator:focus {
   color: #9b9faa;
 }
+.navPrivateWrap {
+  display: none;
+}
+
+.navPrivateWrap {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   .navContainer {
     margin-right: 87px;
-  }
-  .navPrivateWrap {
-    display: none;
   }
 }
 
