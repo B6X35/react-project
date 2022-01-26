@@ -1,4 +1,4 @@
-/* .section {
+.section {
   padding-top: 40px;
 }
 .title {
@@ -9,11 +9,13 @@
   line-height: 1.08;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  text-align: center;
+
 
   color: #fc842d;
 }
-@media screen and (min-width: 290px) {
+
+
+/* @media screen and (min-width: 290px) {
 }
 
 @media screen and (min-width: 605px) {
