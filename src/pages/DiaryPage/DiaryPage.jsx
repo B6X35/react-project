@@ -34,7 +34,7 @@ const DiaryPage = () => {
       '-' +
       selectedDate.getDate();
     setDate(selectedDate);
-    alert(selectedDate);
+    // alert(selectedDate);
   };
 
   // const addProduct = product => {
