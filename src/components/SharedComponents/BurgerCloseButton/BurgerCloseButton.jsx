@@ -7,13 +7,13 @@ function BurgerCloseButton({ isActive, onClick }) {
       {isActive ? (
         <button type="button" onClick={onClick} className={s.btn}>
           <svg className={s.iconMenu}>
-            <use href={sprite + '#icon-burger'} />
+            <use href={sprite + '#icon-close'} />
           </svg>
         </button>
       ) : (
         <button type="button" onClick={onClick} className={s.btn}>
           <svg className={s.iconMenu}>
-            <use href={sprite + '#icon-close'} />
+            <use href={sprite + '#icon-burger'} />
           </svg>
         </button>
       )}
