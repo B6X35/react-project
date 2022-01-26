@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Switch } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 
 import Header from './components/Header';
 import PublicRoute from './Routers/PublicRoute';
 import PrivateRoute from './Routers/PrivateRoute';
+
+import { currentUser } from './redux/auth/authOperation';
 
 import MainPage from './pages/MainPage';
 import LoginPage from './pages/LoginPage';
@@ -14,8 +17,17 @@ import CalculatorPage from './pages/CalculatorPage';
 
 function App() {
   const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state.auth.token);
+  const isFetchCurrentUser = useSelector((state) => state.auth.isFetchCurrentUser)
+
+  useEffect(() => {
+    token && dispatch(currentUser());
+  }, [dispatch])
+
   return (
-    <div>
+    <>
+  {!isFetchCurrentUser && <div>
       <Header />
       <Switch>
         <PublicRoute exact path="/main">
@@ -34,7 +46,8 @@ function App() {
           <CalculatorPage />
         </PrivateRoute>
       </Switch>
-    </div>
+    </div> }
+    </>
   );
 }
 
