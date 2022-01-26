@@ -15,7 +15,7 @@ function Header() {
         </div>
         <NavAll />
       </div>
-      <div className={s.userInfoWrap}>{isLogin && <UserInfo />}</div>
+      <div className={s.userInfoHead}>{isLogin && <UserInfo />}</div>
     </div>
   );
 }

@@ -51,9 +51,15 @@
   .navContainer {
     margin-right: 87px;
   }
+  .navPrivateWrap {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  .navPrivateWrap {
+    display: flex;
+  }
   .container {
     position: absolute;
     right: auto;
