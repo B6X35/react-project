@@ -31,7 +31,7 @@ const RegistrationForm = () => {
             name="password"
             type="text"
             placeholder="Пароль *"
-            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+            // pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
           />
           <div className={s['button-container']}>
             <Link to="/login" className={s.link}>

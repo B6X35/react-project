@@ -8,18 +8,20 @@ import { NavLink } from 'react-router-dom';
 const NavPrivate = () => {
   return (
     <>
-      <ul className={s.links}>
-        <li>
-          <NavLink exact to="/diary" className={s.linkDiary}>
-            ДНЕВНИК
-          </NavLink>
-        </li>
-        <li>
-          <NavLink exact to="/calculator" className={s.linkCalc}>
-            КАЛЬКУЛЯТОР
-          </NavLink>
-        </li>
-      </ul>
+      <nav className={s.container}>
+        <ul className={s.navContainer}>
+          <li>
+            <NavLink exact to="/diary-page" className={s.diary}>
+              ДНЕВНИК
+            </NavLink>
+          </li>
+          <li>
+            <NavLink exact to="/calculator" className={s.calculator}>
+              КАЛЬКУЛЯТОР
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
     </>
   );
 };

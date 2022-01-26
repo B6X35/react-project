@@ -8,7 +8,6 @@ import s from './DiaryPage.module.css';
 const DiaryPage = () => {
   return (
     <>
-      <Header />
       <div className={`${s.background} containerNeo`}>
         <div className={s.wrapper}>
           <DiaryDateCalendar />
