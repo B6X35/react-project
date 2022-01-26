@@ -1,12 +1,13 @@
 .userInfoWrap {
   display: flex;
+  justify-content: flex-end;
   margin-left: auto;
-
-  margin-right: 80px;
+  margin-right: 13px;
+  /* margin-right: 80px; */
 
   align-items: center;
   background-color: #eff1f3;
-  margin-top: 82px;
+
 
   height: 40px;
   width: 100%;
@@ -26,7 +27,6 @@
 
 .logout {
   border: none;
-  /* background-color: #fff; */
   background-color: transparent;
   border-left: 2px solid #e0e0e0;
   cursor: pointer;
@@ -41,10 +41,11 @@
 }
 
 @media screen and (min-width: 768px) {
+
   .userInfoWrap {
     display: flex;
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: 90px;
     margin-top: auto;
     background-color: transparent;
   }
@@ -63,8 +64,6 @@
 
   .logout {
     border: none;
-    /* background-color: #fff; */
-    background-color: transparent;
     border-left: 2px solid #e0e0e0;
     cursor: pointer;
     padding-left: 22px;
@@ -75,6 +74,7 @@
     line-height: 0.93;
     letter-spacing: 0.04em;
     color: #9b9faa;
+    margin-right: 50px;
   }
 }
 
