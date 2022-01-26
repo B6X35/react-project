@@ -1,7 +1,7 @@
 /* .section {
   padding-top: 40px;
   height: 1024px;
-}
+} */
 .title {
   margin-bottom: 60px;
   font-family: GothamPro-Bold;
@@ -10,12 +10,12 @@
   line-height: 1.08;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  text-align: center;
+
 
   color: #fc842d;
 }
 
-@media screen and (min-width: 605px) {
+/* @media screen and (min-width: 605px) {
   .section {
     padding-top: 157px;
   }
@@ -78,6 +78,8 @@
     margin-bottom: 71px;
   }
 } */
+
+/* =================== */
 
 @media screen and (max-width: 767px) {
   padding-top: 40px;
