@@ -118,7 +118,7 @@
     height: 100vh;
 
     background-repeat: no-repeat;
-    background-size: 773px auto, 756px auto, 286px auto, 717px auto;
+    background-size: 773px auto, 756px auto, 286px auto, auto 100vh;
     background-position: right -205px bottom -42px, right 224px top, right 65px bottom 358px,
       right bottom;
 
