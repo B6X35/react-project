@@ -22,13 +22,22 @@
         url('../../images/bg-images/tablet/DiaryPage/tablet-bg-grey.png');
     }
   }
-
+  .bigWrapper {
+    margin-top: 292px;
+  }
   .wrapper {
-    padding-top: 191px;
     width: 605px;
   }
 }
 @media screen and (min-width: 1024px) {
+  .bigWrapper {
+    margin-top: 292px;
+  }
+
+  .wrapper {
+    width: 382px;
+  }
+
   .background {
     width: 100vw;
     height: 100vh;
@@ -40,15 +49,11 @@
     background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs.png'),
       url('../../images/bg-images/desktop/DiaryPage/desktop-bg-grey.png');
   }
+
   @media (-webkit-min-device-pixel-ratio: 2) {
     .background {
       background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs@2x.png'),
         url('../../images/bg-images/desktop/DiaryPage/desktop-bg-grey.png');
     }
-  }
-
-  .wrapper {
-    padding-top: 213px;
-    width: 382px;
   }
 }
