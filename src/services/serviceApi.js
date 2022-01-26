@@ -49,6 +49,7 @@ export const loginUserApi = async user => {
   try {
     const { data } = await axios.post(path.LOGIN, user);
     setToken(data.refreshToken);
+    // setToken(data.accessToken);
     return data;
   } catch (error) {
     throw error.message;

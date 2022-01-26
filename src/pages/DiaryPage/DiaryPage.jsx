@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useDispatch } from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
 
 import DiaryDateCalendar from '../../components/DiaryDateCalendar';
 import DiaryAddProductForm from '../../components/DiaryAddProductForm';
 import DiaryProductsList from '../../components/DiaryProductsList';
 import RightSideBar from '../../components/RightSideBar';
 import Container from '../../components/SharedComponents/Container';
+
+import { postDayInfo } from '../../services/serviceApi';
 
 import s from './DiaryPage.module.css';
 
@@ -25,6 +27,7 @@ const DiaryPage = () => {
   const [selectedDate, setDate] = useState(currentDate);
   const [productsSet, setProductsSet] = useState([]);
   const [filter, setFilter] = useState('');
+  const dispatch = useDispatch();
 
   const handleClick = selectedDate => {
     selectedDate =
@@ -44,6 +47,11 @@ const DiaryPage = () => {
   const handleChange = filter => {
     setFilter(filter);
   };
+
+  useEffect(() => {
+    const data = postDayInfo({ date: selectedDate });
+    console.log(data);
+  }, []);
   return (
     <div className={s.background}>
       <Container>
