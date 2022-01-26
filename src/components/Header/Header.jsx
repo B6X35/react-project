@@ -11,9 +11,8 @@ import NavAll from '../NavAll';
 //   return <>{isLoginUser ? <LoginForm /> : <MainPage />}</>;
 // };
 
-
 function Header() {
-  const isLogin = useSelector((state) => state.auth.isLoginUser)
+  const isLogin = useSelector(state => state.auth.isLoginUser);
   return (
     <div className={s.navWrap}>
       <Logo />

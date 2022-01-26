@@ -14,11 +14,7 @@ const RightSideBar = ({
   kcalConsumed = 0,
   dailyRate = 0,
   percentsOfDailyRate = 0,
-  notAllowedProducts = [
-    'Здесь будет отображаться Ваш рацион',
-    'Здесь будет отображаться Ваш рацион',
-    'Здесь будет отображаться Ваш рацион',
-  ],
+  notAllowedProducts = ['Здесь будет отображаться Ваш рацион'],
 }) => {
   return (
     <div className={s.wrapper}>

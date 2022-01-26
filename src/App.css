@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .containerNeo {
     padding-left: 15px;
     padding-right: 15px;
@@ -6,8 +6,8 @@
 }
 @media screen and (min-width: 768px) {
   .containerNeo {
-    padding-left: 90px; /*interpolated*/
-    padding-right: 90px; /*interpolated*/
+    padding-left: 90px;
+    padding-right: 90px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -15,4 +15,4 @@
     padding-left: 115px;
     padding-right: 115px;
   }
-}
+} */
