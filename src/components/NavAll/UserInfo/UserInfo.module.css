@@ -4,13 +4,14 @@
   margin-left: auto;
   margin-right: 13px;
   /* margin-right: 80px; */
-
+margin-top: 122px;
   align-items: center;
-  background-color: #eff1f3;
+  background-color: transparent;
 
 
   height: 40px;
   width: 100%;
+  z-index: 1;
 }
 
 .userName {
@@ -38,8 +39,19 @@
   line-height: 0.93;
   letter-spacing: 0.04em;
   color: #9b9faa;
+  margin-right: 13px;
 }
-
+.userInfoHead {
+    position: absolute;
+    width: 100%;
+    background: #eff1f3;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: -1;
+  }
 @media screen and (min-width: 768px) {
 
   .userInfoWrap {
@@ -49,7 +61,9 @@
     margin-top: auto;
     background-color: transparent;
   }
-
+  .userInfoHead {
+  display: none;
+  }
   .userName {
     font-family: 'GothamPro-Bold';
     font-style: normal;

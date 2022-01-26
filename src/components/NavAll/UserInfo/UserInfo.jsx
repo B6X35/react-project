@@ -15,6 +15,7 @@ export default function UserInfo() {
         <button className={s.logout} type="button" onClick={() => dispatch(logoutUser(token))}>
           ВЫХОД
         </button>
+        <div className={s.userInfoHead} />
         <BurgerCloseButton/>
       </div>
     </>

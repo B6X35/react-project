@@ -46,6 +46,9 @@
 .calculator:focus {
   color: #9b9faa;
 }
+.navPrivateWrap {
+  display: none;
+}
 
 .navPrivateWrap {
   display: none;
