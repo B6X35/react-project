@@ -15,27 +15,26 @@ import CalculatorPage from './pages/CalculatorPage';
 function App() {
   const [open, setOpen] = useState(false);
   return (
-    <DiaryPage />
-    // <div>
-    //   <Header />
-    //   <Switch>
-    //     <PublicRoute exact path="/main">
-    //       <MainPage />
-    //     </PublicRoute>
-    //     <PublicRoute exact path="/login" isRestricted>
-    //       <LoginPage />
-    //     </PublicRoute>
-    //     <PublicRoute exact path="/registration" isRestricted>
-    //       <RegistrationPage />
-    //     </PublicRoute>
-    //     <PrivateRoute exact path="/diary-page">
-    //       <DiaryPage />
-    //     </PrivateRoute>
-    //     <PrivateRoute exact path="/calculator">
-    //       <CalculatorPage />
-    //     </PrivateRoute>
-    //   </Switch>
-    // </div>
+    <div>
+      <Header />
+      <Switch>
+        <PublicRoute exact path="/main">
+          <MainPage />
+        </PublicRoute>
+        <PublicRoute exact path="/login" isRestricted>
+          <LoginPage />
+        </PublicRoute>
+        <PublicRoute exact path="/registration" isRestricted>
+          <RegistrationPage />
+        </PublicRoute>
+        <PrivateRoute exact path="/diary-page">
+          <DiaryPage />
+        </PrivateRoute>
+        <PrivateRoute exact path="/calculator">
+          <CalculatorPage />
+        </PrivateRoute>
+      </Switch>
+    </div>
   );
 }
 

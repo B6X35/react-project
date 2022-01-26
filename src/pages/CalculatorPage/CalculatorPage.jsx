@@ -1,12 +1,12 @@
 import CalculatorCalorieForm from '../../components/CalculatorCalorieForm';
-import Container from '../../components/Container';
+import Container from '../../components/SharedComponents/Container';
 
 import s from './CalculatorPage.module.css';
 
 const CalculatorPage = () => {
   return (
-    <div className={`${s.background} container`}>
-      <Container title="Узнай свою суточную норму калорий" />
+    <div className={s.background}>
+      <Container />
       <CalculatorCalorieForm />
       <Container />
     </div>

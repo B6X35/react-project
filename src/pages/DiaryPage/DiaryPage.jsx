@@ -45,20 +45,22 @@ const DiaryPage = () => {
     setFilter(filter);
   };
   return (
-    <Container>
-      <div className={s.background}>
-        <div className={s.wrapper}>
-          <DiaryDateCalendar onClick={handleClick} />
-          <DiaryAddProductForm
-            arr={productsSet}
-            onChange={() => handleChange(filter)}
-            filter={filter}
-          />
-          <DiaryProductsList />
+    <div className={s.background}>
+      <Container>
+        <div className={s.bigWrapper}>
+          <div className={s.wrapper}>
+            <DiaryDateCalendar onClick={handleClick} />
+            <DiaryAddProductForm
+              arr={productsSet}
+              onChange={() => handleChange(filter)}
+              filter={filter}
+            />
+            <DiaryProductsList />
+          </div>
+          <RightSideBar />
         </div>
-        {/* <RightSideBar /> */}
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 
