@@ -13,16 +13,45 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+
 }
 .navLogo {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.userInfoHead {
+  position: absolute;
+  width: 100%;
+  background: #eff1f3;
+  height: 40px;
+  display: flex;
+  margin-top: 122px;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  justify-content: flex-end;
+}
+
 @media screen and (min-width: 768px) {
   .navAll {
     align-items: center;
-  }
+    }
+    .navWrap {
+      width: auto;
+    }
+    .userInfoHead {
+      position: relative;
+      width: 100%;
+      background: none;
+      height: 40px;
+      display: flex;
+      margin-top: 0;
+      align-items: center;
+    
+      justify-content: flex-end;
+    }
 }
 @media screen and (min-width: 1024px) {
   .navWrap {

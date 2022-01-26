@@ -4,7 +4,7 @@ import sprite from '../../../images/sprite/sprite.svg';
 function BurgerCloseButton({ isActive, onClick }) {
   return (
     <>
-      {isActive ? (
+      {!isActive ? (
         <button type="button" onClick={onClick} className={s.btn}>
           <svg className={s.iconMenu}>
             <use href={sprite + '#icon-burger'} />

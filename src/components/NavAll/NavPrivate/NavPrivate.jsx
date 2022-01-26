@@ -8,7 +8,8 @@ import { NavLink } from 'react-router-dom';
 const NavPrivate = () => {
   return (
     <>
-          <li>
+      <ul className={s.navPrivateWrap}>
+          <li >
             <NavLink exact to="/diary-page" className={s.diary}>
               ДНЕВНИК
             </NavLink>
@@ -18,6 +19,7 @@ const NavPrivate = () => {
               КАЛЬКУЛЯТОР
             </NavLink>
           </li>
+          </ul>
     </>
   );
 };

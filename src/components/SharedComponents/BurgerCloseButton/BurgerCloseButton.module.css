@@ -5,9 +5,25 @@
 }
 
 .btn {
+  position: absolute;
   background-color: transparent;
   border: 0;
-
+  top: -50px;
   max-width: 25px;
   max-height: 25px;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    position: relative;
+    top: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .iconMenu {
+    display: none;
+  }
+  
+  .btn {
+    display: none;
+  }
 }

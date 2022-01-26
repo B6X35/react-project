@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser } from '../../../redux/auth/authOperation';
+import BurgerCloseButton from '../../SharedComponents/BurgerCloseButton/BurgerCloseButton'
 import s from './UserInfo.module.css';
 
 export default function UserInfo() {
@@ -14,6 +15,7 @@ export default function UserInfo() {
         <button className={s.logout} type="button" onClick={() => dispatch(logoutUser(token))}>
           ВЫХОД
         </button>
+        <BurgerCloseButton/>
       </div>
     </>
   );
