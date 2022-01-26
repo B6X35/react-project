@@ -1,18 +1,18 @@
 .navAll {
-margin: 0;
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-border-bottom: 2px solid #e0e0e0;
-height: 80px;
+  position: absolute;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid #e0e0e0;
+  height: 80px;
 }
 
 .navWrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 .navLogo {
   display: flex;
@@ -22,9 +22,9 @@ height: 80px;
 @media screen and (min-width: 768px) {
   .navAll {
     align-items: center;
-    }
+  }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .navWrap {
     align-items: baseline;
     width: auto;
@@ -39,10 +39,10 @@ height: 80px;
     margin-left: 90px;
     margin-top: 82px;
     border: none;
-    }
-    .navLogo {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
+  }
+  .navLogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }

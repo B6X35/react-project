@@ -46,6 +46,7 @@ const DiaryPage = () => {
 
   const handleChange = filter => {
     setFilter(filter);
+    console.log(filter);
     const data = getProductApi(filter);
     console.log(data);
   };

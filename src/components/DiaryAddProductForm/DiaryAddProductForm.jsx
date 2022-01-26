@@ -10,7 +10,7 @@ const DiaryAddProductForm = ({ arr = [], onClick, onChange, filter }) => {
   // };
 
   return (
-    <div className={s.wrapperAll}>
+    <form className={s.wrapperAll}>
       <div className={s.wrapper}>
         <div className={s.item}>
           <div className={s.productName}>
@@ -41,7 +41,7 @@ const DiaryAddProductForm = ({ arr = [], onClick, onChange, filter }) => {
       <div className={s.btn}>
         <RoundButton onClick={onClick} />
       </div>
-    </div>
+    </form>
   );
 };
 

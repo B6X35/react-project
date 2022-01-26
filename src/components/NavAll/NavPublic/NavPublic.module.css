@@ -1,6 +1,4 @@
-
 .container {
-
   margin: 0;
 }
 .navContainer {
@@ -52,12 +50,11 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .container {
     position: absolute;
     right: auto;
     top: auto;
-
   }
   .navContainer {
     display: flex;
@@ -66,4 +63,4 @@
     list-style: none;
     padding: 0;
   }
-} 
+}

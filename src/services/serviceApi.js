@@ -9,7 +9,7 @@ const path = {
   REFRESH: '/auth/refresh',
   USER: './user',
   DAILY_RATE: './daily-rate',
-  PRODUCT: './product',
+  PRODUCT: '/product?search=',
   DAY: './day',
   GET_INFO_DAY: './day/info',
 };
