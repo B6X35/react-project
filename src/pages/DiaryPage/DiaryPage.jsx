@@ -8,6 +8,8 @@ import DiaryProductsList from '../../components/DiaryProductsList';
 import RightSideBar from '../../components/RightSideBar';
 import Container from '../../components/SharedComponents/Container';
 
+import { getProduct } from '../../redux/product/productOperation';
+
 import { postDayInfo, getProductApi } from '../../services/serviceApi';
 
 import s from './DiaryPage.module.css';
@@ -25,8 +27,9 @@ const currentDate =
 
 const DiaryPage = () => {
   const [selectedDate, setDate] = useState(currentDate);
-  const [productsSet, setProductsSet] = useState([]);
+  // const [productsSet, setProductsSet] = useState([]);
   const [filter, setFilter] = useState('');
+
   const dispatch = useDispatch();
 
   const handleClick = selectedDate => {
@@ -47,7 +50,7 @@ const DiaryPage = () => {
   const handleChange = filter => {
     setFilter(filter);
     console.log(filter);
-    const data = getProductApi(filter);
+    const data = dispatch(getProduct(filter));
     console.log(data);
   };
 
@@ -63,7 +66,7 @@ const DiaryPage = () => {
         <div className={s.bigWrapper}>
           <div className={s.wrapper}>
             <DiaryDateCalendar onClick={handleClick} />
-            <DiaryAddProductForm arr={productsSet} onChange={handleChange} filter={filter} />
+            <DiaryAddProductForm onChange={handleChange} filter={filter} />
             <DiaryProductsList />
           </div>
           <RightSideBar />
