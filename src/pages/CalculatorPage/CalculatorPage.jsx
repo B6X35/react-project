@@ -6,9 +6,9 @@ import s from './CalculatorPage.module.css';
 const CalculatorPage = () => {
   return (
     <div className={s.background}>
-      <Container />
-      <CalculatorCalorieForm />
-      <Container />
+      <Container>
+        <CalculatorCalorieForm />
+      </Container>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const path = {
   REFRESH: '/auth/refresh',
   USER: './user',
   DAILY_RATE: './daily-rate',
-  PRODUCT: './product',
+  PRODUCT: '/product?search=',
   DAY: './day',
   GET_INFO_DAY: './day/info',
 };
@@ -49,6 +49,7 @@ export const loginUserApi = async user => {
   try {
     const { data } = await axios.post(path.LOGIN, user);
     setToken(data.refreshToken);
+    // setToken(data.accessToken);
     return data;
   } catch (error) {
     throw error.message;
@@ -122,7 +123,7 @@ export const deletDay = async dayId => {
 
 export const postDayInfo = async date => {
   try {
-    const { data } = await axios.post(path.DAY + '/info', date);
+    const { data } = await axios.post(path.DAY + '/info', { date });
     return data;
   } catch (error) {
     throw error.message;
