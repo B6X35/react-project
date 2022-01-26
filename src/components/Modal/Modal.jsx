@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import styles from './modal.module.css';
 import sprite from '../../images/sprite/sprite.svg'
 // import styles from './modal.module.css';
-// import { createPortal } from 'react-dom';
+// import { createPortal } from 'react-dom'; 
 
 
 
