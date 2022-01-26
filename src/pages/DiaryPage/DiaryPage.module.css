@@ -1,28 +1,25 @@
 @media screen and (max-width: 767px) {
-  padding-top: 40px;
+  .background {
+    padding-top: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .background {
     width: 100vw;
     height: 100vh;
-
+    /* overflow: hidden; */
     background-repeat: no-repeat;
-    background-size: 740px auto, 291px auto, 740px auto, 553px auto;
-    background-position: right -249px bottom -96px, right -26px bottom 279px, right 12px top -97px,
-      right -32px bottom -187px;
+    background-size: 531px auto, 100vw auto;
+    background-position: right -233px bottom -169px, right bottom;
 
-    background-image: url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-banana.png'),
-      url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-strawberry.png'),
-      url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-leafs.png'),
-      url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-img-grey.png');
+    background-image: url('../../images/bg-images/tablet/DiaryPage/tablet-bg-leafs.png'),
+      url('../../images/bg-images/tablet/DiaryPage/tablet-bg-grey.png');
   }
   @media (-webkit-min-device-pixel-ratio: 2) {
     .background {
-      background-image: url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-banana@2x.png'),
-        url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-strawberry@2x.png'),
-        url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-leafs@2x.png'),
-        url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-img-grey@2x.png');
+      background-image: url('../../images/bg-images/tablet/DiaryPage/tablet-bg-leafs@2x.png'),
+        url('../../images/bg-images/tablet/DiaryPage/tablet-bg-grey.png');
     }
   }
 
@@ -35,20 +32,18 @@
   .background {
     width: 100vw;
     height: 100vh;
-
+    /* overflow: hidden; */
     background-repeat: no-repeat;
-    background-size: 740px auto;
-    background-position: right -235px bottom -27px, 100vw 100vh;
+    background-size: 740px auto, auto 100vh;
+    background-position: right -235px bottom -27px, right bottom;
 
     background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs.png'),
-      linear-gradient(90deg, white 70%, grey);
+      url('../../images/bg-images/desktop/DiaryPage/desktop-bg-grey.png');
   }
   @media (-webkit-min-device-pixel-ratio: 2) {
     .background {
-      /* background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs@2x.png'),
-        linear-gradient(90deg, white 70%, grey 70%); */
-
-      background-image: linear-gradient(90deg, white 70%, grey 70%);
+      background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs@2x.png'),
+        url('../../images/bg-images/desktop/DiaryPage/desktop-bg-grey.png');
     }
   }
 

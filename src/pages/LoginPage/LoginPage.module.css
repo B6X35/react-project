@@ -1,4 +1,4 @@
-/* .section {
+.section {
   padding-top: 40px;
 }
 .title {
@@ -9,11 +9,13 @@
   line-height: 1.08;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  text-align: center;
+
 
   color: #fc842d;
 }
-@media screen and (min-width: 290px) {
+
+
+/* @media screen and (min-width: 290px) {
 }
 
 @media screen and (min-width: 605px) {
@@ -44,7 +46,7 @@
     height: 100vh;
 
     background-repeat: no-repeat;
-    background-size: 740px auto, 291px auto, 740px auto, 553px auto;
+    background-size: 740px auto, 291px auto, 740px auto, auto 100vh;
     background-position: right -249px bottom -96px, right -26px bottom 279px, right 12px top -97px,
       right -32px bottom -187px;
 
@@ -73,7 +75,7 @@
     height: 100vh;
 
     background-repeat: no-repeat;
-    background-size: 773px auto, 756px auto, 286px auto, 717px auto;
+    background-size: 773px auto, 756px auto, 286px auto, auto 100vh;
     background-position: right -205px bottom -42px, right 224px top, right 65px bottom 358px,
       right bottom;
 

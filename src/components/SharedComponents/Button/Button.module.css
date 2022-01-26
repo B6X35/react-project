@@ -9,6 +9,9 @@
 
 .btnPassive {
   composes: btn;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fc842d;
   color: white;
   border: 2px solid transparent;

@@ -6,8 +6,6 @@ import { getIsAuth } from '../redux/auth/authSelectors';
 const PublicRoute = ({ path, exact, component, isRestricted, children }) => {
   const isLoginUser = useSelector(getIsAuth);
 
-  console.log('isLoginUser && isRestricted', isLoginUser && isRestricted);
-
   return isLoginUser && isRestricted ? (
     isLoginUser ? (
       <Redirect to="/diary-page" />
@@ -16,8 +14,7 @@ const PublicRoute = ({ path, exact, component, isRestricted, children }) => {
     )
   ) : (
     <>
-    {console.log("first")}
-    <Route path={path} exact={exact}>
+    <Route exact={exact} path={path}>
       {children}
     </Route>
     </>
