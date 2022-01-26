@@ -3,8 +3,8 @@ import { registerUser, loginUser, logoutUser, currentUser } from './authOperatio
 
 const initialState = {
   user: {
-    username: null,
     email: null,
+    username: null,
   },
   todaySummary: {
       userId: null,
@@ -29,10 +29,15 @@ const authSlice = createSlice({
           [registerUser.fulfilled]: (state, { payload }) => {
             state.isLoading = false;
             state.isLoginUser = true;
+            state.token = payload.refreshToken;
+            state.sid = payload.sid;
             state.user = {
-              username: payload.user.username,
               email: payload.user.email,
+              username: payload.user.username,
             };
+            state.todaySummary = {
+                userId: payload.userId,
+            }
           },
           [registerUser.rejected]: (state, { payload }) => {
             state.isLoading = false;
@@ -48,12 +53,13 @@ const authSlice = createSlice({
             state.token = payload.refreshToken;
             state.sid = payload.sid;
             state.user = {
-              username: payload.user.username,
               email: payload.user.email,
+              username: payload.user.username,
             };
             state.todaySummary = {
                 userId: payload.userId,
-            }
+            };
+            console.log(payload)
           },
           [loginUser.rejected]: (state, { payload }) => {
             state.isLoading = false;
@@ -84,8 +90,8 @@ const authSlice = createSlice({
             state.token = null;
             state.isLoginUser = false;
             state.user = {
-              name: null,
               email: null,
+              username: null
             };
           },
           [logoutUser.rejected]: () => {

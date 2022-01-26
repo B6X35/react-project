@@ -11,17 +11,22 @@ const Input = ({
   pattern,
 }) => {
   return (
-    <input
-      id={id}
-      list={listId}
-      className={s.input}
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      value={value}
-      pattern={pattern}
-      required
-    />
+    <div className={s.wrapper}>
+      <label className={s.label} htmlFor={id}>
+        {placeholder}
+      </label>
+      <input
+        className={s.input}
+        id={id}
+        list={listId}
+        type={type}
+        name={name}
+        // placeholder={placeholder}
+        value={value}
+        pattern={pattern}
+        required
+      />
+    </div>
   );
 };
 

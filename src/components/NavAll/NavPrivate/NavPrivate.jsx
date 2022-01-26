@@ -1,32 +1,29 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import s from './NavPrivate.module.css';
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // import { connect } from 'react-redux';
 // import userSelectors from '../../redux/user/userSelectors.js';
 
 const NavPrivate = () => {
   return (
     <>
-  <ul className={s.links}>
-    <li>
-      <div exact to="/diary" className={s.linkDiary}>
-        <span>ДНЕВНИК</span>
-      </div>
-    </li>
-    <li>
-      <div exact to="/calculator" className={s.linkCalc}>
-        <span>КАЛЬКУЛЯТОР</span>
-      </div>
-    </li>
-  </ul>
-  </>
-  )
-  };
-// const mapState = state => ({
-//   dailyRate: userSelectors.getCalories(state),
-//   userDataDailyRate: userSelectors.getUserDataDailyRate(state),
-// });
+      <nav className={s.container}>
+        <ul className={s.navContainer}>
+          <li>
+            <NavLink exact to="/diary-page" className={s.diary}>
+              ДНЕВНИК
+            </NavLink>
+          </li>
+          <li>
+            <NavLink exact to="/calculator" className={s.calculator}>
+              КАЛЬКУЛЯТОР
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
+};
 
 export default NavPrivate;
-

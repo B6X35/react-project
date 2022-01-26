@@ -1,0 +1,60 @@
+@media screen and (max-width: 767px) {
+}
+@media screen and (min-width: 768px) {
+  .background {
+    width: 100vw;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: 740px auto, 531px auto, 208px auto, auto 100vh;
+    background-position: right -249px bottom -96px, right 166px bottom, right 96px bottom 238px,
+      right -32px bottom -187px;
+
+    background-image: url('../../images/bg-images/tablet/MainPage/tablet-bg-banana.png'),
+      url('../../images/bg-images/tablet/MainPage/tablet-bg-home-leafs.png'),
+      url('../../images/bg-images/tablet/MainPage/tablet-bg-strawberry.png'),
+      url('../../images/bg-images/tablet/MainPage/tablet-bg-img-grey.png');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    .background {
+      background-image: url('../../images/bg-images/tablet/MainPage/tablet-bg-banana@2x.png'),
+        url('../../images/bg-images/tablet/MainPage/tablet-bg-home-leafs@2x.png'),
+        url('../../images/bg-images/tablet/MainPage/tablet-bg-strawberry@2x.png'),
+        url('../../images/bg-images/tablet/MainPage/tablet-bg-img-grey@2x.png');
+    }
+  }
+
+  .wrapper {
+    padding-top: 100px;
+    width: 605px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .background {
+    width: 100vw;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: 773px auto, 746px auto, 286px auto, auto 100vh;
+    background-position: right -275px top -102px, right 195px bottom 30px, right 36px bottom 65px,
+      right bottom;
+
+    background-image: url('../../images/bg-images/desktop/MainPage/desktop-bg-banana.png'),
+      url('../../images/bg-images/desktop/MainPage/desktop-bg-home-leafs.png'),
+      url('../../images/bg-images/desktop/MainPage/desktop-bg-strawberry.png'),
+      url('../../images/bg-images/desktop/MainPage/desktop-bg-img-grey.png');
+  }
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    .background {
+      background-image: url('../../images/bg-images/desktop/MainPage/desktop-bg-banana@2x.png'),
+        url('../../images/bg-images/desktop/MainPage/desktop-bg-home-leafs@2x.png'),
+        url('../../images/bg-images/desktop/MainPage/desktop-bg-strawberry@2x.png'),
+        url('../../images/bg-images/desktop/MainPage/desktop-bg-img-grey@2x.png');
+    }
+  }
+
+  .wrapper {
+    padding-top: 144px;
+    width: 605px;
+  }
+}

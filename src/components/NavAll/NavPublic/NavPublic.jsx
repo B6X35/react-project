@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './NavPublic.module.css';
-// import {NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const NavPublic = () => {
   return (
@@ -8,14 +8,14 @@ const NavPublic = () => {
       <nav className={s.container}>
         <ul className={s.navContainer}>
           <li>
-            <div exact to="/login" className={s.login}>
-              <span>Вход</span>
-            </div>
+            <NavLink exact to="/login" className={s.login}>
+              Вход
+            </NavLink>
           </li>
           <li>
-            <div exact to="/register" className={s.login}>
-              <span>Регистрация</span>
-            </div>
+            <NavLink exact to="/registration" className={s.login}>
+              Регистрация
+            </NavLink>
           </li>
         </ul>
       </nav>

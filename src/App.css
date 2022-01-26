@@ -1,21 +1,18 @@
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 320px) {
-  .container {
-    max-width: 320px;
+/* @media screen and (max-width: 767px) {
+  .containerNeo {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media screen and (min-width: 768px) {
-  .container {
-    width: 635px;
+  .containerNeo {
+    padding-left: 90px;
+    padding-right: 90px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .container {
-    width: 840px;
+  .containerNeo {
+    padding-left: 115px;
+    padding-right: 115px;
   }
-}
+} */

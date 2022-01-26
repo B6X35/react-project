@@ -1,19 +1,20 @@
 import React from 'react';
-// import { getUserName } from '../../redux/user/userOperations';
+import { useSelector, useDispatch } from 'react-redux';
+import { logoutUser } from '../../../redux/auth/authOperation';
 import s from './UserInfo.module.css';
 
 export default function UserInfo() {
-    // const userName = useSelector(getUserName);
-    return (
-        <>
-        <div className={s.userInfoWrap}>
-        <div className={s.userName}>
-          {/* {`${userName}`} */}
-          Nic
-        </div>
-        <button to='/home' className={s.logout} type='button'>ВЫХОД</button> 
-        </div>
-        </>
-    );
+  const dispatch = useDispatch();
+  const userName = useSelector(state => state.auth.user.username);
+  const token = useSelector(state => state.auth.token);
+  return (
+    <>
+      <div className={s.userInfoWrap}>
+        <div className={s.userName}>{`${userName}`}</div>
+        <button className={s.logout} type="button" onClick={() => dispatch(logoutUser(token))}>
+          ВЫХОД
+        </button>
+      </div>
+    </>
+  );
 }
-
