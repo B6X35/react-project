@@ -1,10 +1,48 @@
-.navWrap {
-  border-bottom: 2px solid #e0e0e0;
-  height: 80px;
+.navAll {
+margin: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+border-bottom: 2px solid #e0e0e0;
+height: 80px;
 }
 
+.navWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.navLogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .navAll {
+    align-items: center;
+    }
+}
 @media screen and (min-width: 1200px) {
   .navWrap {
-    border: none;
+    align-items: baseline;
+    width: auto;
   }
+  .navAll {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    padding-right: 115px;
+    margin-left: 90px;
+    margin-top: 82px;
+    border: none;
+    }
+    .navLogo {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
 }

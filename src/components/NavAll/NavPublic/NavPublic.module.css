@@ -1,7 +1,6 @@
+
 .container {
-  position: absolute;
-  right: 15px;
-  top: 33px;
+
   margin: 0;
 }
 .navContainer {
@@ -23,6 +22,7 @@
   text-transform: uppercase;
   color: #212121;
   cursor: pointer;
+  margin-left: 22px;
 }
 
 .register {
@@ -36,6 +36,7 @@
   margin-left: 14px;
   color: #212121;
   cursor: pointer;
+  margin-left: 14px;
 }
 
 .login:hover,
@@ -56,8 +57,7 @@
     position: absolute;
     right: auto;
     top: auto;
-    margin-left: 302px;
-    margin-top: 133px;
+
   }
   .navContainer {
     display: flex;
@@ -66,4 +66,4 @@
     list-style: none;
     padding: 0;
   }
-}
+} 
