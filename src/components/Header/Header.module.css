@@ -1,11 +1,12 @@
 .navAll {
-margin: 0;
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-border-bottom: 2px solid #e0e0e0;
-height: 80px;
+  position: absolute;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid #e0e0e0;
+  height: 80px;
 }
 
 .navWrap {
@@ -13,6 +14,7 @@ height: 80px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
 }
 .navLogo {
   display: flex;
@@ -50,9 +52,8 @@ height: 80px;
     
       justify-content: flex-end;
     }
-    
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .navWrap {
     align-items: baseline;
     width: auto;
@@ -64,13 +65,13 @@ height: 80px;
     align-items: baseline;
     width: 100%;
     padding-right: 115px;
-    margin-left: 90px;
+    padding-left: 90px;
     margin-top: 82px;
     border: none;
-    }
-    .navLogo {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
+  }
+  .navLogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }

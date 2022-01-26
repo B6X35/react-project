@@ -24,9 +24,9 @@ const CalculatorCalorieForm = () => {
       values.height = Number(values.height);
       values.desiredWeight = Number(values.desiredWeight);
       values.bloodType = Number(values.bloodType);
-      const formData = JSON.stringify(values);
-
-      dispatch(getDailyRate(formData));
+      // const formData = JSON.stringify(values);
+      dispatch(getDailyRate(values));
+      // dispatch(getDailyRate(formData));
     },
     validationSchema: DiaryFormSchema,
   });

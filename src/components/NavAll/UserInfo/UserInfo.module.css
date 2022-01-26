@@ -78,5 +78,11 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+  .logout {
+    border: none;
+    /* background-color: #fff; */
+    background-color: transparent;
+    border-left: 2px solid #e0e0e0;
+  }
 }
