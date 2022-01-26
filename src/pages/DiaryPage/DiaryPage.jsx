@@ -8,7 +8,7 @@ import DiaryProductsList from '../../components/DiaryProductsList';
 import RightSideBar from '../../components/RightSideBar';
 import Container from '../../components/SharedComponents/Container';
 
-import { postDayInfo } from '../../services/serviceApi';
+import { postDayInfo, getProductApi } from '../../services/serviceApi';
 
 import s from './DiaryPage.module.css';
 
@@ -46,23 +46,23 @@ const DiaryPage = () => {
 
   const handleChange = filter => {
     setFilter(filter);
+    const data = getProductApi(filter);
+    console.log(data);
   };
 
-  useEffect(() => {
-    const data = postDayInfo({ date: selectedDate });
-    console.log(data);
-  }, []);
+  // useEffect(() => {
+  //   console.log(selectedDate);
+  //   const data = postDayInfo(selectedDate);
+  //   console.log(data);
+  // }, []);
+
   return (
     <div className={s.background}>
       <Container>
         <div className={s.bigWrapper}>
           <div className={s.wrapper}>
             <DiaryDateCalendar onClick={handleClick} />
-            <DiaryAddProductForm
-              arr={productsSet}
-              onChange={() => handleChange(filter)}
-              filter={filter}
-            />
+            <DiaryAddProductForm arr={productsSet} onChange={handleChange} filter={filter} />
             <DiaryProductsList />
           </div>
           <RightSideBar />

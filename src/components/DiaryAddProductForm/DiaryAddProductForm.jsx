@@ -5,9 +5,9 @@ import s from './DiaryAddProductForm.module.css';
 
 const DiaryAddProductForm = ({ arr = [], onClick, onChange, filter }) => {
   console.log(onChange);
-  const handleChange = event => {
-    onChange(event.target.value);
-  };
+  // const handleChange = event => {
+  //   onChange(event.target.value);
+  // };
 
   return (
     <div className={s.wrapperAll}>
@@ -21,8 +21,8 @@ const DiaryAddProductForm = ({ arr = [], onClick, onChange, filter }) => {
               name="productName"
               placeholder="Введите название продукта"
               value={filter}
-              // onChange={() => onChange(filter)}
-              onChange={handleChange}
+              onChange={onChange}
+              // onChange={handleChange}
             />
 
             <datalist id="data">

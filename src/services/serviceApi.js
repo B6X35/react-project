@@ -123,7 +123,7 @@ export const deletDay = async dayId => {
 
 export const postDayInfo = async date => {
   try {
-    const { data } = await axios.post(path.DAY + '/info', date);
+    const { data } = await axios.post(path.DAY + '/info', { date });
     return data;
   } catch (error) {
     throw error.message;
