@@ -104,6 +104,7 @@
   .background {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
     background-repeat: no-repeat;
     background-size: 740px auto, 740px auto, 291px auto, 553px auto;
@@ -128,6 +129,7 @@
   .background {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
     background-repeat: no-repeat;
     background-size: 773px auto, 756px auto, 286px auto, auto 100vh;

@@ -44,7 +44,7 @@ const DiaryPage = () => {
       '-' +
       (selectedDate.getMonth() + 1).toString().padStart(2, '0') +
       '-' +
-      selectedDate.getDate();
+      selectedDate.getDate().toString().padStart(2, '0');
     setDate(selectedDate);
     setFilter('');
   };
@@ -86,9 +86,9 @@ const DiaryPage = () => {
             </div>
             <div className={s.diaryProductsListWrapper}>
               <DiaryProductsList />
-              <div className={s.roundButtonwrapper}>
-                <RoundButton />
-              </div>
+            </div>
+            <div className={s.roundButtonwrapper}>
+              <RoundButton />
             </div>
           </div>
           <RightSideBar
