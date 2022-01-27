@@ -1,23 +1,38 @@
+import { useDispatch, useSelector } from 'react-redux';
 import Input from '../SharedComponents/Input';
 import RoundButton from '../SharedComponents/RoundButton';
 
+import { addProductOperation } from '../../redux/day/dayOperations';
+import { getProductsSelector } from '../../redux/product/productSelectors';
+
 import s from './DiaryAddProductForm.module.css';
 
-const DiaryAddProductForm = ({ arr = [], onClick, onChange, filter }) => {
-  console.log(onChange);
-  // const handleChange = event => {
-  //   onChange(event.target.value);
-  // };
+const DiaryAddProductForm = ({ arr = [], onChange, filter, selectedDate }) => {
+  const dispatch = useDispatch();
+  const products = useSelector(getProductsSelector);
+
+  // console.log(products);
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    const product = {
+      data: selectedDate,
+      productId: products[0]._id,
+      weight: event.target.elements[1].value,
+    };
+
+    dispatch(addProductOperation(product));
+  };
 
   return (
-    <form className={s.wrapperAll}>
+    <form className={s.wrapperAll} onSubmit={handleSubmit}>
       <div className={s.wrapper}>
         <div className={s.item}>
           <div className={s.productName}>
             <Input
               id="data1"
               type="search"
-              list="data"
+              listId="data"
               name="productName"
               placeholder="Введите название продукта"
               value={filter}
@@ -27,7 +42,7 @@ const DiaryAddProductForm = ({ arr = [], onClick, onChange, filter }) => {
 
             <datalist id="data">
               {arr.map(item => (
-                <option key={item} value={item} />
+                <option id={item?._id} key={item?._id} value={item?.title?.ru} />
               ))}
             </datalist>
           </div>
@@ -39,7 +54,7 @@ const DiaryAddProductForm = ({ arr = [], onClick, onChange, filter }) => {
         </div>
       </div>
       <div className={s.btn}>
-        <RoundButton onClick={onClick} />
+        <RoundButton type="submit" />
       </div>
     </form>
   );

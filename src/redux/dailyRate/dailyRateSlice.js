@@ -6,6 +6,7 @@ const dailyRateSlice = createSlice({
   initialState: {
     dailyRate: null,
     notAllowedProducts: [],
+    dayInfo: null,
     isLoading: false,
     error: null,
   },

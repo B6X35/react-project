@@ -11,11 +11,4 @@ export const getProduct = createAsyncThunk('getProduct', async (product, thunkAp
   }
 });
 
-export const addProduct = createAsyncThunk('addProduct', async (product, thunkApi) => {
-  try {
-    const products = await postDay(product);
-    return products;
-  } catch (error) {
-    return thunkApi.rejectWithValue(error);
-  }
-});
+

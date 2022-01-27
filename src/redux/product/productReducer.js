@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 import { getProduct } from './productOperation';
 
 const productSlice = createSlice({
-  name: 'products',
+  name: 'productSearch',
   initialState: {
-    items: [],
+    products: [],
     isLoading: false,
     error: null,
   },
@@ -22,9 +22,10 @@ const productSlice = createSlice({
     [getProduct.fulfilled]: (state, { payload }) => ({
       ...state,
       isLoading: false,
-      items: [...state.items, payload],
+      products: payload,
     }),
   },
+  name: 'addProduct',
 });
 
 export default productSlice.reducer;

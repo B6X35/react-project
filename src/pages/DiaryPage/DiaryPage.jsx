@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import debounce from 'debounce';
 
 import DiaryDateCalendar from '../../components/DiaryDateCalendar';
 import DiaryAddProductForm from '../../components/DiaryAddProductForm';
 import DiaryProductsList from '../../components/DiaryProductsList';
 import RightSideBar from '../../components/RightSideBar';
 import Container from '../../components/SharedComponents/Container';
+import RoundButton from '../../components/SharedComponents/RoundButton';
 
 import { getProduct } from '../../redux/product/productOperation';
-
-import { postDayInfo, getProductApi } from '../../services/serviceApi';
+import { getProductsSelector } from '../../redux/product/productSelectors';
+import { getDayInfoSelector, getProductsDaySummary } from '../../redux/day/daySelectors';
+import { getDayInfoOperation } from '../../redux/day/dayOperations';
 
 import s from './DiaryPage.module.css';
 
@@ -24,10 +27,13 @@ const currentDate =
 
 //props DiaryAddProductForm={ arr = [], onClick }
 //props DiaryDateCalendar={ onClick }
+//props RightSideBar=  {dateOn, kcalLeft, kcalConsumed, dailyRate, percentsOfDailyRate, notAllowedProducts,
 
 const DiaryPage = () => {
+  const dayInfo = useSelector(getDayInfoSelector);
+  const daySummary = useSelector(getProductsDaySummary);
+  const products = useSelector(getProductsSelector);
   const [selectedDate, setDate] = useState(currentDate);
-  // const [productsSet, setProductsSet] = useState([]);
   const [filter, setFilter] = useState('');
 
   const dispatch = useDispatch();
@@ -40,7 +46,7 @@ const DiaryPage = () => {
       '-' +
       selectedDate.getDate();
     setDate(selectedDate);
-    // alert(selectedDate);
+    setFilter('');
   };
 
   // const addProduct = product => {
@@ -49,27 +55,49 @@ const DiaryPage = () => {
 
   const handleChange = filter => {
     setFilter(filter);
-    console.log(filter);
-    const data = dispatch(getProduct(filter));
-    console.log(data);
+    // debounce(dispatch(getProduct(filter)), 2000);
+    dispatch(getProduct(filter));
   };
 
-  // useEffect(() => {
-  //   console.log(selectedDate);
-  //   const data = postDayInfo(selectedDate);
-  //   console.log(data);
-  // }, []);
+  useEffect(() => {
+    dispatch(getDayInfoOperation(selectedDate));
+  }, [dispatch, selectedDate]);
+
+  function transformDate(date) {
+    const newDate = date.slice(-2) + '.' + date.slice(5, 7) + '.' + date.slice(0, 4);
+    return newDate;
+  }
 
   return (
     <div className={s.background}>
       <Container>
         <div className={s.bigWrapper}>
           <div className={s.wrapper}>
-            <DiaryDateCalendar onClick={handleClick} />
-            <DiaryAddProductForm onChange={handleChange} filter={filter} />
-            <DiaryProductsList />
+            <div className={s.calendarWrap}>
+              <DiaryDateCalendar onClick={handleClick} />
+            </div>
+            <div className={s.addProductFormWrapper}>
+              <DiaryAddProductForm
+                onChange={handleChange}
+                filter={filter}
+                arr={products}
+                selectedDate={selectedDate}
+              />
+            </div>
+            <div className={s.diaryProductsListWrapper}>
+              <DiaryProductsList />
+              <div className={s.roundButtonwrapper}>
+                <RoundButton />
+              </div>
+            </div>
           </div>
-          <RightSideBar />
+          <RightSideBar
+            dateOn={transformDate(selectedDate)}
+            dailyRate={Math.round(daySummary?.dailyRate.toFixed(2) * 100) / 100}
+            kcalConsumed={Math.round(daySummary?.kcalConsumed.toFixed(2) * 100) / 100}
+            kcalLeft={Math.round(daySummary?.kcalLeft.toFixed(2) * 100) / 100}
+            percentsOfDailyRate={Math.round(daySummary?.percentsOfDailyRate.toFixed(2) * 100) / 100}
+          />
         </div>
       </Container>
     </div>
