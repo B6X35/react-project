@@ -10,6 +10,8 @@ import s from './DiaryProductsList.module.css';
 const DiaryProductsList = () => {
   const eatenProducts = useSelector(getEatenProducts);
   const dateId = useSelector(getDateId);
+  console.log(dateId);
+  console.log(eatenProducts);
   const dispatch = useDispatch();
   // const dispatch = useDispatch();
 
@@ -17,6 +19,7 @@ const DiaryProductsList = () => {
 
   const items = eatenProducts?.map(item => {
     const { id, weight, title, kcal } = item;
+    console.log(id)
     return (
       <li key={id} className={s.listItem}>
         <p className={s.productName}>{title}</p>
