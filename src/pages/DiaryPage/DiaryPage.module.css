@@ -43,6 +43,10 @@
     display: none;
   }
 
+  .diaryProductsListWrapper {
+    margin-bottom: 150px;
+  }
+
   .background {
     width: 100vw;
     height: 100vh;
@@ -61,7 +65,7 @@
     }
   }
   .bigWrapper {
-    margin-top: 292px;
+    margin-top: 180px;
   }
   .wrapper {
     width: 605px;
