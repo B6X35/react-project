@@ -19,7 +19,9 @@ function App() {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const token = useSelector(state => state.auth.token);
+  console.log(token)
   const isFetchCurrentUser = useSelector(state => state.auth.isFetchCurrentUser);
+  console.log(useSelector((state) => state.auth.user.id))
 
   useEffect(() => {
     token && dispatch(currentUser());

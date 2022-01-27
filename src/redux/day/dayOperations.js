@@ -21,3 +21,16 @@ export const addProductOperation = createAsyncThunk(
     }
   },
 );
+
+export const deleteProductOperation = createAsyncThunk(
+  'deleteProduct',
+  async ({ dayId, eatenProductId }, thunkApi) => {
+    try {
+      console.log({ dayId, eatenProductId })
+      const response = await deletDay(dayId, eatenProductId);
+      return response;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error);
+    }
+  },
+);

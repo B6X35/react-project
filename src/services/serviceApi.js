@@ -69,7 +69,7 @@ export const logoutUserApi = async user => {
 
 export const getUserApi = async token => {
   try {
-    setToken(token)
+    setToken(token);
     const { data } = await axios.get(path.USER, token);
     return data;
   } catch (error) {
@@ -86,9 +86,11 @@ export const postDayilyRate = async rate => {
   }
 };
 
-export const postDayilyRateUser = async (id, rate) => {
+export const postDayilyRateUser = async (rate, userId) => {
   try {
-    const { data } = await axios.post(path.DAILY_RATE + '/' + id, rate);
+    console.log(userId);
+    console.log(rate)
+    const { data } = await axios.post(path.DAILY_RATE + '/' + userId, rate);
     return data;
   } catch (error) {
     throw error.message;
@@ -113,9 +115,12 @@ export const postDay = async (date, productId, weight) => {
   }
 };
 
-export const deletDay = async dayId => {
+export const deletDay = async (dayId, eatenProductId) => {
   try {
-    const { data } = await axios.delete(path.DAY, dayId);
+    const day = { dayId: dayId, eatenProductId: eatenProductId }
+    console.log("api after >>>", day);
+    const { data } = await axios.delete(path.DAY, { data: day});
+    console.log("api before >>>", data)
     return data;
   } catch (error) {
     throw error.message;
