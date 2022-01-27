@@ -28,7 +28,6 @@ const NavAll = () => {
     {/* </li>*/}
   </ul>
   <BurgerCloseButton isActive={isActive} onClick={toggleModal} />
-        {/* <BurgerModal isActive={isActive} /> */}
 </>
   );
 };
