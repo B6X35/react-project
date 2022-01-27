@@ -5,15 +5,30 @@ const errorMessage = {
   email: '* Введен некорректный почтовый адресс.',
   password: '* Пароль должен состоять минимум из одной буквы, одной цифры и длиной в 6 символов.',
   required: '* Поле обязательно к заполнению.',
+  minHeight: '* Минимальное значение 100!',
+  maxHeight: '* Максимальное значение 250!',
+  minAge: '* Минимальное значение 18!',
+  maxAge: '* Максимальное значение 250!',
+  minWeight: '* Минимальное значение 20!',
+  maxWeight: '* Максимальное значение 500!',
 };
 
 const DiaryFormSchema = Yup.object().shape({
-  height: Yup.number().min(100, 'Too Short!').max(250, 'Too Long!').required(errorMessage.required),
-  age: Yup.number().min(18, 'Too Short!').max(100, 'Too Long!').required(errorMessage.required),
-  weight: Yup.number().min(20, 'Too Short!').max(500, 'Too Long!').required(errorMessage.required),
+  height: Yup.number()
+    .min(100, errorMessage.minHeight)
+    .max(250, errorMessage.maxHeight)
+    .required(errorMessage.required),
+  age: Yup.number()
+    .min(18, errorMessage.minAge)
+    .max(100, errorMessage.maxAge)
+    .required(errorMessage.required),
+  weight: Yup.number()
+    .min(20, errorMessage.minWeight)
+    .max(500, errorMessage.maxWeight)
+    .required(errorMessage.required),
   desiredWeight: Yup.number()
-    .min(20, 'Too Short!')
-    .max(500, 'Too Long!')
+    .min(20, errorMessage.minWeight)
+    .max(500, errorMessage.maxWeight)
     .required(errorMessage.required),
 });
 
