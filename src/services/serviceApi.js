@@ -1,4 +1,5 @@
 import axios from 'axios';
+import debounce from 'lodash';
 
 axios.defaults.baseURL = 'https://slimmom-backend.goit.global';
 
@@ -103,9 +104,9 @@ export const getProductApi = async product => {
   }
 };
 
-export const postDay = async day => {
+export const postDay = async (date, productId, weight) => {
   try {
-    const { data } = await axios.post(path.DAY, day);
+    const { data } = await axios.post(path.DAY, { date, productId, weight });
     return data;
   } catch (error) {
     throw error.message;
@@ -121,7 +122,7 @@ export const deletDay = async dayId => {
   }
 };
 
-export const postDayInfo = async date => {
+export const getDayInfo = async date => {
   try {
     const { data } = await axios.post(path.DAY + '/info', { date });
     return data;

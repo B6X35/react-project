@@ -12,7 +12,9 @@ const Input = ({
   onChange,
 }) => {
   const handleChangeInput = e => {
-    onChange(e.target.value);
+    if (typeof onChange === 'function') {
+      onChange(e.target.value);
+    }
   };
   return (
     <div className={s.wrapper}>
@@ -30,7 +32,7 @@ const Input = ({
         pattern={pattern}
         onChange={handleChangeInput}
         required
-        // autoComplete={false}
+        // autoComplete="off"
       />
     </div>
   );

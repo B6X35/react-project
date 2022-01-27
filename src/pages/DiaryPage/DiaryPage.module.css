@@ -1,10 +1,48 @@
+.visuallyHidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 767px) {
   .background {
     padding-top: 40px;
   }
+
+  .calendarWrap {
+    margin-top: 160px;
+    margin-bottom: 30px;
+  }
+  .addProductFormWrapper {
+    display: none;
+  }
+  .diaryProductsListWrapper {
+    margin-bottom: 60px;
+  }
+  .roundButtonwrapper {
+    display: block;
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .calendarWrap {
+    margin-bottom: 60px;
+  }
+  .addProductFormWrapper {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  .roundButtonwrapper {
+    display: none;
+  }
+
   .background {
     width: 100vw;
     height: 100vh;
@@ -38,7 +76,19 @@
   }
 
   .wrapper {
-    width: 382px;
+    width: auto;
+  }
+
+  .calendarWrap {
+    margin-bottom: 60px;
+  }
+
+  .addProductFormWrapper {
+    margin-bottom: 60px;
+  }
+
+  .roundButtonwrapper {
+    display: none;
   }
 
   .background {
