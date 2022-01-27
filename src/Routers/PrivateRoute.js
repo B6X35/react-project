@@ -10,7 +10,7 @@ const PrivateRoute = ({ path, exact, component, children }) => {
       {children}
     </Route>
   ) : (
-    <Redirect to="/main" />
+   <>{isFetchCurrentUser ? <Redirect to="/main" /> : <Redirect to="/login" />}</>
   );
 };
 
