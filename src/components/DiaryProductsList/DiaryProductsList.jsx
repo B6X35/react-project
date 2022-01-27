@@ -13,13 +13,12 @@ const DiaryProductsList = () => {
   console.log(dateId);
   console.log(eatenProducts);
   const dispatch = useDispatch();
-  // const dispatch = useDispatch();
 
   console.log(dateId);
 
   const items = eatenProducts?.map(item => {
     const { id, weight, title, kcal } = item;
-    console.log(id)
+    console.log(id);
     return (
       <li key={id} className={s.listItem}>
         <p className={s.productName}>{title}</p>
