@@ -16,7 +16,6 @@ export default function UserInfo() {
           ВЫХОД
         </button>
         <div className={s.userInfoHead} />
-        <BurgerCloseButton/>
       </div>
     </>
   );

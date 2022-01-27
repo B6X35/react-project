@@ -1,5 +1,6 @@
 import React from 'react';
 // import { useHistory, useLocation } from 'react-router';
+import Modal from '../Modal/Modal'
 import { useFormik } from 'formik';
 import s from './DailyCaloriesForm.module.css';
 import Button from '../SharedComponents/Button';
@@ -10,8 +11,11 @@ import {
 } from 'react-redux';
 import { getDailyRate } from '../../redux/dailyRate/dailyRateActions';
 
-const DailyCaloriesForm = () => {
+
+const DailyCaloriesForm = ({onModalOpen}) => {
   const dispatch = useDispatch();
+
+
   const formik = useFormik({
     initialValues: {
       height: '',
@@ -33,6 +37,7 @@ const DailyCaloriesForm = () => {
   });
 
   return (
+    <>
     <form className={s.form} onSubmit={formik.handleSubmit}>
       <div className={s.formWrapper}>
         <div className={s.inputWrapper}>
@@ -162,10 +167,11 @@ const DailyCaloriesForm = () => {
         </div>
       </div>
       <div className={s.btnWrp}>
-        <Button text="Похудеть" type="submit" />
+        <Button text="Похудеть" type="submit"/>
       </div>
     </form>
-  );
+    
+  </>);
 };
 
 export default DailyCaloriesForm;
