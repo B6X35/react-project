@@ -1,16 +1,69 @@
 .userInfoWrap {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .userInfoWrap {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    width: 114px;
-    right: 161px;
-    margin-top: 34px;
-  }
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 13px;
+  /* margin-right: 80px; */
+margin-top: 122px;
+  align-items: center;
+  background-color: transparent;
 
+
+  height: 40px;
+  width: 100%;
+  z-index: 1;
+}
+
+.userName {
+  font-family: 'GothamPro-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 0.93;
+  text-align: right;
+  letter-spacing: 0.04em;
+  color: #212121;
+  margin-right: 22px;
+}
+
+.logout {
+  border: none;
+  background-color: transparent;
+  border-left: 2px solid #e0e0e0;
+  cursor: pointer;
+  padding-left: 22px;
+  font-family: 'GothamPro-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 0.93;
+  letter-spacing: 0.04em;
+  color: #9b9faa;
+  margin-right: 13px;
+}
+.userInfoHead {
+    position: absolute;
+    width: 100%;
+    background: #eff1f3;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: -1;
+  }
+@media screen and (min-width: 768px) {
+
+  .userInfoWrap {
+    display: flex;
+    margin-left: auto;
+    margin-right: 90px;
+    margin-top: auto;
+    background-color: transparent;
+  }
+  .userInfoHead {
+  display: none;
+  }
   .userName {
     font-family: 'GothamPro-Bold';
     font-style: normal;
@@ -25,7 +78,6 @@
 
   .logout {
     border: none;
-    background-color: #fff;
     border-left: 2px solid #e0e0e0;
     cursor: pointer;
     padding-left: 22px;
@@ -36,12 +88,15 @@
     line-height: 0.93;
     letter-spacing: 0.04em;
     color: #9b9faa;
+    margin-right: 50px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .userInfoWrap {
-    right: 115px;
-    margin-top: 121px;
+@media screen and (min-width: 1024px) {
+  .logout {
+    border: none;
+    /* background-color: #fff; */
+    background-color: transparent;
+    border-left: 2px solid #e0e0e0;
   }
 }

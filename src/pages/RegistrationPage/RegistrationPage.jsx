@@ -6,12 +6,10 @@ const RegistrationPage = () => {
   return (
     <div className={s.background}>
       <Container>
-        <div className={s.wrapper}>
-          <section className={s.section}>
-            <h1 className={s.title}>Регистрация</h1>
-            <RegistrationForm />
-          </section>
-        </div>
+        <section className={s.wrapper}>
+          <h1 className={s.title}>Регистрация</h1>
+          <RegistrationForm />
+        </section>
       </Container>
     </div>
   );

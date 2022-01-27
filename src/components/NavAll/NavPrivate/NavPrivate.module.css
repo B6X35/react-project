@@ -23,6 +23,7 @@
   text-transform: uppercase;
   color: #212121;
   cursor: pointer;
+  margin-left: 22px;
 }
 
 .calculator {
@@ -36,6 +37,21 @@
   margin-left: 14px;
   color: #212121;
   cursor: pointer;
+  margin-left: 14px;
+}
+
+.diary:hover,
+.diary:focus,
+.calculator:hover,
+.calculator:focus {
+  color: #9b9faa;
+}
+.navPrivateWrap {
+  display: none;
+}
+
+.navPrivateWrap {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -44,7 +60,10 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+  .navPrivateWrap {
+    display: flex;
+  }
   .container {
     position: absolute;
     right: auto;

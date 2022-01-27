@@ -1,0 +1,21 @@
+.NavigateAll {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+
+.NavPrivate {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 22px;
+    margin-right: 120px;
+}
+.NavPublic {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 22px;
+}
+}

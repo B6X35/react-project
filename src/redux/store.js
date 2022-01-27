@@ -12,6 +12,8 @@ import {
 import storage from 'redux-persist/lib/storage';
 import authReducer from './auth/authSlice';
 import dailyRateReducers from './dailyRate/dailyRateSlice';
+import dayReducer from './day/daySlice';
+import productReducer from './product/productReducer';
 
 const authConfigPersist = {
   key: 'token',
@@ -30,6 +32,8 @@ const middleware = getDefaultMiddleware =>
 const rootReducer = combineReducers({
   auth: persistReducer(authConfigPersist, authReducer),
   dailyRateReducers,
+  day: dayReducer,
+  productSearch: productReducer,
 });
 
 const store = configureStore({
