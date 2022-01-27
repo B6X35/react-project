@@ -35,13 +35,14 @@ const daySlice = createSlice({
       error: null,
       isLoading: true,
     }),
-    [addProductOperation.fulfilled]: (state, { payload }) => ({
-      ...state,
-      isLoading: false,
-      console: console.log('payload >>', payload),
+    [addProductOperation.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+      state.dayInfo.eatenProducts = payload.day.eatenProducts;
+      // ...state,
+      // isLoading: false,
       // dayInfo:payload.dayInfo,
-      eatenProducts: payload.eatenProducts,
-    }),
+      // eatenProducts: payload.eatenProducts,
+    },
     [deleteProductOperation.rejected]: (state, { payload }) => ({
       ...state,
       error: payload,
@@ -52,12 +53,11 @@ const daySlice = createSlice({
       error: null,
       isLoading: true,
     }),
-    [deleteProductOperation.fulfilled]: (state, { payload }) => ({
-      ...state,
-      isLoading: false,
-      eatenProducts: payload.eatenProducts,
-    }),
-  },
+    [deleteProductOperation.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+      state.dayInfo.eatenProducts = null;
+    },
+  }
 });
 
 export default daySlice.reducer;
