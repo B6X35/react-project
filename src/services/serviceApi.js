@@ -11,7 +11,7 @@ const path = {
   USER: './user',
   DAILY_RATE: './daily-rate',
   PRODUCT: '/product?search=',
-  DAY: './day',
+  DAY: '/day',
   GET_INFO_DAY: './day/info',
 };
 const headers = {

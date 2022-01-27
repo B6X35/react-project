@@ -25,7 +25,7 @@ const productSlice = createSlice({
       products: payload,
     }),
   },
-  name: 'addProduct',
+  // name: 'addProduct',
 });
 
 export default productSlice.reducer;
