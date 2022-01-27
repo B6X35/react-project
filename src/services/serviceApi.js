@@ -1,4 +1,5 @@
 import axios from 'axios';
+import debounce from 'lodash';
 
 axios.defaults.baseURL = 'https://slimmom-backend.goit.global';
 
@@ -9,7 +10,7 @@ const path = {
   REFRESH: '/auth/refresh',
   USER: './user',
   DAILY_RATE: './daily-rate',
-  PRODUCT: './product',
+  PRODUCT: '/product?search=',
   DAY: './day',
   GET_INFO_DAY: './day/info',
 };
@@ -49,6 +50,7 @@ export const loginUserApi = async user => {
   try {
     const { data } = await axios.post(path.LOGIN, user);
     setToken(data.refreshToken);
+    // setToken(data.accessToken);
     return data;
   } catch (error) {
     throw error.message;
@@ -65,10 +67,10 @@ export const logoutUserApi = async user => {
   }
 };
 
-export const getUserApi = async id => {
+export const getUserApi = async token => {
   try {
-    const { data } = await axios.get(path.USER, id);
-    console.log(data);
+    setToken(token);
+    const { data } = await axios.get(path.USER, token);
     return data;
   } catch (error) {
     throw error.message;
@@ -84,9 +86,11 @@ export const postDayilyRate = async rate => {
   }
 };
 
-export const postDayilyRateUser = async (id, rate) => {
+export const postDayilyRateUser = async (rate, userId) => {
   try {
-    const { data } = await axios.post(path.DAILY_RATE + '/' + id, rate);
+    console.log(userId);
+    console.log(rate)
+    const { data } = await axios.post(path.DAILY_RATE + '/' + userId, rate);
     return data;
   } catch (error) {
     throw error.message;
@@ -95,34 +99,37 @@ export const postDayilyRateUser = async (id, rate) => {
 
 export const getProductApi = async product => {
   try {
-    const { data } = await axios.get(path.PRODUCT, product);
+    const { data } = await axios.get(path.PRODUCT + product);
     return data;
   } catch (error) {
     throw error.message;
   }
 };
 
-export const postDay = async day => {
+export const postDay = async (date, productId, weight) => {
   try {
-    const { data } = await axios.post(path.DAY, day);
+    const { data } = await axios.post(path.DAY, { date, productId, weight });
     return data;
   } catch (error) {
     throw error.message;
   }
 };
 
-export const deletDay = async dayId => {
+export const deletDay = async (dayId, eatenProductId) => {
   try {
-    const { data } = await axios.delete(path.DAY, dayId);
+    const day = { dayId: dayId, eatenProductId: eatenProductId }
+    console.log("api after >>>", day);
+    const { data } = await axios.delete(path.DAY, { data: day});
+    console.log("api before >>>", data)
     return data;
   } catch (error) {
     throw error.message;
   }
 };
 
-export const postDayInfo = async date => {
+export const getDayInfo = async date => {
   try {
-    const { data } = await axios.post(path.DAY + '/info', date);
+    const { data } = await axios.post(path.DAY + '/info', { date });
     return data;
   } catch (error) {
     throw error.message;

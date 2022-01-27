@@ -9,7 +9,13 @@ const Input = ({
   placeholder = 'Hello world',
   listId = 'somelistId',
   pattern,
+  onChange,
 }) => {
+  const handleChangeInput = e => {
+    if (typeof onChange === 'function') {
+      onChange(e.target.value);
+    }
+  };
   return (
     <div className={s.wrapper}>
       <label className={s.label} htmlFor={id}>
@@ -24,7 +30,9 @@ const Input = ({
         // placeholder={placeholder}
         value={value}
         pattern={pattern}
+        onChange={handleChangeInput}
         required
+        // autoComplete="off"
       />
     </div>
   );

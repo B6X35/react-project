@@ -1,9 +1,14 @@
 @media screen and (max-width: 767px) {
+  .wrapper {
+    margin-top: 110px;
+    width: 100%;
+  }
 }
 @media screen and (min-width: 768px) {
   .background {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
     background-repeat: no-repeat;
     background-size: 740px auto, 531px auto, 208px auto, auto 100vh;
@@ -25,7 +30,7 @@
   }
 
   .wrapper {
-    padding-top: 100px;
+    margin-top: 100px;
     width: 605px;
   }
 }
@@ -33,6 +38,7 @@
   .background {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
     background-repeat: no-repeat;
     background-size: 773px auto, 746px auto, 286px auto, auto 100vh;

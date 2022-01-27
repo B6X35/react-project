@@ -59,7 +59,6 @@ const authSlice = createSlice({
             state.todaySummary = {
                 userId: payload.userId,
             };
-            console.log(payload)
           },
           [loginUser.rejected]: (state, { payload }) => {
             state.isLoading = false;
@@ -74,7 +73,7 @@ const authSlice = createSlice({
             state.isLoading = false;
             state.isFetchCurrentUser = false
             state.isLoginUser = true;
-            state.currentUser = payload;
+            state.user = payload;
           },
           [currentUser.rejected]: (state, { payload }) => {
             state.isLoading = false;

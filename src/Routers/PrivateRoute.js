@@ -5,6 +5,7 @@ import { getIsAuth } from '../redux/auth/authSelectors';
 
 const PrivateRoute = ({ path, exact, component, children }) => {
   const isLoginUser = useSelector(getIsAuth);
+  const isFetchCurrentUser = useSelector(state => state.auth.isFetchCurrentUser);
   return isLoginUser ? (
     <Route path={path} exact={exact}>
       {children}

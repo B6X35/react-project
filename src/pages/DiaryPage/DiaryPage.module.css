@@ -1,14 +1,59 @@
+.visuallyHidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 767px) {
   .background {
     padding-top: 40px;
   }
+
+  .calendarWrap {
+    margin-top: 160px;
+    margin-bottom: 30px;
+  }
+  .addProductFormWrapper {
+    display: none;
+  }
+  .diaryProductsListWrapper {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+  }
+  .roundButtonwrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .calendarWrap {
+    margin-bottom: 60px;
+  }
+  .addProductFormWrapper {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  .roundButtonwrapper {
+    display: none;
+  }
+
+  .diaryProductsListWrapper {
+    margin-bottom: 150px;
+  }
+
   .background {
     width: 100vw;
     height: 100vh;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-repeat: no-repeat;
     background-size: 531px auto, 100vw auto;
     background-position: right -233px bottom -169px, right bottom;
@@ -22,17 +67,41 @@
         url('../../images/bg-images/tablet/DiaryPage/tablet-bg-grey.png');
     }
   }
-
+  .bigWrapper {
+    margin-top: 180px;
+  }
   .wrapper {
-    padding-top: 191px;
     width: 605px;
   }
 }
 @media screen and (min-width: 1024px) {
+  .bigWrapper {
+    margin-top: 292px;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+
+  .wrapper {
+    width: auto;
+  }
+
+  .calendarWrap {
+    margin-bottom: 60px;
+  }
+
+  .addProductFormWrapper {
+    margin-bottom: 60px;
+  }
+
+  .roundButtonwrapper {
+    display: none;
+  }
+
   .background {
     width: 100vw;
     height: 100vh;
-    /* overflow: hidden; */
+    overflow: hidden;
     background-repeat: no-repeat;
     background-size: 740px auto, auto 100vh;
     background-position: right -235px bottom -27px, right bottom;
@@ -40,15 +109,11 @@
     background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs.png'),
       url('../../images/bg-images/desktop/DiaryPage/desktop-bg-grey.png');
   }
+
   @media (-webkit-min-device-pixel-ratio: 2) {
     .background {
       background-image: url('../../images/bg-images/desktop/DiaryPage/desktop-bg-leafs@2x.png'),
         url('../../images/bg-images/desktop/DiaryPage/desktop-bg-grey.png');
     }
-  }
-
-  .wrapper {
-    padding-top: 213px;
-    width: 382px;
   }
 }

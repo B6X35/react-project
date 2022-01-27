@@ -5,13 +5,12 @@ import s from './CalculatorCalorieForm.module.css';
 import Button from '../SharedComponents/Button';
 import { DiaryFormSchema } from '../../utils/errorMessageSchema';
 import { useDispatch } from 'react-redux';
-import { getDailyRate } from '../../redux/dailyRate/dailyRateActions';
+import { getDailyRateUser } from '../../redux/dailyRate/dailyRateActions';
 
 const CalculatorCalorieForm = () => {
   const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
-      userId: '',
       height: '',
       age: '',
       weight: '',
@@ -24,9 +23,10 @@ const CalculatorCalorieForm = () => {
       values.height = Number(values.height);
       values.desiredWeight = Number(values.desiredWeight);
       values.bloodType = Number(values.bloodType);
-      const formData = JSON.stringify(values);
-
-      dispatch(getDailyRate(formData));
+      // const formData = JSON.stringify(values);
+      // dispatch(getDailyRate(values));
+      console.log(dispatch(getDailyRateUser(values)));
+      dispatch(getDailyRateUser(values));
     },
     validationSchema: DiaryFormSchema,
   });

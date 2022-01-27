@@ -11,7 +11,6 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
-
   color: #fc842d;
 }
 
@@ -82,13 +81,30 @@
 /* =================== */
 
 @media screen and (max-width: 767px) {
-  padding-top: 40px;
+  .wrapper {
+    padding-top: 120px;
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .wrapper {
+    padding-top: 191px;
+    width: 605px;
+  }
+
+  .title {
+    text-align: left;
+  }
+
   .background {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
     background-repeat: no-repeat;
     background-size: 740px auto, 740px auto, 291px auto, 553px auto;
@@ -108,16 +124,12 @@
         url('../../images/bg-images/tablet/LoginRegistrationPage/tablet-bg-img-grey@2x.png');
     }
   }
-
-  .wrapper {
-    padding-top: 191px;
-    width: 605px;
-  }
 }
 @media screen and (min-width: 1024px) {
   .background {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
     background-repeat: no-repeat;
     background-size: 773px auto, 756px auto, 286px auto, auto 100vh;

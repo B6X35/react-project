@@ -6,12 +6,10 @@ const LoginPage = () => {
   return (
     <div className={s.background}>
       <Container>
-        <div className={s.wrapper}>
-          <section className={s.section}>
-            <h1 className={s.title}>Вход</h1>
-            <LoginForm />
-          </section>
-        </div>
+        <section className={s.wrapper}>
+          <h1 className={s.title}>Вход</h1>
+          <LoginForm />
+        </section>
       </Container>
     </div>
   );

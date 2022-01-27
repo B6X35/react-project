@@ -12,28 +12,28 @@
 
 @media screen and (min-width: 768px) {
   .logoMobile {
-  display: block;
-  width: 47px;
-  height: 44px;
-  cursor: pointer;
-}
+    display: block;
+    width: 47px;
+    height: 44px;
+    cursor: pointer;
+  }
 
-.logoText {
-  display: inline;
-  margin-left: 10px;
-  font-family: "GothamPro-Light";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 1.14;
-  letter-spacing: 0.08em;
-  color: #212121;
-  border: none;
-}
+  .logoText {
+    display: inline;
+    margin-left: 10px;
+    font-family: 'GothamPro-Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.14;
+    letter-spacing: 0.08em;
+    color: #212121;
+    border: none;
+  }
 
-.logoTextMom {
-  color: #FC842D;
-} 
+  .logoTextMom {
+    color: #fc842d;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -43,26 +43,25 @@
     width: 66px;
   }
 
-.logoText {
-
-  /* margin-left: 148px;
+  .logoText {
+    /* margin-left: 148px;
   margin-top: 125px; */
-  font-family: "GothamPro-Light";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 1.14;
-  letter-spacing: 0.08em;
-  color: #212121;
-  border-right:  2px solid #E0E0E0;
-  padding-right: 22px;
-  margin-left: -15px;
-}
+    font-family: 'GothamPro-Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.14;
+    letter-spacing: 0.08em;
+    color: #212121;
+    border-right: 2px solid #e0e0e0;
+    padding-right: 22px;
+    margin-left: -15px;
+  }
 
-.logoTextMom {
-  color: #FC842D;
+  .logoTextMom {
+    color: #fc842d;
+  }
+  .logoMobile {
+    display: none;
+  }
 }
-.logoMobile {
-  display: none;
-}
-}  

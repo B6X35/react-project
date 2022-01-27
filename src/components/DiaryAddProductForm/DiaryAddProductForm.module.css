@@ -8,6 +8,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-left: 45px;
   }
 
   .wrapper {
@@ -38,6 +39,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-left: 60px;
   }
 
   .wrapper {
