@@ -18,7 +18,7 @@ const RightSideBar = ({
   percentsOfDailyRate = 0,
   notAllowedProducts = ['Здесь будет отображаться Ваш рацион'],
 }) => {
-  notAllowedProducts = useSelector(state => state?.auth?.user?.userData?.notAllowedProducts) || [
+  notAllowedProducts = useSelector(state => state?.dailyRateReducers?.notAllowedProducts) || [
     'Здесь будет отображаться Ваш рацион',
   ];
 
