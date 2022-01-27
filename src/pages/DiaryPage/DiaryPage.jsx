@@ -33,6 +33,7 @@ const initialValue = '';
 const DiaryPage = () => {
   const dayInfo = useSelector(getDayInfoSelector);
   const daySummary = useSelector(getProductsDaySummary);
+  console.log(daySummary)
   const products = useSelector(getProductsSelector);
   const [selectedDate, setDate] = useState(currentDate);
   const [filter, setFilter] = useState(initialValue);
