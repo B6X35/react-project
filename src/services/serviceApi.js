@@ -117,7 +117,10 @@ export const postDay = async (date, productId, weight) => {
 
 export const deletDay = async (dayId, eatenProductId) => {
   try {
-    const { data } = await axios.delete(path.DAY, { dayId, eatenProductId });
+    const day = { dayId: dayId, eatenProductId: eatenProductId }
+    console.log("api after >>>", day);
+    const { data } = await axios.delete(path.DAY, { data: day});
+    console.log("api before >>>", data)
     return data;
   } catch (error) {
     throw error.message;
