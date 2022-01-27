@@ -5,7 +5,7 @@ const daySlice = createSlice({
   name: 'day',
   initialState: {
     dayInfo: null,
-    eatenProducts: null,
+    eatenProducts: [],
     isLoading: false,
     error: null,
   },
@@ -37,7 +37,7 @@ const daySlice = createSlice({
     }),
     [addProductOperation.fulfilled]: (state, { payload }) => {
       state.isLoading = false;
-      state.dayInfo.eatenProducts = payload.dayInfo;
+      state.dayInfo.eatenProducts = payload.day.eatenProducts;
       // eatenProducts: payload.eatenProducts,
     },
     [deleteProductOperation.rejected]: (state, { payload }) => ({
@@ -50,11 +50,10 @@ const daySlice = createSlice({
       error: null,
       isLoading: true,
     }),
-    [deleteProductOperation.fulfilled]: (state, { payload }) => ({
-      ...state,
-      isLoading: false,
-      eatenProducts: payload.eatenProducts,
-    }),
+    [deleteProductOperation.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+      state.dayInfo.eatenProducts = null;
+    },
   },
 });
 

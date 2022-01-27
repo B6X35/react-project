@@ -3,6 +3,7 @@ import { Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 
+import Modal from './components/Modal'
 import Header from './components/Header';
 import PublicRoute from './Routers/PublicRoute';
 import PrivateRoute from './Routers/PrivateRoute';
@@ -16,6 +17,7 @@ import DiaryPage from './pages/DiaryPage';
 import CalculatorPage from './pages/CalculatorPage';
 
 function App() {
+
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const token = useSelector(state => state.auth.token);

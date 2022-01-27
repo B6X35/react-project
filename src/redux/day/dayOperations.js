@@ -14,6 +14,8 @@ export const addProductOperation = createAsyncThunk(
   'addProduct',
   async ({ data, productId, weight }, thunkApi) => {
     try {
+      const state = thunkApi.getState();
+      console.log('addProdu >>', state.day)
       const products = await postDay(data, productId, weight);
       return products;
     } catch (error) {

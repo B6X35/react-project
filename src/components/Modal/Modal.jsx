@@ -11,7 +11,7 @@ import DailyCalorieIntake from '../DailyCalorieIntake/DailyCalorieIntake';
 
 const ModalRootElement = document.querySelector('#modal-root');
 const Modal = props => {
-  const { marker, open, onClose } = props;
+  const { isOpen, onClose } = props;
 
   const element = useMemo(() => document.createElement('div'), []);
   useEffect(() => {
@@ -21,7 +21,7 @@ const Modal = props => {
     };
   }, []);
 
-  if (open) {
+  if (isOpen) {
     return createPortal(
       <div className={styles.box} onClick={onClose}>
         <div className={styles.modal}>
