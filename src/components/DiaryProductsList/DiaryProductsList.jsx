@@ -13,7 +13,6 @@ const DiaryProductsList = () => {
   console.log(dateId);
   console.log(eatenProducts);
   const dispatch = useDispatch();
-  // const dispatch = useDispatch();
 
   console.log(dateId);
 

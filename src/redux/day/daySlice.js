@@ -5,7 +5,7 @@ const daySlice = createSlice({
   name: 'day',
   initialState: {
     dayInfo: null,
-    eatenProducts: null,
+    eatenProducts: [],
     isLoading: false,
     error: null,
   },
@@ -38,6 +38,7 @@ const daySlice = createSlice({
     [addProductOperation.fulfilled]: (state, { payload }) => ({
       ...state,
       isLoading: false,
+      console: console.log('payload >>', payload),
       // dayInfo:payload.dayInfo,
       eatenProducts: payload.eatenProducts,
     }),
