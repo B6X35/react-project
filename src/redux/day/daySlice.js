@@ -38,8 +38,8 @@ const daySlice = createSlice({
     [addProductOperation.fulfilled]: (state, { payload }) => ({
       ...state,
       isLoading: false,
-      // dayInfo:payload.dayInfo,
-      eatenProducts: payload.eatenProducts,
+      dayInfo: payload.dayInfo,
+      // eatenProducts: payload.eatenProducts,
     }),
     [deleteProductOperation.rejected]: (state, { payload }) => ({
       ...state,
