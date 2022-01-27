@@ -1,3 +1,5 @@
+import { useSelector } from 'react-redux';
+
 import s from './RightSideBar.module.css';
 
 const today = new Date();
@@ -16,6 +18,10 @@ const RightSideBar = ({
   percentsOfDailyRate = 0,
   notAllowedProducts = ['Здесь будет отображаться Ваш рацион'],
 }) => {
+  notAllowedProducts = useSelector(state => state?.auth?.user?.userData?.notAllowedProducts) || [
+    'Здесь будет отображаться Ваш рацион',
+  ];
+
   return (
     <div className={s.wrapper}>
       <section className={s.section}>

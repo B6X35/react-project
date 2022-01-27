@@ -28,13 +28,14 @@ const currentDate =
 //props DiaryAddProductForm={ arr = [], onClick }
 //props DiaryDateCalendar={ onClick }
 //props RightSideBar=  {dateOn, kcalLeft, kcalConsumed, dailyRate, percentsOfDailyRate, notAllowedProducts,
+const initialValue = '';
 
 const DiaryPage = () => {
   const dayInfo = useSelector(getDayInfoSelector);
   const daySummary = useSelector(getProductsDaySummary);
   const products = useSelector(getProductsSelector);
   const [selectedDate, setDate] = useState(currentDate);
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState(initialValue);
 
   const dispatch = useDispatch();
 
@@ -46,7 +47,7 @@ const DiaryPage = () => {
       '-' +
       selectedDate.getDate().toString().padStart(2, '0');
     setDate(selectedDate);
-    setFilter('');
+    setFilter(initialValue);
   };
 
   // const addProduct = product => {
@@ -66,6 +67,13 @@ const DiaryPage = () => {
   function transformDate(date) {
     const newDate = date.slice(-2) + '.' + date.slice(5, 7) + '.' + date.slice(0, 4);
     return newDate;
+  }
+
+  function transformNumber(number) {
+    if (typeof number === 'number') {
+      return Math.round(number.toFixed(2) * 100) / 100;
+    }
+    return 0;
   }
 
   return (
@@ -93,10 +101,10 @@ const DiaryPage = () => {
           </div>
           <RightSideBar
             dateOn={transformDate(selectedDate)}
-            dailyRate={Math.round(daySummary?.dailyRate.toFixed(2) * 100) / 100}
-            kcalConsumed={Math.round(daySummary?.kcalConsumed.toFixed(2) * 100) / 100}
-            kcalLeft={Math.round(daySummary?.kcalLeft.toFixed(2) * 100) / 100}
-            percentsOfDailyRate={Math.round(daySummary?.percentsOfDailyRate.toFixed(2) * 100) / 100}
+            dailyRate={transformNumber(daySummary?.dailyRate)}
+            kcalConsumed={transformNumber(daySummary?.kcalConsumed)}
+            kcalLeft={transformNumber(daySummary?.kcalLeft)}
+            percentsOfDailyRate={transformNumber(daySummary?.percentsOfDailyRate)}
           />
         </div>
       </Container>
