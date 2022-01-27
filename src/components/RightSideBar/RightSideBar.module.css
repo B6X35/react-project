@@ -39,14 +39,14 @@
 @media screen and (min-width: 768px) {
   .wrapper {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
   .section {
     font-size: 14px;
     line-height: 1.21;
     letter-spacing: 0.04;
     color: #9b9faa;
-    max-width: 280px;
+    width: 280px;
   }
   .section:not(:last-child) {
     padding-right: 65px;
