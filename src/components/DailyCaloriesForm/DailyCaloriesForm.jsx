@@ -27,7 +27,6 @@ const DailyCaloriesForm = () => {
       values.desiredWeight = Number(values.desiredWeight);
       values.bloodType = Number(values.bloodType);
       const formData = JSON.stringify(values);
-      console.log(dispatch(getDailyRate(formData)))
       dispatch(getDailyRate(formData));
     },
     validationSchema: DiaryFormSchema,

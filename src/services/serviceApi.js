@@ -86,9 +86,11 @@ export const postDayilyRate = async rate => {
   }
 };
 
-export const postDayilyRateUser = async (id, rate) => {
+export const postDayilyRateUser = async (rate, userId) => {
   try {
-    const { data } = await axios.post(path.DAILY_RATE + '/' + id, rate);
+    console.log(userId);
+    console.log(rate)
+    const { data } = await axios.post(path.DAILY_RATE + '/' + userId, rate);
     return data;
   } catch (error) {
     throw error.message;
