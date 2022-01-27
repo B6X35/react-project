@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getDayInfoOperation, addProductOperation } from './dayOperations';
+import { getDayInfoOperation, addProductOperation, deleteProductOperation } from './dayOperations';
 
 const daySlice = createSlice({
   name: 'day',
@@ -36,6 +36,22 @@ const daySlice = createSlice({
       isLoading: true,
     }),
     [addProductOperation.fulfilled]: (state, { payload }) => ({
+      ...state,
+      isLoading: false,
+      // dayInfo:payload.dayInfo,
+      eatenProducts: payload.eatenProducts,
+    }),
+    [deleteProductOperation.rejected]: (state, { payload }) => ({
+      ...state,
+      error: payload,
+      isLoading: false,
+    }),
+    [deleteProductOperation.pending]: state => ({
+      ...state,
+      error: null,
+      isLoading: true,
+    }),
+    [deleteProductOperation.fulfilled]: (state, { payload }) => ({
       ...state,
       isLoading: false,
       eatenProducts: payload.eatenProducts,

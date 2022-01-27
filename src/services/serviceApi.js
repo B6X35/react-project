@@ -69,7 +69,7 @@ export const logoutUserApi = async user => {
 
 export const getUserApi = async token => {
   try {
-    setToken(token)
+    setToken(token);
     const { data } = await axios.get(path.USER, token);
     return data;
   } catch (error) {
@@ -113,9 +113,9 @@ export const postDay = async (date, productId, weight) => {
   }
 };
 
-export const deletDay = async dayId => {
+export const deletDay = async (dayId, eatenProductId) => {
   try {
-    const { data } = await axios.delete(path.DAY, dayId);
+    const { data } = await axios.delete(path.DAY, { dayId, eatenProductId });
     return data;
   } catch (error) {
     throw error.message;
