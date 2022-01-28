@@ -27,7 +27,7 @@ const NavAll = () => {
   : (  <NavPublic />) }
     {/* </li>*/}
   </ul>
-  <BurgerCloseButton isActive={isActive} onClick={toggleModal} />
+  {isLogin && <BurgerCloseButton isActive={isActive} onClick={toggleModal} />}
 </>
   );
 };
