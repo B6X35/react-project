@@ -3,7 +3,7 @@ import { Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 
-import Modal from './components/Modal'
+import Modal from './components/Modal';
 import Header from './components/Header';
 import PublicRoute from './Routers/PublicRoute';
 import PrivateRoute from './Routers/PrivateRoute';
@@ -17,13 +17,12 @@ import DiaryPage from './pages/DiaryPage';
 import CalculatorPage from './pages/CalculatorPage';
 
 function App() {
-
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const token = useSelector(state => state.auth.token);
-  console.log(token)
+  console.log(token);
   const isFetchCurrentUser = useSelector(state => state.auth.isFetchCurrentUser);
-  console.log(useSelector((state) => state.auth.user.id))
+  // console.log(useSelector((state) => state.auth.user.id))
 
   useEffect(() => {
     token && dispatch(currentUser());

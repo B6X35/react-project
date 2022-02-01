@@ -24,6 +24,7 @@ const dailyRateSlice = createSlice({
     }),
     [getDailyRate.fulfilled]: (state, { payload }) => ({
       ...state,
+      // auth.user.userData.dailyRate:payload.dailyRate,
       isLoading: false,
       dailyRate: payload.dailyRate,
       notAllowedProducts: payload.notAllowedProducts,
