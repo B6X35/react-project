@@ -23,7 +23,7 @@ const currentDate =
   '-' +
   (today.getMonth() + 1).toString().padStart(2, '0') +
   '-' +
-  today.getDate();
+  today.getDate().toString().padStart(2, '0');
 
 //props DiaryAddProductForm={ arr = [], onClick }
 //props DiaryDateCalendar={ onClick }
@@ -33,7 +33,7 @@ const initialValue = '';
 const DiaryPage = () => {
   const dayInfo = useSelector(getDayInfoSelector);
   const daySummary = useSelector(getProductsDaySummary);
-  console.log(daySummary)
+  console.log(daySummary);
   const products = useSelector(getProductsSelector);
   const [selectedDate, setDate] = useState(currentDate);
   const [filter, setFilter] = useState(initialValue);

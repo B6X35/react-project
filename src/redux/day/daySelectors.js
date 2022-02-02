@@ -1,7 +1,8 @@
-export const getDayInfoSelector = state => state.day.dayInfo;
-export const getProductsDaySummary = state => state?.day?.dayInfo?.daySummary;
-export const getEatenProducts = state => state?.day?.dayInfo?.eatenProducts;
+export const getDayInfoSelector = state => state.day.dayInfo; //////??????????????????
+export const getProductsDaySummary = state => state?.day?.daySummary;
+export const getEatenProducts = state => state?.day?.eatenProducts;
 
-export const getDateId = state => state?.day?.dayInfo?.id;
+export const getDateId = state => state?.day?.daySummary?.dateId;
+// export const getDateId = state => state?.auth?.user?.userId;
 
 // export const getDateId = state => console.dir(state);

@@ -2,11 +2,23 @@ import { createSlice } from '@reduxjs/toolkit';
 import { registerUser, loginUser, logoutUser, currentUser } from './authOperation';
 
 const initialState = {
-  user: null,
-  todaySummary: null,
-  currentUser: [],
-  sid: null,
-  token: null,
+  user: {
+    email: null,
+    username: null,
+    userId: null,
+    userData: {
+      weight: null,
+      height: null,
+      age: null,
+      bloodType: null,
+      desiredWeight: null,
+    },
+    tokens: {
+      accessToken: null,
+      refreshToken: null,
+      sid: null,
+    },
+  },
   isLoginUser: false,
   isFetchCurrentUser: false,
   isLoading: false,
@@ -24,14 +36,10 @@ const authSlice = createSlice({
     [registerUser.fulfilled]: (state, { payload }) => {
       state.isLoading = false;
       state.isLoginUser = true;
-      state.token = payload.refreshToken;
-      state.sid = payload.sid;
       state.user = {
         email: payload.user.email,
         username: payload.user.username,
-      };
-      state.todaySummary = {
-        userId: payload.userId,
+        userId: payload.id,
       };
     },
     [registerUser.rejected]: (state, { payload }) => {
@@ -42,17 +50,27 @@ const authSlice = createSlice({
       state.isLoading = true;
       state.error = null;
     },
-    [loginUser.fulfilled]: (state, { payload }) => {
-      state.isLoading = false;
-      state.isLoginUser = true;
-      state.token = payload.refreshToken;
-      state.sid = payload.sid;
-      state.user = {
-        ...payload.user,
-        userData: { ...payload.user.userData },
-      };
-      state.todaySummary = { ...payload.todaySummary };
-    },
+    [loginUser.fulfilled]: (state, { payload }) => ({
+      user: {
+        username: payload.user.username,
+        email: payload.user.email,
+        userId: payload.user.id,
+        userData: {
+          weight: payload.user.userData.weight,
+          height: payload.user.userData.height,
+          age: payload.user.userData.age,
+          bloodType: payload.user.userData.bloodType,
+          desiredWeight: payload.user.userData.desiredWeight,
+        },
+        tokens: {
+          ccessToken: payload.accessToken,
+          refreshToken: payload.refreshToken,
+          sid: payload.sid,
+        },
+      },
+      isLoading: false,
+      isLoginUser: true,
+    }),
     [loginUser.rejected]: (state, { payload }) => {
       state.isLoading = false;
       state.error = payload;
@@ -77,12 +95,12 @@ const authSlice = createSlice({
       state.isLoading = true;
       state.error = null;
     },
-    [logoutUser.fulfilled]: state => {
-      state.isLoading = false;
-      state.token = null;
-      state.isLoginUser = false;
-      state.user = null;
-    },
+    [logoutUser.fulfilled]: state => ({
+      ...initialState,
+      isLoading: false,
+      isLoginUser: false,
+      // state = null;
+    }),
     [logoutUser.rejected]: state => state,
   },
 });

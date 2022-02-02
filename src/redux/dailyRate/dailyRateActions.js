@@ -14,7 +14,7 @@ export const getDailyRate = createAsyncThunk(
 );
 
 export const getDailyRateUser = createAsyncThunk(
-  'getDailyRate',
+  'getDailyRateUser',
   async (userCharacteristics, thunkApi) => {
     try {
       const state = thunkApi.getState();

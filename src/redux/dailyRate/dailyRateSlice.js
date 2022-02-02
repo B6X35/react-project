@@ -1,13 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getDailyRate, getDailyRateUser } from './dailyRateActions';
+import { logoutUser } from '../auth/authOperation';
 
 const dailyRateSlice = createSlice({
   name: 'dailyRate',
   initialState: {
     dailyRate: null,
-    summaries: [],
     notAllowedProducts: [],
-    dayInfo: null,
     isLoading: false,
     error: null,
   },
@@ -24,7 +23,6 @@ const dailyRateSlice = createSlice({
     }),
     [getDailyRate.fulfilled]: (state, { payload }) => ({
       ...state,
-      // auth.user.userData.dailyRate:payload.dailyRate,
       isLoading: false,
       dailyRate: payload.dailyRate,
       notAllowedProducts: payload.notAllowedProducts,
@@ -44,6 +42,12 @@ const dailyRateSlice = createSlice({
       isLoading: false,
       dailyRate: payload.dailyRate,
       notAllowedProducts: payload.notAllowedProducts,
+    }),
+    [logoutUser.fulfilled]: () => ({
+      dailyRate: null,
+      notAllowedProducts: [],
+      isLoading: false,
+      error: null,
     }),
   },
 });

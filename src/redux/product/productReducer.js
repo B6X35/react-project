@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getProduct } from './productOperation';
+import { logoutUser } from '../auth/authOperation';
 
 const productSlice = createSlice({
   name: 'productSearch',
@@ -23,6 +24,11 @@ const productSlice = createSlice({
       ...state,
       isLoading: false,
       products: payload,
+    }),
+    [logoutUser.fulfilled]: () => ({
+      products: [],
+      isLoading: false,
+      error: null,
     }),
   },
   // name: 'addProduct',
