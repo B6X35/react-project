@@ -48,7 +48,8 @@ const daySlice = createSlice({
     }),
     [addProductOperation.fulfilled]: (state, { payload }) => ({
       ...state,
-      eatenProducts: payload.eatenProducts ? [...payload.eatenProducts] : null,
+      // eatenProducts: payload.eatenProducts ? [...payload.eatenProducts] : null,
+      eatenProducts: [...payload.day.eatenProducts],
       daySummary: {
         ...state.daySummary,
         date: payload.daySummary.date,

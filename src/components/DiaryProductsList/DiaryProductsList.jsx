@@ -2,19 +2,25 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import XCloseButton from '../SharedComponents/XButton';
 
-import { getEatenProducts, getDateId } from '../../redux/day/daySelectors';
-import { deleteProductOperation } from '../../redux/day/dayOperations';
+import { getEatenProducts, getDateId, getDate } from '../../redux/day/daySelectors';
+import { deleteProductOperation, getDayInfoOperation } from '../../redux/day/dayOperations';
 
 import s from './DiaryProductsList.module.css';
 
 const DiaryProductsList = () => {
   const eatenProducts = useSelector(getEatenProducts);
   const dateId = useSelector(getDateId);
+  const dateRequested = useSelector(getDate);
   console.log(dateId);
   console.log(eatenProducts);
   const dispatch = useDispatch();
 
   console.log(dateId);
+
+  const handleClick = (dayId, eatenProductId) => {
+    dispatch(deleteProductOperation({ dayId, eatenProductId }));
+    dispatch(getDayInfoOperation(dateRequested));
+  };
 
   const items = eatenProducts?.map(item => {
     const { id, weight, title, kcal } = item;
@@ -28,7 +34,8 @@ const DiaryProductsList = () => {
           <span className={s.dimension}> ккал</span>
         </p>
         <XCloseButton
-          onClick={() => dispatch(deleteProductOperation({ dayId: dateId, eatenProductId: id }))}
+          // onClick={() => dispatch(deleteProductOperation({ dayId: dateId, eatenProductId: id }))}
+          onClick={() => handleClick(dateId, id)}
         />
       </li>
     );
