@@ -22,6 +22,9 @@ const DiaryAddProductForm = ({ arr = [], onChange, filter, selectedDate }) => {
     };
 
     dispatch(addProductOperation(product));
+
+    event.target.elements[0].value = '';
+    event.target.elements[1].value = ''; //peredelat local state
   };
 
   return (

@@ -11,15 +11,15 @@ const DiaryProductsList = () => {
   const eatenProducts = useSelector(getEatenProducts);
   const dateId = useSelector(getDateId);
   const dateRequested = useSelector(getDate);
-  console.log(dateId);
-  console.log(eatenProducts);
-  const dispatch = useDispatch();
 
-  console.log(dateId);
+  const dispatch = useDispatch();
+  console.log('dateId-', dateId);
+  console.log('eatenProducts-', eatenProducts);
+  console.log('dateRequested-', dateRequested);
 
   const handleClick = (dayId, eatenProductId) => {
     dispatch(deleteProductOperation({ dayId, eatenProductId }));
-    dispatch(getDayInfoOperation(dateRequested));
+    // dispatch(getDayInfoOperation(dateRequested));
   };
 
   const items = eatenProducts?.map(item => {

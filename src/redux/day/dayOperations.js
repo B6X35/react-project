@@ -30,7 +30,7 @@ export const deleteProductOperation = createAsyncThunk(
   async ({ dayId, eatenProductId }, thunkApi) => {
     try {
       const response = await deletDay(dayId, eatenProductId);
-      console.log('======================', response);
+      console.log('delete response ======================', response);
       return response;
     } catch (error) {
       return thunkApi.rejectWithValue(error);

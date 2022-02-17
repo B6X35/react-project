@@ -73,6 +73,7 @@ const daySlice = createSlice({
     }),
     [deleteProductOperation.fulfilled]: (state, { payload }) => ({
       ...state,
+      // eatenProducts: state.eatenProducts.filter(product => product.id !== payload.eatenProducts.id),
       daySummary: {
         ...state.daySummary,
         date: payload.daySummary?.date,
