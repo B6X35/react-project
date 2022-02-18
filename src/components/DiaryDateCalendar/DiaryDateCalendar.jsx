@@ -2,6 +2,7 @@ import { useState, forwardRef } from 'react';
 import DatePicker from 'react-datepicker';
 import s from './DiaryDateCalendar.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
+import sprite from '../../images/sprite/sprite.svg';
 
 function DiaryDateCalendar({ onClick }) {
   // console.log(onClick);
@@ -17,12 +18,17 @@ function DiaryDateCalendar({ onClick }) {
     onClick(date);
   };
   return (
-    <DatePicker
-      selected={startDate}
-      onChange={handleChange}
-      customInput={<CustomInput />}
-      dateFormat="dd.MM.yyyy"
-    />
+    <div className={s.wrapper}>
+      <DatePicker
+        selected={startDate}
+        onChange={handleChange}
+        customInput={<CustomInput />}
+        dateFormat="dd.MM.yyyy"
+      />
+      <svg className={s.iconCalendar}>
+        <use href={sprite + '#icon-calendar'} />
+      </svg>
+    </div>
   );
 }
 

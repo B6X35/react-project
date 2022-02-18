@@ -11,7 +11,7 @@ const path = {
   USER: './user',
   DAILY_RATE: './daily-rate',
   PRODUCT: '/product?search=',
-  DAY: './day',
+  DAY: '/day',
   GET_INFO_DAY: './day/info',
 };
 const headers = {
@@ -49,6 +49,7 @@ export const registerUserApi = async user => {
 export const loginUserApi = async user => {
   try {
     const { data } = await axios.post(path.LOGIN, user);
+    console.log('>>>>>>>>>>>>>>>>>>>data>>>>>>>>>>', data);
     setToken(data.refreshToken);
     // setToken(data.accessToken);
     return data;
@@ -89,7 +90,7 @@ export const postDayilyRate = async rate => {
 export const postDayilyRateUser = async (rate, userId) => {
   try {
     console.log(userId);
-    console.log(rate)
+    console.log(rate);
     const { data } = await axios.post(path.DAILY_RATE + '/' + userId, rate);
     return data;
   } catch (error) {
@@ -117,10 +118,10 @@ export const postDay = async (date, productId, weight) => {
 
 export const deletDay = async (dayId, eatenProductId) => {
   try {
-    const day = { dayId: dayId, eatenProductId: eatenProductId }
-    console.log("api after >>>", day);
-    const { data } = await axios.delete(path.DAY, { data: day});
-    console.log("api before >>>", data)
+    const day = { dayId: dayId, eatenProductId: eatenProductId };
+    console.log('api after >>>', day);
+    const { data } = await axios.delete(path.DAY, { data: day });
+    console.log('api before >>>', data);
     return data;
   } catch (error) {
     throw error.message;

@@ -14,8 +14,10 @@ import { getProduct } from '../../redux/product/productOperation';
 import { getProductsSelector } from '../../redux/product/productSelectors';
 import { getDayInfoSelector, getProductsDaySummary } from '../../redux/day/daySelectors';
 import { getDayInfoOperation } from '../../redux/day/dayOperations';
+import { getDailyRateCalories } from '../../redux/dailyRate/dailyRateSelectors';
 
 import s from './DiaryPage.module.css';
+import { getDailyRate } from '../../redux/dailyRate/dailyRateActions';
 
 const today = new Date();
 const currentDate =
@@ -23,7 +25,7 @@ const currentDate =
   '-' +
   (today.getMonth() + 1).toString().padStart(2, '0') +
   '-' +
-  today.getDate();
+  today.getDate().toString().padStart(2, '0');
 
 //props DiaryAddProductForm={ arr = [], onClick }
 //props DiaryDateCalendar={ onClick }
@@ -31,9 +33,13 @@ const currentDate =
 const initialValue = '';
 
 const DiaryPage = () => {
-  const dayInfo = useSelector(getDayInfoSelector);
+  // const dayInfo = useSelector(getDayInfoSelector);
   const daySummary = useSelector(getProductsDaySummary);
-  console.log(daySummary)
+  const dailyRateCalories = useSelector(getDailyRateCalories);
+
+  console.log('daySummary - ', daySummary);
+  console.log('dailyRateReducers -', dailyRateCalories);
+
   const products = useSelector(getProductsSelector);
   const [selectedDate, setDate] = useState(currentDate);
   const [filter, setFilter] = useState(initialValue);
@@ -102,7 +108,7 @@ const DiaryPage = () => {
           </div>
           <RightSideBar
             dateOn={transformDate(selectedDate)}
-            dailyRate={transformNumber(daySummary?.dailyRate)}
+            dailyRate={transformNumber(dailyRateCalories)}
             kcalConsumed={transformNumber(daySummary?.kcalConsumed)}
             kcalLeft={transformNumber(daySummary?.kcalLeft)}
             percentsOfDailyRate={transformNumber(daySummary?.percentsOfDailyRate)}

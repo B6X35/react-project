@@ -1,20 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getDayInfoOperation, addProductOperation, deleteProductOperation } from './dayOperations';
+import { loginUser, logoutUser } from '../auth/authOperation';
 
 const daySlice = createSlice({
   name: 'day',
   initialState: {
-    dayInfo: null,
+    daySummary: {
+      date: null,
+      kcalLeft: null,
+      kcalConsumed: null,
+      percentsOfDailyRate: null,
+      dateId: null,
+    },
     eatenProducts: [],
     isLoading: false,
     error: null,
   },
   extraReducers: {
-    [getDayInfoOperation.rejected]: (state, { payload }) => ({
-      ...state,
-      error: payload,
-      isLoading: false,
-    }),
     [getDayInfoOperation.pending]: state => ({
       ...state,
       error: null,
@@ -22,10 +24,19 @@ const daySlice = createSlice({
     }),
     [getDayInfoOperation.fulfilled]: (state, { payload }) => ({
       ...state,
+      daySummary: {
+        ...state.daySummary,
+        date: payload.daySummary?.date,
+        kcalLeft: payload.daySummary?.kcalLeft,
+        kcalConsumed: payload.daySummary?.kcalConsumed,
+        percentsOfDailyRate: payload.daySummary?.percentsOfDailyRate,
+        dateId: payload?.id,
+      },
+      eatenProducts: payload.eatenProducts ? [...payload.eatenProducts] : null,
       isLoading: false,
-      dayInfo: payload.dayInfo,
+      error: null,
     }),
-    [addProductOperation.rejected]: (state, { payload }) => ({
+    [getDayInfoOperation.rejected]: (state, { payload }) => ({
       ...state,
       error: payload,
       isLoading: false,
@@ -35,15 +46,22 @@ const daySlice = createSlice({
       error: null,
       isLoading: true,
     }),
-    [addProductOperation.fulfilled]: (state, { payload }) => {
-      state.isLoading = false;
-      state.dayInfo.eatenProducts = payload.day.eatenProducts;
-      // ...state,
-      // isLoading: false,
-      // dayInfo:payload.dayInfo,
-      // eatenProducts: payload.eatenProducts,
-    },
-    [deleteProductOperation.rejected]: (state, { payload }) => ({
+    [addProductOperation.fulfilled]: (state, { payload }) => ({
+      ...state,
+      // eatenProducts: payload.eatenProducts ? [...payload.eatenProducts] : null,
+      eatenProducts: [...payload?.day?.eatenProducts],
+      daySummary: {
+        ...state.daySummary,
+        date: payload.daySummary.date,
+        kcalLeft: payload.daySummary.kcalLeft,
+        kcalConsumed: payload.daySummary.kcalConsumed,
+        percentsOfDailyRate: payload.daySummary.percentsOfDailyRate,
+        dateId: payload?.day?.id, //?????????????????????
+      },
+      isLoading: false,
+      error: null,
+    }),
+    [addProductOperation.rejected]: (state, { payload }) => ({
       ...state,
       error: payload,
       isLoading: false,
@@ -53,11 +71,37 @@ const daySlice = createSlice({
       error: null,
       isLoading: true,
     }),
-    [deleteProductOperation.fulfilled]: (state, { payload }) => {
-      state.isLoading = false;
-      state.dayInfo.eatenProducts = null;
-    },
-  }
+    [deleteProductOperation.fulfilled]: (state, { payload, meta }) => ({
+      ...state,
+      eatenProducts: state.eatenProducts.filter(product => product.id !== meta.arg.eatenProductId),
+      daySummary: {
+        ...state.daySummary,
+        date: payload.newDaySummary?.date,
+        kcalLeft: payload.newDaySummary?.kcalLeft,
+        kcalConsumed: payload.newDaySummary?.kcalConsumed,
+        percentsOfDailyRate: payload.newDaySummary?.percentsOfDailyRate,
+      },
+      isLoading: false,
+      error: null,
+    }),
+    [deleteProductOperation.rejected]: (state, { payload }) => ({
+      ...state,
+      error: payload,
+      isLoading: false,
+    }),
+    [logoutUser.fulfilled]: () => ({
+      daySummary: {
+        date: null,
+        kcalLeft: null,
+        kcalConsumed: null,
+        percentsOfDailyRate: null,
+        dateId: null,
+      },
+      eatenProducts: [],
+      isLoading: false,
+      error: null,
+    }),
+  },
 });
 
 export default daySlice.reducer;
