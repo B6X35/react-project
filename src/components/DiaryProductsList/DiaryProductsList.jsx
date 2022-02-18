@@ -27,12 +27,15 @@ const DiaryProductsList = () => {
     console.log(id);
     return (
       <li key={id} className={s.listItem}>
-        <p className={s.productName}>{title}</p>
-        <p className={s.productWeight}>{weight} г</p>
-        <p className={s.productClories}>
-          {Math.round(kcal.toFixed(2) * 100) / 100}
-          <span className={s.dimension}> ккал</span>
-        </p>
+        <div className={s.itemWrapper}>
+          <p className={s.productName}>{title}</p>
+          <p className={s.productWeight}>{weight} г</p>
+          <p className={s.productClories}>
+            {Math.round(kcal.toFixed(2) * 100) / 100}
+            <span className={s.dimension}> ккал</span>
+          </p>
+        </div>
+
         <XCloseButton
           // onClick={() => dispatch(deleteProductOperation({ dayId: dateId, eatenProductId: id }))}
           onClick={() => handleClick(dateId, id)}

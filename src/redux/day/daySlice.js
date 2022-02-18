@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getDayInfoOperation, addProductOperation, deleteProductOperation } from './dayOperations';
-import { logoutUser } from '../auth/authOperation';
+import { loginUser, logoutUser } from '../auth/authOperation';
 
 const daySlice = createSlice({
   name: 'day',
@@ -49,14 +49,14 @@ const daySlice = createSlice({
     [addProductOperation.fulfilled]: (state, { payload }) => ({
       ...state,
       // eatenProducts: payload.eatenProducts ? [...payload.eatenProducts] : null,
-      eatenProducts: [...payload.day.eatenProducts],
+      eatenProducts: [...payload?.day?.eatenProducts],
       daySummary: {
         ...state.daySummary,
         date: payload.daySummary.date,
         kcalLeft: payload.daySummary.kcalLeft,
         kcalConsumed: payload.daySummary.kcalConsumed,
         percentsOfDailyRate: payload.daySummary.percentsOfDailyRate,
-        dateId: payload?.id, //?????????????????????
+        dateId: payload?.day?.id, //?????????????????????
       },
       isLoading: false,
       error: null,
@@ -71,16 +71,15 @@ const daySlice = createSlice({
       error: null,
       isLoading: true,
     }),
-    [deleteProductOperation.fulfilled]: (state, { payload }) => ({
+    [deleteProductOperation.fulfilled]: (state, { payload, meta }) => ({
       ...state,
-      // eatenProducts: state.eatenProducts.filter(product => product.id !== payload.eatenProducts.id),
+      eatenProducts: state.eatenProducts.filter(product => product.id !== meta.arg.eatenProductId),
       daySummary: {
         ...state.daySummary,
-        date: payload.daySummary?.date,
-        kcalLeft: payload.daySummary?.kcalLeft,
-        kcalConsumed: payload.daySummary?.kcalConsumed,
-        percentsOfDailyRate: payload.daySummary?.percentsOfDailyRate,
-        dateId: payload?.id, //?????????????????????
+        date: payload.newDaySummary?.date,
+        kcalLeft: payload.newDaySummary?.kcalLeft,
+        kcalConsumed: payload.newDaySummary?.kcalConsumed,
+        percentsOfDailyRate: payload.newDaySummary?.percentsOfDailyRate,
       },
       isLoading: false,
       error: null,
