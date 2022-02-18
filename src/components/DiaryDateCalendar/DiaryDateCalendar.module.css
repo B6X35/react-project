@@ -1,10 +1,23 @@
+.wrapper {
+  display: inline-flex;
+  /* justify-content: flex-start; */
+  align-items: baseline;
+  /* align-items: flex-end; */
+}
+
 .calendar {
   border: 0px;
+  margin-right: 20px;
   background-color: transparent;
-  color:rgba(33, 33, 33, 1);
-  
+  color: rgba(33, 33, 33, 1);
+
   font-family: Verdana;
   font-weight: 700;
   font-size: 34px;
   line-height: 41px;
+}
+
+.iconCalendar {
+  width: 20px;
+  height: 20px;
 }

@@ -33,7 +33,7 @@ const currentDate =
 const initialValue = '';
 
 const DiaryPage = () => {
-  const dayInfo = useSelector(getDayInfoSelector);
+  // const dayInfo = useSelector(getDayInfoSelector);
   const daySummary = useSelector(getProductsDaySummary);
   const dailyRateCalories = useSelector(getDailyRateCalories);
 
