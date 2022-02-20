@@ -29,7 +29,7 @@ const RegistrationForm = () => {
           <FormikInput name="email" type="text" placeholder="Почта *" />
           <FormikInput
             name="password"
-            type="text"
+            type="password"
             placeholder="Пароль *"
             // pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
           />
